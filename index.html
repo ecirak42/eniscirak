@@ -1,185 +1,277 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Enis Cirak | Anxiety & Panic Coaching</title>
+  <title>Permanent Agoraphobia Recovery | Calm Step-by-Step Guidance</title>
+  <meta
+    name="description"
+    content="Gentle, grounded support for people struggling with agoraphobia and fear of panic attacks, with a simple path to book a free 30-minute call."
+  />
   <style>
+    :root {
+      --bg: #f8f8f5;
+      --bg-soft: #f2f3ef;
+      --text: #22302b;
+      --muted: #5a6963;
+      --line: #d9dfda;
+      --button: #ffffff;
+      --button-hover: #f4f6f3;
+      --page-width: 720px;
+    }
+
     * {
       box-sizing: border-box;
     }
 
     html {
       scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
     }
 
     body {
       margin: 0;
-      background: #f6f1e8;
-      color: #1f1f1f;
+      min-width: 320px;
+      background: var(--bg);
+      color: var(--text);
       font-family: Georgia, "Times New Roman", serif;
-      line-height: 1.7;
+      line-height: 1.75;
     }
 
-    .page {
-      width: min(760px, 88%);
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    main {
+      width: min(calc(100% - 2rem), var(--page-width));
       margin: 0 auto;
-      padding: 72px 0 100px;
+      padding: 3rem 0 4rem;
     }
 
-    .hero {
-      padding: 40px 0 56px;
+    section {
+      padding: 3.5rem 0;
+      border-top: 1px solid var(--line);
     }
 
-    .eyebrow {
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: #7a6f61;
-      margin-bottom: 18px;
-    }
-
-    h1 {
-      font-size: clamp(2.6rem, 7vw, 4.9rem);
-      line-height: 1.03;
-      font-weight: 500;
-      letter-spacing: -0.03em;
-      margin: 0 0 22px;
-      max-width: 700px;
-    }
-
-    .intro {
-      font-size: 1.2rem;
-      color: #3d3a35;
-      max-width: 640px;
-      margin: 0;
-    }
-
-    .section {
-      padding: 52px 0;
-      border-top: 1px solid #d9d0c3;
-    }
-
-    h2 {
-      font-size: clamp(1.8rem, 4vw, 2.7rem);
-      line-height: 1.15;
-      font-weight: 500;
-      margin: 0 0 20px;
-      letter-spacing: -0.02em;
-    }
-
-    p {
-      margin: 0 0 18px;
-      font-size: 1.1rem;
-      color: #2d2b28;
+    section:first-child {
+      border-top: 0;
+      padding-top: 2rem;
     }
 
     .soft {
-      color: #5e564d;
+      background: var(--bg-soft);
+      margin: 0 -1rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
     }
 
-    .calendar-wrap {
-      margin-top: 28px;
-      padding: 18px;
-      background: rgba(255,255,255,0.42);
-      border: 1px solid #ded5c8;
-      border-radius: 20px;
+    h1,
+    h2 {
+      margin: 0;
+      font-weight: 500;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+    }
+
+    h1 {
+      max-width: 16ch;
+      font-size: clamp(2.4rem, 6vw, 4.2rem);
+    }
+
+    h2 {
+      font-size: clamp(1.7rem, 4vw, 2.4rem);
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(1.04rem, 1.5vw, 1.14rem);
+    }
+
+    p + p {
+      margin-top: 1rem;
+    }
+
+    .subheadline {
+      margin-top: 1.25rem;
+      color: var(--text);
+      font-size: clamp(1.12rem, 1.9vw, 1.24rem);
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.75rem;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 2.9rem;
+      padding: 0.75rem 1.1rem;
+      border: 1px solid var(--line);
+      background: var(--button);
+      color: var(--text);
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      transition: background-color 0.18s ease, border-color 0.18s ease;
+    }
+
+    .button:hover,
+    .button:focus-visible {
+      background: var(--button-hover);
+      border-color: #c8d0ca;
+      outline: none;
+    }
+
+    ul {
+      margin: 1.25rem 0 0;
+      padding-left: 1.2rem;
+    }
+
+    li {
+      color: var(--muted);
+      font-size: clamp(1.04rem, 1.4vw, 1.12rem);
+      margin-top: 0.7rem;
+    }
+
+    .about-photo {
+      margin: 0 0 1.5rem;
+    }
+
+    .about-photo img {
+      width: 100%;
+      height: auto;
+      border: 1px solid var(--line);
+      background: #ffffff;
+    }
+
+    .booking-wrap {
+      margin-top: 1.75rem;
+      border: 1px solid var(--line);
+      background: #ffffff;
     }
 
     footer {
-      padding-top: 28px;
-      border-top: 1px solid #d9d0c3;
-      color: #7a6f61;
+      padding-top: 2.5rem;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       font-size: 0.95rem;
+      text-align: center;
     }
 
     @media (max-width: 640px) {
-      .page {
-        padding: 48px 0 72px;
+      main {
+        width: min(calc(100% - 1.25rem), var(--page-width));
+        padding-top: 2rem;
+        padding-bottom: 3rem;
       }
 
-      .hero {
-        padding: 20px 0 40px;
+      section {
+        padding: 3rem 0;
       }
 
-      p,
-      .intro {
-        font-size: 1.04rem;
+      .soft {
+        margin-left: -0.625rem;
+        margin-right: -0.625rem;
+        padding-left: 0.625rem;
+        padding-right: 0.625rem;
       }
 
-      .calendar-wrap {
-        padding: 10px;
+      .actions {
+        flex-direction: column;
+      }
+
+      .button {
+        width: 100%;
       }
     }
   </style>
 </head>
 <body>
-  <main class="page">
-    <section class="hero">
-      <div class="eyebrow">Enis Cirak</div>
-      <h1>I help people overcome panic attacks, anxiety, and agoraphobia.</h1>
-      <p class="intro">
-        My work is focused on helping people understand what is happening in their body,
-        stop fearing the panic itself, and gradually return to a life that feels open,
-        steady, and possible again.
+  <main>
+    <section>
+      <h1>Agoraphobia Recovery (step-by-step guidance)</h1>
+      <p class="subheadline">
+        When you&rsquo;re living with agoraphobia, life can start revolving around one
+        question: &ldquo;What if I panic?&rdquo;
+      </p>
+      <p>
+        But the fear of panic does not have to keep deciding where you go, what you do, and
+        how much of life you get to have. There is a way to respond differently.
+      </p>
+      <div class="actions">
+        <a class="button" href="#book-call" data-scroll-target="book-call">Book a Free Call</a>
+      </div>
+    </section>
+
+    <section class="soft">
+      <h2>You are not broken</h2>
+      <p>
+        Agoraphobia can make you feel trapped in a life that keeps getting smaller. You may
+        look fine on the outside while inside you&rsquo;re scanning for exits, bracing for
+        symptoms, and trying to stay one step ahead of the next panic attack. That is
+        exhausting. It can start to feel like you&rsquo;re not really living anymore.
+        You&rsquo;re just managing, avoiding, enduring. But this is not the end of your life.
       </p>
     </section>
 
-    <section class="section">
-      <h2>You are not broken.</h2>
+    <section>
+      <h2>The real problem is the feedback loop.</h2>
       <p>
-        Panic attacks and agoraphobia can make life feel small very quickly. You may start
-        avoiding places, situations, sensations, or even your own body because you are afraid
-        of what might happen next.
-      </p>
-      <p>
-        But the symptoms of panic are not proof that something is fundamentally wrong with you.
-        They are part of a fear response that can be understood, worked with, and unwound.
-      </p>
-      <p class="soft">
-        The goal is not just to feel better for a moment. The goal is to become free again.
+        One little sensation turns into a thought: &ldquo;What if this becomes a panic
+        attack?&rdquo; That thought creates more fear. The fear releases adrenaline, which makes
+        the sensations more intense. And suddenly you&rsquo;re caught in a loop. When you
+        understand that loop, everything starts to make more sense. And when you learn how to
+        interrupt it, everything can begin to change.
       </p>
     </section>
 
-    <section class="section">
-      <h2>How I help</h2>
+    <section class="soft">
+      <h2>Five things you will learn while working with me:</h2>
+      <ul>
+        <li>what&rsquo;s happening in your mind and body during panic</li>
+        <li>how to stop treating adrenaline as a threat and break the feedback loop</li>
+        <li>how to release pent up emotions and stuck energy</li>
+        <li>how to trust your own body again and feel safe anywhere you go</li>
+        <li>how to feel confident and free</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>About me</h2>
+      <figure class="about-photo">
+        <img src="about-photo.jpg" alt="Enis Cirak speaking to a group" />
+      </figure>
       <p>
-        I help people build a new relationship with anxiety so that the fear cycle starts to
-        lose its grip. That usually means learning what panic actually is, understanding why
-        the body reacts the way it does, and practicing a different response instead of
-        reinforcing the loop through avoidance.
+        I have been through anxiety in my own life, and I know how overwhelming and limiting
+        it can feel when fear starts shaping your decisions.
       </p>
       <p>
-        We work on clarity, nervous system confidence, and gradual return to the parts of life
-        that have started to feel unsafe or out of reach.
-      </p>
-      <p>
-        This work is practical, compassionate, and focused on real change.
+        Part of why I do this work is because I understand how painful it is to feel like
+        your world is getting smaller. I want to help other people move through that same kind
+        of struggle with more clarity, steadiness, and hope.
       </p>
     </section>
 
-    <section class="section">
-      <h2>Who this is for</h2>
+    <section class="soft" id="book-call">
+      <h2>Book a free 30-minute call</h2>
       <p>
-        This is for people who are tired of living around fear.
+        If you&rsquo;re ready to stop organizing your life around &ldquo;what if I panic?&rdquo;,
+        book a free call below.
       </p>
-      <p>
-        People who are dealing with panic attacks, constant anxiety, fear of bodily sensations,
-        avoidance of driving or public places, difficulty being alone, fear of leaving home,
-        or the sense that their world has been getting smaller.
-      </p>
-      <p>
-        It is also for people who know, somewhere deep down, that life can become bigger again.
-      </p>
-    </section>
-
-    <section class="section">
-      <h2>Book a call</h2>
-      <p>
-        If this resonates, you can schedule a time below.
-      </p>
-
-      <div class="calendar-wrap">
+      <div class="booking-wrap">
         <!-- Calendly inline widget begin -->
         <div class="calendly-inline-widget" data-url="https://calendly.com/eniscirak/30min" style="min-width:320px;height:700px;"></div>
         <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
@@ -188,8 +280,24 @@
     </section>
 
     <footer>
-      © 2026 Enis Cirak
+      <p>You deserve more than a life built around avoidance.</p>
     </footer>
   </main>
+
+  <script>
+    document.querySelectorAll("[data-scroll-target]").forEach(function (link) {
+      link.addEventListener("click", function (event) {
+        var targetId = link.getAttribute("data-scroll-target");
+        var target = document.getElementById(targetId);
+
+        if (!target) {
+          return;
+        }
+
+        event.preventDefault();
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    });
+  </script>
 </body>
 </html>
