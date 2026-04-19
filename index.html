@@ -13,13 +13,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#F2EDE1" />
-  <title>Enis Cirak — A quieter way back to the world</title>
+  <title>Enis Cirak — Agoraphobia Recovery Coaching</title>
   <meta
     name="description"
-    content="Gentle, root-level 1-on-1 coaching for agoraphobia and the fear of panic. Integration, not symptom management. Book a free 30-minute call."
+    content="1-on-1 coaching for agoraphobia and the fear of panic. Book a free 30-minute call."
   />
-  <meta property="og:title" content="Enis Cirak — A quieter way back to the world" />
-  <meta property="og:description" content="Gentle, step-by-step 1-on-1 coaching for agoraphobia and the fear of panic." />
+  <meta property="og:title" content="Enis Cirak — Agoraphobia Recovery Coaching" />
+  <meta property="og:description" content="1-on-1 coaching for agoraphobia and the fear of panic." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="about-photo.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -175,11 +175,11 @@
       margin: 0;
       font-family: "Inter", "Segoe UI", system-ui, sans-serif;
       font-weight: 600;
-      font-size: clamp(2.6rem, 7vw, 5rem);
-      line-height: 1.08;
+      font-size: clamp(2.2rem, 5.6vw, 4rem);
+      line-height: 1.1;
       letter-spacing: -0.03em;
       color: var(--ink);
-      max-width: 14ch;
+      max-width: 18ch;
     }
 
     h1 em {
@@ -507,6 +507,75 @@
       color: var(--muted);
     }
 
+    /* ------- New content blocks ------- */
+    .crisis-note {
+      margin-top: 1.5rem;
+      padding: 1rem 1.25rem;
+      border-left: 2px solid var(--accent);
+      background: var(--paper-2);
+      font-size: 0.98rem;
+      color: var(--ink-2);
+    }
+
+    .declaration {
+      margin: 2.5rem 0 2rem;
+      font-weight: 600;
+      font-size: clamp(2rem, 4.2vw, 3rem);
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      color: var(--ink);
+    }
+
+    .sessions {
+      margin: 2.5rem 0 0;
+      padding: 0;
+      display: grid;
+      gap: 0;
+    }
+
+    .sessions > div {
+      display: grid;
+      grid-template-columns: 8rem 1fr;
+      gap: 1.5rem;
+      padding: 1.25rem 0;
+      border-top: 1px solid var(--line-soft);
+      align-items: baseline;
+    }
+
+    .sessions > div:last-child { border-bottom: 1px solid var(--line-soft); }
+
+    .sessions dt {
+      font-weight: 500;
+      color: var(--ink);
+      font-size: 0.92rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .sessions dd {
+      margin: 0;
+      color: var(--ink-2);
+    }
+
+    .placeholder {
+      display: inline-block;
+      padding: 0.55rem 0.85rem;
+      background: #fbedb8;
+      color: #6b4f10;
+      font-size: 0.92rem;
+      font-style: italic;
+      border-radius: 3px;
+      line-height: 1.45;
+    }
+
+    @media (max-width: 640px) {
+      .sessions > div {
+        grid-template-columns: 1fr;
+        gap: 0.3rem;
+        padding: 1rem 0;
+      }
+    }
+
     /* ------- Reveal animation ------- */
     .reveal {
       opacity: 0;
@@ -561,119 +630,147 @@
     <!-- ===== Hero ===== -->
     <section class="hero">
       <div class="wrap-wide">
-        <p class="eyebrow">Agoraphobia Recovery &middot; 1&#8209;on&#8209;1 Coaching</p>
-        <h1>A quieter way <em>back</em><br />to the world.</h1>
+        <h1>You can stop organizing your life around the next panic attack.</h1>
         <p class="lede">
-          Gentle, root&#8209;level work with the fear of panic &mdash; not to manage it, but to meet
-          it, understand it, and stop building your life around it.
+          Not by forcing yourself through feared situations. Not by learning to cope better. By
+          resolving what is actually driving it.
         </p>
         <div class="hero-cta">
           <a class="btn" href="#book" data-scroll-target="book">Book a free 30&#8209;minute call</a>
-          <span class="meta-line">No pressure. Just a conversation.</span>
         </div>
       </div>
     </section>
 
     <div class="rule"></div>
 
-    <!-- ===== You are not broken ===== -->
+    <!-- ===== Who this is for ===== -->
     <section class="reveal">
       <div class="wrap">
-        <p class="sec-label">01 &middot; Where you might be</p>
-        <h2>You are not <em>broken</em>. Your world has just gotten smaller.</h2>
+        <h2>Who this is for</h2>
         <p>
-          Agoraphobia can make life feel like a shrinking room. You may look fine on the outside
-          while, inside, you&rsquo;re scanning for exits, bracing for symptoms, and trying to stay
-          one step ahead of the next panic attack.
-        </p>
-        <p>
-          That&rsquo;s exhausting. It can start to feel like you&rsquo;re not really living &mdash;
-          just managing, avoiding, enduring.
-        </p>
-        <p>
-          And the part of you that got this vigilant isn&rsquo;t broken either. It&rsquo;s been
-          trying, in its own way, to protect you. We&rsquo;re not going to fight it. We&rsquo;re
-          going to listen to it.
-        </p>
-        <p class="pullquote">
-          This isn&rsquo;t the end of your life. It&rsquo;s a pattern &mdash; and patterns, even
-          old protective ones, can change.
+          People whose world has gotten smaller because of panic or agoraphobia, who have tried
+          managing the symptoms, and who are ready to work on what is underneath.
         </p>
       </div>
     </section>
 
-    <!-- ===== The loop ===== -->
+    <!-- ===== What you are dealing with ===== -->
     <section class="reveal">
       <div class="wrap">
-        <p class="sec-label">02 &middot; The real problem</p>
-        <h2>It&rsquo;s a feedback loop &mdash; and loops can be <em>interrupted</em>.</h2>
-        <p>
-          One little sensation becomes a thought. The thought creates fear. The fear releases
-          adrenaline. And suddenly you&rsquo;re caught inside something that feels bigger than you.
-        </p>
+        <h2>What you are dealing with</h2>
+        <p class="declaration">A loop.</p>
         <ol class="loop">
           <li class="step">
             <span class="step-num">01</span>
-            <span class="step-body"><strong>A sensation.</strong> A skipped heartbeat, a wave of dizziness, a tight chest.</span>
+            <span class="step-body">A sensation in the body. A skipped beat. A wave of lightheadedness. A tight chest.</span>
           </li>
           <li class="step">
             <span class="step-num">02</span>
-            <span class="step-body"><strong>A thought.</strong> <em>&ldquo;What if this becomes a panic attack?&rdquo;</em></span>
+            <span class="step-body">A thought. <em>What if this is the one.</em></span>
           </li>
           <li class="step">
             <span class="step-num">03</span>
-            <span class="step-body"><strong>Fear.</strong> Which releases adrenaline into the body.</span>
+            <span class="step-body">Fear. Which the body reads as real danger and answers with adrenaline.</span>
           </li>
           <li class="step">
             <span class="step-num">04</span>
-            <span class="step-body"><strong>Louder sensations.</strong> And the loop tightens.</span>
+            <span class="step-body">A louder sensation. Which confirms the fear. Which releases more adrenaline.</span>
           </li>
         </ol>
         <p style="margin-top: 2.5rem;">
-          Seeing the loop is the first step. But naming it isn&rsquo;t the same as healing it.
-          Real change happens when you also turn toward what&rsquo;s underneath it &mdash; the
-          emotion, the part of you that&rsquo;s been bracing &mdash; and let it finally move
-          through.
+          The loop is self-sustaining. That is why willpower does not break it. Why avoidance
+          makes it worse. Why &ldquo;just calm down&rdquo; is useless.
+        </p>
+        <p>
+          Seeing the loop is the first thing we do. It helps. But it is not enough on its own. The
+          loop runs on something. Usually an older feeling that has been waiting, often for years,
+          to be met. The real work is there.
         </p>
       </div>
     </section>
 
-    <!-- ===== Five learnings ===== -->
+    <!-- ===== What we do about it ===== -->
     <section class="reveal">
       <div class="wrap">
-        <p class="sec-label">03 &middot; What we&rsquo;ll work on</p>
-        <h2>Five things you&rsquo;ll learn, <em>together</em>.</h2>
-        <ol class="learn">
-          <li><span>How to recognise panic as a pattern passing through you &mdash; not as who you are.</span></li>
-          <li><span>How to meet the anxious part of you with curiosity, instead of going to war with it.</span></li>
-          <li><span>How to release the emotion and energy that&rsquo;s been stuck underneath the fear.</span></li>
-          <li><span>How to stay present, even while your body is loud.</span></li>
-          <li><span>How to feel at home in yourself &mdash; not just less anxious. Actually free.</span></li>
-        </ol>
+        <h2>What we do about it</h2>
+        <p>
+          We meet online, one to one. We find the place in your body where the fear lives. We
+          stay there together, without force, until what has been stuck begins to move.
+        </p>
+        <p>
+          No exposure drills. No homework. No protocol you have to follow between sessions.
+        </p>
+        <p>
+          Most people feel a real shift in their relationship to panic within the first few weeks.
+          Feeling fully at ease in yourself takes longer than that. You set the pace.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== Why this works ===== -->
+    <section class="reveal">
+      <div class="wrap">
+        <h2>Why this works when other things have not</h2>
+        <p>
+          Most approaches stop at the mind. They teach you the loop and send you home with
+          breathing exercises. The loop keeps running because the feeling underneath it was
+          never touched.
+        </p>
+        <p>
+          This work goes underneath. It is slower in the first week and faster in the tenth. It
+          does not ask you to push through anything. It asks you to turn toward what is already
+          there. That is what the nervous system has been waiting for.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== Sessions ===== -->
+    <section class="reveal">
+      <div class="wrap">
+        <h2>Sessions</h2>
+        <dl class="sessions">
+          <div>
+            <dt>Format</dt>
+            <dd>60 minutes, online (Zoom or Google Meet).</dd>
+          </div>
+          <div>
+            <dt>Frequency</dt>
+            <dd>Weekly, usually. Some people do every other week. You choose.</dd>
+          </div>
+          <div>
+            <dt>Cost</dt>
+            <dd>$125 per session.</dd>
+          </div>
+        </dl>
+        <p style="margin-top: 2rem;">
+          First call is free. 30 minutes. No obligation. If we are not a fit, you will still leave
+          with a clearer picture of what is going on.
+        </p>
+        <div class="hero-cta" style="margin-top: 2rem;">
+          <a class="btn" href="#book" data-scroll-target="book">Book a free 30&#8209;minute call</a>
+        </div>
       </div>
     </section>
 
     <!-- ===== About ===== -->
     <section class="reveal">
       <div class="wrap-wide">
-        <p class="sec-label">04 &middot; About</p>
         <div class="about-grid">
           <figure class="about-photo">
             <img src="about-photo.jpg" alt="Enis Cirak" loading="lazy" />
           </figure>
           <div class="about-copy">
-            <h2>I&rsquo;ve been on the <em>other side</em> of this.</h2>
+            <h2>About</h2>
             <p>
               I&rsquo;ve lived through anxiety in my own life. I know how overwhelming and limiting
-              it feels when fear starts shaping every decision &mdash; where you go, who you see,
-              whether you leave the house.
+              it feels when fear starts shaping every decision. Where you go. Who you see. Whether
+              you leave the house.
             </p>
             <p>
-              My work draws on Internal Family Systems, Michael Singer&rsquo;s teaching on
-              releasing stored emotion, the present&#8209;moment clarity of Eckhart Tolle and
-              Adyashanti, and the practical cognitive tools of Dr. David Burns. The thread through
-              all of it: we don&rsquo;t numb, fight, or outrun what you&rsquo;re feeling. We turn
-              toward it &mdash; gently &mdash; and let it resolve at the root.
+              My work is informed by Internal Family Systems, Michael Singer, Eckhart Tolle,
+              Adyashanti, and Dr. David Burns. They all point to the same thing. You do not need
+              to numb what you are feeling, fight it, or outrun it. You can turn toward it. When
+              you do, it begins to move on its own.
             </p>
             <p>
               Part of why I do this is because I remember how painful it is to watch your world
@@ -681,43 +778,43 @@
               clarity, steadiness, and hope.
             </p>
             <p>
-              We&rsquo;ll go at your pace. No rushing, no pushing, no forcing. Just honest
-              conversation and real, root&#8209;level work.
+              We go at your pace. No rushing. No pushing. Just honest conversation, and real work.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ===== FAQ ===== -->
+    <!-- ===== Common questions ===== -->
     <section class="reveal">
       <div class="wrap">
-        <p class="sec-label">05 &middot; Common questions</p>
-        <h2>A few things people often ask.</h2>
-        <div class="faq" style="margin-top: 2.5rem;">
+        <h2>Common questions</h2>
+        <div class="faq" style="margin-top: 2rem;">
           <details>
-            <summary>What if I can&rsquo;t leave the house for the call?</summary>
-            <p>You don&rsquo;t need to. Every call happens online, from wherever feels safest.</p>
+            <summary>What if I cannot leave the house?</summary>
+            <p>Every session is online.</p>
           </details>
           <details>
-            <summary>How is this different from CBT or standard anxiety therapy?</summary>
-            <p>We use some cognitive tools &mdash; especially for understanding the feedback loop. But the work also goes deeper: into the parts of you that are generating the fear, the emotion stored underneath, and the presence you can build to meet it all without being swept away. The goal isn&rsquo;t to manage symptoms. It&rsquo;s to resolve what&rsquo;s driving them.</p>
+            <summary>Is this therapy?</summary>
+            <p>No. It is coaching, and it sits alongside whatever medical care you are getting. It does not replace it.</p>
           </details>
           <details>
-            <summary>Do I have to stop my medication?</summary>
-            <p>No, and I&rsquo;d never advise that. This work sits alongside whatever you&rsquo;re already doing. Medication decisions stay between you and your doctor.</p>
+            <summary>Do I need to stop my medication?</summary>
+            <p>No. That is between you and your doctor.</p>
           </details>
           <details>
             <summary>What does a session actually look like?</summary>
-            <p>A calm conversation. We map what&rsquo;s happening in your specific case, work gently with the parts of you that are reacting, and make room for what&rsquo;s been stuck to move. No exposure drills, no pushing, no forcing.</p>
+            <p>A quiet conversation, mostly. We look at what is happening in your specific case, and we work with what the moment asks for.</p>
+            <p>Some days this means slowing down and finding a sensation in your body, and staying with it until it shifts. Other days it is about meeting a part of you that has been carrying something alone for a long time. Other times we look at a thought loop and turn toward what is underneath it.</p>
+            <p>The practices vary. The aim is steady. To release what has been stuck, and come back to yourself.</p>
+          </details>
+          <details>
+            <summary>How long until I feel different?</summary>
+            <p>Most people notice a real change within the first few weeks. Feeling fully steady takes longer. We go at your pace.</p>
           </details>
           <details>
             <summary>Is the first call really free?</summary>
-            <p>Yes &mdash; a free 30&#8209;minute conversation. No obligation. If it doesn&rsquo;t feel like the right fit, you leave with a clearer picture of what&rsquo;s going on, and nothing else.</p>
-          </details>
-          <details>
-            <summary>How long does this take?</summary>
-            <p>It varies. Most people feel a meaningful shift within the first few weeks, as their relationship with panic starts to change. Full integration &mdash; feeling steady, not just managing &mdash; takes longer. We go at your pace.</p>
+            <p>Yes. Thirty minutes. No obligation.</p>
           </details>
         </div>
       </div>
@@ -728,11 +825,9 @@
   <!-- ===== Booking band ===== -->
   <section class="booking-band" id="book">
     <div class="wrap">
-      <p class="sec-label">06 &middot; Book a call</p>
-      <h2>A free 30&#8209;minute call &mdash; <em>just a conversation</em>.</h2>
+      <h2>Book a free 30&#8209;minute call.</h2>
       <p>
-        If you&rsquo;re ready to stop organising your life around &ldquo;what if I panic?&rdquo;,
-        pick a time below. No pressure to commit to anything. We&rsquo;ll just talk.
+        Pick a time below.
       </p>
       <div class="booking-wrap">
         <div id="calendly-mount" class="booking-placeholder">Loading calendar&hellip;</div>
@@ -741,7 +836,6 @@
   </section>
 
   <footer>
-    <p class="closing">You deserve more than a life built around avoidance.</p>
     <p class="fine">&copy; Enis Cirak</p>
   </footer>
 
