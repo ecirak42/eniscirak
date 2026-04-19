@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <!-- Google tag (gtag.js) -->
@@ -7,31 +7,48 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag("js", new Date());
-
     gtag("config", "G-ZX55VB4F1P");
   </script>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Permanent Agoraphobia Recovery | Calm Step-by-Step Guidance</title>
+  <meta name="theme-color" content="#F2EDE1" />
+  <title>Enis Cirak — A quieter way back to the world</title>
   <meta
     name="description"
-    content="Gentle, grounded support for people struggling with agoraphobia and fear of panic attacks, with a simple path to book a free 30-minute call."
+    content="Gentle, root-level 1-on-1 coaching for agoraphobia and the fear of panic. Integration, not symptom management. Book a free 30-minute call."
   />
+  <meta property="og:title" content="Enis Cirak — A quieter way back to the world" />
+  <meta property="og:description" content="Gentle, step-by-step 1-on-1 coaching for agoraphobia and the fear of panic." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="about-photo.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23F2EDE1'/%3E%3Ccircle cx='16' cy='16' r='6' fill='none' stroke='%235F7463' stroke-width='1.5'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
   <style>
     :root {
-      --bg: #f8f8f5;
-      --bg-soft: #f2f3ef;
-      --text: #22302b;
-      --muted: #5a6963;
-      --line: #d9dfda;
-      --button: #ffffff;
-      --button-hover: #f4f6f3;
-      --page-width: 720px;
+      --paper: #F2EDE1;
+      --paper-2: #EBE5D6;
+      --ink: #1E211D;
+      --ink-2: #3F443D;
+      --muted: #6B7069;
+      --line: #D3CCBD;
+      --line-soft: #E0DAC9;
+      --accent: #5F7463;
+      --accent-ink: #3E4F44;
+      --measure: 38rem;
+      --wide: 62rem;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     html {
       scroll-behavior: smooth;
@@ -41,276 +58,766 @@
     body {
       margin: 0;
       min-width: 320px;
-      background: var(--bg);
-      color: var(--text);
-      font-family: Georgia, "Times New Roman", serif;
-      line-height: 1.75;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+      font-weight: 400;
+      font-size: clamp(1.125rem, 1rem + 0.45vw, 1.22rem);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
+    p, li, .lede, .step-body, .meta-line, .fine {
+      color: var(--ink-2);
     }
 
-    img {
-      display: block;
-      max-width: 100%;
+    p strong { font-weight: 500; color: var(--ink); }
+
+    ::selection {
+      background: var(--accent);
+      color: var(--paper);
     }
 
-    main {
-      width: min(calc(100% - 2rem), var(--page-width));
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    .ui {
+      font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+    }
+
+    /* ------- Layout ------- */
+    .wrap {
+      width: min(calc(100% - 2.5rem), var(--measure));
       margin: 0 auto;
-      padding: 3rem 0 4rem;
     }
 
-    section {
-      padding: 3.5rem 0;
-      border-top: 1px solid var(--line);
+    .wrap-wide {
+      width: min(calc(100% - 2.5rem), var(--wide));
+      margin: 0 auto;
     }
 
-    section:first-child {
-      border-top: 0;
-      padding-top: 2rem;
+    section { padding: 6rem 0; }
+    section + section { padding-top: 0; }
+
+    .rule {
+      width: min(calc(100% - 2.5rem), var(--wide));
+      margin: 0 auto;
+      height: 1px;
+      background: var(--line);
     }
 
-    .soft {
-      background: var(--bg-soft);
-      margin: 0 -1rem;
-      padding-left: 1rem;
-      padding-right: 1rem;
+    /* ------- Top bar ------- */
+    .topbar {
+      padding: 1.5rem 0 0;
     }
 
-    h1,
-    h2 {
-      margin: 0;
+    .topbar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      font-family: "Inter", system-ui, sans-serif;
+      font-size: 0.82rem;
+      letter-spacing: 0.02em;
+      color: var(--ink-2);
+    }
+
+    .wordmark {
+      font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+      font-weight: 600;
+      font-size: 0.98rem;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+    }
+
+    .topbar a.nav-book {
+      color: var(--ink-2);
+      transition: color .2s ease;
+    }
+
+    .topbar a.nav-book:hover { color: var(--ink); }
+
+    .topbar a.nav-book::after {
+      content: "\2009\2192";
+      display: inline-block;
+      transition: transform .25s ease;
+    }
+
+    .topbar a.nav-book:hover::after { transform: translateX(3px); }
+
+    /* ------- Hero ------- */
+    .hero {
+      padding: 6rem 0 7rem;
+    }
+
+    .eyebrow {
+      font-family: "Inter", system-ui, sans-serif;
+      font-size: 0.76rem;
       font-weight: 500;
-      letter-spacing: -0.03em;
-      line-height: 1.1;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent-ink);
+      margin: 0 0 1.75rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 1.6rem;
+      height: 1px;
+      background: var(--accent);
     }
 
     h1 {
-      max-width: 16ch;
-      font-size: clamp(2.4rem, 6vw, 4.2rem);
-    }
-
-    h2 {
-      font-size: clamp(1.7rem, 4vw, 2.4rem);
-      margin-bottom: 1rem;
-    }
-
-    p {
       margin: 0;
-      color: var(--muted);
-      font-size: clamp(1.04rem, 1.5vw, 1.14rem);
+      font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+      font-weight: 600;
+      font-size: clamp(2.6rem, 7vw, 5rem);
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      color: var(--ink);
+      max-width: 14ch;
     }
 
-    p + p {
-      margin-top: 1rem;
+    h1 em {
+      font-style: normal;
+      font-weight: 600;
+      color: var(--accent-ink);
     }
 
-    .subheadline {
-      margin-top: 1.25rem;
-      color: var(--text);
-      font-size: clamp(1.12rem, 1.9vw, 1.24rem);
+    .lede {
+      margin: 1.75rem 0 0;
+      max-width: 34rem;
+      font-size: clamp(1.15rem, 1.6vw, 1.35rem);
+      line-height: 1.55;
+      color: var(--ink-2);
     }
 
-    .actions {
+    .hero-cta {
+      margin-top: 2.5rem;
       display: flex;
+      align-items: center;
+      gap: 1.5rem;
       flex-wrap: wrap;
-      gap: 0.75rem;
-      margin-top: 1.75rem;
     }
 
-    .button {
+    .btn {
+      font-family: "Inter", system-ui, sans-serif;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 2.9rem;
-      padding: 0.75rem 1.1rem;
-      border: 1px solid var(--line);
-      background: var(--button);
-      color: var(--text);
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      font-size: 0.95rem;
-      font-weight: 600;
-      transition: background-color 0.18s ease, border-color 0.18s ease;
+      gap: 0.55rem;
+      padding: 0.95rem 1.35rem;
+      background: var(--ink);
+      color: var(--paper);
+      font-size: 0.92rem;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      border: 1px solid var(--ink);
+      border-radius: 999px;
+      transition: background-color .2s ease, transform .2s ease;
+      cursor: pointer;
     }
 
-    .button:hover,
-    .button:focus-visible {
-      background: var(--button-hover);
-      border-color: #c8d0ca;
+    .btn:hover,
+    .btn:focus-visible {
+      background: var(--accent-ink);
+      border-color: var(--accent-ink);
       outline: none;
     }
 
-    ul {
-      margin: 1.25rem 0 0;
-      padding-left: 1.2rem;
+    .btn::after {
+      content: "\2192";
+      transition: transform .25s ease;
     }
 
-    li {
+    .btn:hover::after { transform: translateX(3px); }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--ink-2);
+      border: 1px solid var(--line);
+    }
+
+    .btn-ghost:hover {
+      background: var(--paper-2);
+      color: var(--ink);
+      border-color: var(--line);
+    }
+
+    .meta-line {
+      font-family: "Inter", system-ui, sans-serif;
+      font-size: 0.82rem;
       color: var(--muted);
-      font-size: clamp(1.04rem, 1.4vw, 1.12rem);
-      margin-top: 0.7rem;
+      letter-spacing: 0.01em;
+    }
+
+    /* ------- Typographic sections ------- */
+    .sec-label {
+      font-family: "Inter", system-ui, sans-serif;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 0 0 2rem;
+    }
+
+    h2 {
+      margin: 0 0 1.75rem;
+      font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+      font-weight: 600;
+      font-size: clamp(1.85rem, 3.4vw, 2.6rem);
+      line-height: 1.18;
+      letter-spacing: -0.025em;
+      color: var(--ink);
+      max-width: 22ch;
+    }
+
+    h2 em {
+      font-style: normal;
+      color: var(--accent-ink);
+    }
+
+    p { margin: 0; color: var(--ink-2); }
+    p + p { margin-top: 1.15rem; }
+
+    .pullquote {
+      margin: 3rem 0;
+      font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: clamp(1.4rem, 2.2vw, 1.75rem);
+      line-height: 1.4;
+      letter-spacing: -0.015em;
+      color: var(--ink);
+      border-left: 2px solid var(--accent);
+      padding-left: 1.5rem;
+      max-width: 32rem;
+    }
+
+    /* ------- The loop (numbered steps) ------- */
+    .loop {
+      margin-top: 2.5rem;
+      display: grid;
+      gap: 0;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 4rem 1fr;
+      gap: 1.5rem;
+      padding: 1.5rem 0;
+      border-top: 1px solid var(--line-soft);
+      align-items: baseline;
+    }
+
+    .step:last-child { border-bottom: 1px solid var(--line-soft); }
+
+    .step-num {
+      font-family: "Inter", system-ui, sans-serif;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+    }
+
+    .step-body {
+      font-size: clamp(1.08rem, 1.5vw, 1.2rem);
+      color: var(--ink);
+      line-height: 1.5;
+    }
+
+    .step-body strong {
+      font-weight: 500;
+      color: var(--ink);
+    }
+
+    .step-body em {
+      font-style: italic;
+      color: var(--accent-ink);
+    }
+
+    /* ------- Learnings (numbered editorial list) ------- */
+    .learn {
+      margin-top: 3rem;
+      counter-reset: learn;
+    }
+
+    .learn li {
+      list-style: none;
+      counter-increment: learn;
+      display: grid;
+      grid-template-columns: 4rem 1fr;
+      gap: 1.5rem;
+      padding: 1.75rem 0;
+      border-top: 1px solid var(--line-soft);
+      align-items: baseline;
+    }
+
+    .learn li:last-child { border-bottom: 1px solid var(--line-soft); }
+
+    .learn li::before {
+      content: "0" counter(learn);
+      font-family: "Inter", system-ui, sans-serif;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      color: var(--accent-ink);
+    }
+
+    .learn li span {
+      font-family: "Inter", system-ui, sans-serif;
+      font-size: clamp(1.08rem, 1.55vw, 1.22rem);
+      font-weight: 400;
+      line-height: 1.5;
+      color: var(--ink);
+      letter-spacing: -0.005em;
+    }
+
+    .learn {
+      padding: 0;
+      margin: 3rem 0 0;
+    }
+
+    /* ------- About ------- */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      align-items: start;
+    }
+
+    @media (min-width: 800px) {
+      .about-grid {
+        grid-template-columns: 1fr 1.3fr;
+        gap: 4rem;
+      }
     }
 
     .about-photo {
-      margin: 0 0 1.5rem;
+      margin: 0;
     }
 
     .about-photo img {
       width: 100%;
       height: auto;
-      border: 1px solid var(--line);
-      background: #ffffff;
+      filter: saturate(0.92);
+      border-radius: 2px;
     }
+
+    .about-copy h2 { max-width: 18ch; }
+
+    /* ------- FAQ ------- */
+    .faq details {
+      border-top: 1px solid var(--line-soft);
+      padding: 1.5rem 0;
+    }
+
+    .faq details:last-of-type { border-bottom: 1px solid var(--line-soft); }
+
+    .faq summary {
+      list-style: none;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 2rem;
+      font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+      font-size: clamp(1.08rem, 1.5vw, 1.2rem);
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      transition: color .2s ease;
+    }
+
+    .faq summary::-webkit-details-marker { display: none; }
+
+    .faq summary:hover { color: var(--accent-ink); }
+
+    .faq summary::after {
+      content: "+";
+      font-family: "Inter", system-ui, sans-serif;
+      font-size: 1.25rem;
+      color: var(--muted);
+      transition: transform .25s ease;
+      flex-shrink: 0;
+    }
+
+    .faq details[open] summary::after {
+      content: "\2013";
+      transform: none;
+    }
+
+    .faq details p {
+      margin-top: 1rem;
+      max-width: 34rem;
+    }
+
+    /* ------- Booking ------- */
+    .booking-band {
+      background: var(--paper-2);
+    }
+
+    .booking-band .wrap { padding: 6rem 0; }
 
     .booking-wrap {
-      margin-top: 1.75rem;
+      margin-top: 2.5rem;
+      background: var(--paper);
       border: 1px solid var(--line);
-      background: #ffffff;
+      border-radius: 2px;
+      overflow: hidden;
     }
 
-    footer {
-      padding-top: 2.5rem;
-      border-top: 1px solid var(--line);
+    .booking-placeholder {
+      min-height: 700px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       color: var(--muted);
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      font-size: 0.95rem;
+      font-family: "Inter", system-ui, sans-serif;
+      font-size: 0.9rem;
+    }
+
+    /* ------- Footer ------- */
+    footer {
+      padding: 4rem 0 5rem;
       text-align: center;
     }
 
+    footer .closing {
+      font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: clamp(1.08rem, 1.5vw, 1.2rem);
+      letter-spacing: -0.01em;
+      color: var(--ink-2);
+      max-width: 28rem;
+      margin: 0 auto;
+    }
+
+    footer .fine {
+      margin-top: 2rem;
+      font-family: "Inter", system-ui, sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+    }
+
+    /* ------- Reveal animation ------- */
+    .reveal {
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity 0.9s cubic-bezier(0.22, 0.61, 0.36, 1),
+                  transform 0.9s cubic-bezier(0.22, 0.61, 0.36, 1);
+      will-change: opacity, transform;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal,
+      .reveal.is-visible {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+      * {
+        animation-duration: 0.001ms !important;
+        transition-duration: 0.001ms !important;
+      }
+    }
+
+    /* ------- Mobile refinements ------- */
     @media (max-width: 640px) {
-      main {
-        width: min(calc(100% - 1.25rem), var(--page-width));
-        padding-top: 2rem;
-        padding-bottom: 3rem;
-      }
-
-      section {
-        padding: 3rem 0;
-      }
-
-      .soft {
-        margin-left: -0.625rem;
-        margin-right: -0.625rem;
-        padding-left: 0.625rem;
-        padding-right: 0.625rem;
-      }
-
-      .actions {
-        flex-direction: column;
-      }
-
-      .button {
-        width: 100%;
-      }
+      section { padding: 4.5rem 0; }
+      .hero { padding: 3rem 0 4.5rem; }
+      .pullquote { padding-left: 1.1rem; margin: 2.25rem 0; }
+      .step, .learn li { grid-template-columns: 3rem 1fr; gap: 1rem; }
+      .hero-cta .btn { width: 100%; }
+      .booking-band .wrap { padding: 4.5rem 0; }
+      footer { padding: 3rem 0 4rem; }
     }
   </style>
 </head>
 <body>
-  <main>
-    <section>
-      <h1>Agoraphobia Recovery (step-by-step guidance)</h1>
-      <p class="subheadline">
-        When you&rsquo;re living with agoraphobia, life can start revolving around one
-        question: &ldquo;What if I panic?&rdquo;
-      </p>
-      <p>
-        But the fear of panic does not have to keep deciding where you go, what you do, and
-        how much of life you get to have. There is a way to respond differently.
-      </p>
-      <div class="actions">
-        <a class="button" href="#book-call" data-scroll-target="book-call">Book a Free Call</a>
+
+  <header class="topbar">
+    <div class="wrap-wide topbar-inner">
+      <a href="#top" class="wordmark">Enis&nbsp;Cirak</a>
+      <a href="#book" class="nav-book ui" data-scroll-target="book">Book a free call</a>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <div class="wrap-wide">
+        <p class="eyebrow">Agoraphobia Recovery &middot; 1&#8209;on&#8209;1 Coaching</p>
+        <h1>A quieter way <em>back</em><br />to the world.</h1>
+        <p class="lede">
+          Gentle, root&#8209;level work with the fear of panic &mdash; not to manage it, but to meet
+          it, understand it, and stop building your life around it.
+        </p>
+        <div class="hero-cta">
+          <a class="btn" href="#book" data-scroll-target="book">Book a free 30&#8209;minute call</a>
+          <span class="meta-line">No pressure. Just a conversation.</span>
+        </div>
       </div>
     </section>
 
-    <section class="soft">
-      <h2>You are not broken</h2>
-      <p>
-        Agoraphobia can make you feel trapped in a life that keeps getting smaller. You may
-        look fine on the outside while inside you&rsquo;re scanning for exits, bracing for
-        symptoms, and trying to stay one step ahead of the next panic attack. That is
-        exhausting. It can start to feel like you&rsquo;re not really living anymore.
-        You&rsquo;re just managing, avoiding, enduring. But this is not the end of your life.
-      </p>
-    </section>
+    <div class="rule"></div>
 
-    <section>
-      <h2>The real problem is the feedback loop.</h2>
-      <p>
-        One little sensation turns into a thought: &ldquo;What if this becomes a panic
-        attack?&rdquo; That thought creates more fear. The fear releases adrenaline, which makes
-        the sensations more intense. And suddenly you&rsquo;re caught in a loop. When you
-        understand that loop, everything starts to make more sense. And when you learn how to
-        interrupt it, everything can begin to change.
-      </p>
-    </section>
-
-    <section class="soft">
-      <h2>Five things you will learn while working with me:</h2>
-      <ul>
-        <li>what&rsquo;s happening in your mind and body during panic</li>
-        <li>how to stop treating adrenaline as a threat and break the feedback loop</li>
-        <li>how to release pent up emotions and stuck energy</li>
-        <li>how to trust your own body again and feel safe anywhere you go</li>
-        <li>how to feel confident and free</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>About me</h2>
-      <figure class="about-photo">
-        <img src="about-photo.jpg" alt="Enis Cirak speaking to a group" />
-      </figure>
-      <p>
-        I have been through anxiety in my own life, and I know how overwhelming and limiting
-        it can feel when fear starts shaping your decisions.
-      </p>
-      <p>
-        Part of why I do this work is because I understand how painful it is to feel like
-        your world is getting smaller. I want to help other people move through that same kind
-        of struggle with more clarity, steadiness, and hope.
-      </p>
-    </section>
-
-    <section class="soft" id="book-call">
-      <h2>Book a free 30-minute call</h2>
-      <p>
-        If you&rsquo;re ready to stop organizing your life around &ldquo;what if I panic?&rdquo;,
-        book a free call below.
-      </p>
-      <div class="booking-wrap">
-        <!-- Calendly inline widget begin -->
-        <div class="calendly-inline-widget" data-url="https://calendly.com/eniscirak/30min" style="min-width:320px;height:700px;"></div>
-        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-        <!-- Calendly inline widget end -->
+    <!-- ===== You are not broken ===== -->
+    <section class="reveal">
+      <div class="wrap">
+        <p class="sec-label">01 &middot; Where you might be</p>
+        <h2>You are not <em>broken</em>. Your world has just gotten smaller.</h2>
+        <p>
+          Agoraphobia can make life feel like a shrinking room. You may look fine on the outside
+          while, inside, you&rsquo;re scanning for exits, bracing for symptoms, and trying to stay
+          one step ahead of the next panic attack.
+        </p>
+        <p>
+          That&rsquo;s exhausting. It can start to feel like you&rsquo;re not really living &mdash;
+          just managing, avoiding, enduring.
+        </p>
+        <p>
+          And the part of you that got this vigilant isn&rsquo;t broken either. It&rsquo;s been
+          trying, in its own way, to protect you. We&rsquo;re not going to fight it. We&rsquo;re
+          going to listen to it.
+        </p>
+        <p class="pullquote">
+          This isn&rsquo;t the end of your life. It&rsquo;s a pattern &mdash; and patterns, even
+          old protective ones, can change.
+        </p>
       </div>
     </section>
 
-    <footer>
-      <p>You deserve more than a life built around avoidance.</p>
-    </footer>
+    <!-- ===== The loop ===== -->
+    <section class="reveal">
+      <div class="wrap">
+        <p class="sec-label">02 &middot; The real problem</p>
+        <h2>It&rsquo;s a feedback loop &mdash; and loops can be <em>interrupted</em>.</h2>
+        <p>
+          One little sensation becomes a thought. The thought creates fear. The fear releases
+          adrenaline. And suddenly you&rsquo;re caught inside something that feels bigger than you.
+        </p>
+        <ol class="loop">
+          <li class="step">
+            <span class="step-num">01</span>
+            <span class="step-body"><strong>A sensation.</strong> A skipped heartbeat, a wave of dizziness, a tight chest.</span>
+          </li>
+          <li class="step">
+            <span class="step-num">02</span>
+            <span class="step-body"><strong>A thought.</strong> <em>&ldquo;What if this becomes a panic attack?&rdquo;</em></span>
+          </li>
+          <li class="step">
+            <span class="step-num">03</span>
+            <span class="step-body"><strong>Fear.</strong> Which releases adrenaline into the body.</span>
+          </li>
+          <li class="step">
+            <span class="step-num">04</span>
+            <span class="step-body"><strong>Louder sensations.</strong> And the loop tightens.</span>
+          </li>
+        </ol>
+        <p style="margin-top: 2.5rem;">
+          Seeing the loop is the first step. But naming it isn&rsquo;t the same as healing it.
+          Real change happens when you also turn toward what&rsquo;s underneath it &mdash; the
+          emotion, the part of you that&rsquo;s been bracing &mdash; and let it finally move
+          through.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== Five learnings ===== -->
+    <section class="reveal">
+      <div class="wrap">
+        <p class="sec-label">03 &middot; What we&rsquo;ll work on</p>
+        <h2>Five things you&rsquo;ll learn, <em>together</em>.</h2>
+        <ol class="learn">
+          <li><span>How to recognise panic as a pattern passing through you &mdash; not as who you are.</span></li>
+          <li><span>How to meet the anxious part of you with curiosity, instead of going to war with it.</span></li>
+          <li><span>How to release the emotion and energy that&rsquo;s been stuck underneath the fear.</span></li>
+          <li><span>How to stay present, even while your body is loud.</span></li>
+          <li><span>How to feel at home in yourself &mdash; not just less anxious. Actually free.</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section class="reveal">
+      <div class="wrap-wide">
+        <p class="sec-label">04 &middot; About</p>
+        <div class="about-grid">
+          <figure class="about-photo">
+            <img src="about-photo.jpg" alt="Enis Cirak" loading="lazy" />
+          </figure>
+          <div class="about-copy">
+            <h2>I&rsquo;ve been on the <em>other side</em> of this.</h2>
+            <p>
+              I&rsquo;ve lived through anxiety in my own life. I know how overwhelming and limiting
+              it feels when fear starts shaping every decision &mdash; where you go, who you see,
+              whether you leave the house.
+            </p>
+            <p>
+              My work draws on Internal Family Systems, Michael Singer&rsquo;s teaching on
+              releasing stored emotion, the present&#8209;moment clarity of Eckhart Tolle and
+              Adyashanti, and the practical cognitive tools of Dr. David Burns. The thread through
+              all of it: we don&rsquo;t numb, fight, or outrun what you&rsquo;re feeling. We turn
+              toward it &mdash; gently &mdash; and let it resolve at the root.
+            </p>
+            <p>
+              Part of why I do this is because I remember how painful it is to watch your world
+              get smaller. I want to help other people move through that same struggle with more
+              clarity, steadiness, and hope.
+            </p>
+            <p>
+              We&rsquo;ll go at your pace. No rushing, no pushing, no forcing. Just honest
+              conversation and real, root&#8209;level work.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="reveal">
+      <div class="wrap">
+        <p class="sec-label">05 &middot; Common questions</p>
+        <h2>A few things people often ask.</h2>
+        <div class="faq" style="margin-top: 2.5rem;">
+          <details>
+            <summary>What if I can&rsquo;t leave the house for the call?</summary>
+            <p>You don&rsquo;t need to. Every call happens online, from wherever feels safest.</p>
+          </details>
+          <details>
+            <summary>How is this different from CBT or standard anxiety therapy?</summary>
+            <p>We use some cognitive tools &mdash; especially for understanding the feedback loop. But the work also goes deeper: into the parts of you that are generating the fear, the emotion stored underneath, and the presence you can build to meet it all without being swept away. The goal isn&rsquo;t to manage symptoms. It&rsquo;s to resolve what&rsquo;s driving them.</p>
+          </details>
+          <details>
+            <summary>Do I have to stop my medication?</summary>
+            <p>No, and I&rsquo;d never advise that. This work sits alongside whatever you&rsquo;re already doing. Medication decisions stay between you and your doctor.</p>
+          </details>
+          <details>
+            <summary>What does a session actually look like?</summary>
+            <p>A calm conversation. We map what&rsquo;s happening in your specific case, work gently with the parts of you that are reacting, and make room for what&rsquo;s been stuck to move. No exposure drills, no pushing, no forcing.</p>
+          </details>
+          <details>
+            <summary>Is the first call really free?</summary>
+            <p>Yes &mdash; a free 30&#8209;minute conversation. No obligation. If it doesn&rsquo;t feel like the right fit, you leave with a clearer picture of what&rsquo;s going on, and nothing else.</p>
+          </details>
+          <details>
+            <summary>How long does this take?</summary>
+            <p>It varies. Most people feel a meaningful shift within the first few weeks, as their relationship with panic starts to change. Full integration &mdash; feeling steady, not just managing &mdash; takes longer. We go at your pace.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
   </main>
 
+  <!-- ===== Booking band ===== -->
+  <section class="booking-band" id="book">
+    <div class="wrap">
+      <p class="sec-label">06 &middot; Book a call</p>
+      <h2>A free 30&#8209;minute call &mdash; <em>just a conversation</em>.</h2>
+      <p>
+        If you&rsquo;re ready to stop organising your life around &ldquo;what if I panic?&rdquo;,
+        pick a time below. No pressure to commit to anything. We&rsquo;ll just talk.
+      </p>
+      <div class="booking-wrap">
+        <div id="calendly-mount" class="booking-placeholder">Loading calendar&hellip;</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p class="closing">You deserve more than a life built around avoidance.</p>
+    <p class="fine">&copy; Enis Cirak</p>
+  </footer>
+
   <script>
+    // Smooth-scroll + analytics on CTA clicks
     document.querySelectorAll("[data-scroll-target]").forEach(function (link) {
       link.addEventListener("click", function (event) {
         var targetId = link.getAttribute("data-scroll-target");
         var target = document.getElementById(targetId);
-
-        if (!target) {
-          return;
-        }
+        if (!target) return;
 
         event.preventDefault();
-        gtag("event", "book_call_click", {
-          event_category: "engagement",
-          event_label: "Book a Free Call"
-        });
+        if (typeof gtag === "function") {
+          gtag("event", "book_call_click", {
+            event_category: "engagement",
+            event_label: "Book a Free Call"
+          });
+        }
         target.scrollIntoView({ behavior: "smooth", block: "start" });
       });
     });
+
+    // Reveal on scroll (respects prefers-reduced-motion via CSS)
+    var revealEls = document.querySelectorAll(".reveal");
+    if ("IntersectionObserver" in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            io.unobserve(entry.target);
+          }
+        });
+      }, { rootMargin: "0px 0px -10% 0px", threshold: 0.05 });
+      revealEls.forEach(function (el) { io.observe(el); });
+    } else {
+      revealEls.forEach(function (el) { el.classList.add("is-visible"); });
+    }
+
+    // Lazy-load Calendly only when the booking section is near the viewport
+    var bookingSection = document.getElementById("book");
+    var calendlyLoaded = false;
+    function loadCalendly() {
+      if (calendlyLoaded) return;
+      calendlyLoaded = true;
+
+      var mount = document.getElementById("calendly-mount");
+      mount.classList.remove("booking-placeholder");
+      mount.innerHTML = '';
+      mount.removeAttribute('style');
+
+      var widget = document.createElement("div");
+      widget.className = "calendly-inline-widget";
+      widget.setAttribute("data-url", "https://calendly.com/eniscirak/30min");
+      widget.style.minWidth = "320px";
+      widget.style.height = "700px";
+      mount.appendChild(widget);
+
+      var s = document.createElement("script");
+      s.src = "https://assets.calendly.com/assets/external/widget.js";
+      s.async = true;
+      document.body.appendChild(s);
+    }
+
+    if ("IntersectionObserver" in window && bookingSection) {
+      var bookingIo = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            loadCalendly();
+            bookingIo.disconnect();
+          }
+        });
+      }, { rootMargin: "400px 0px" });
+      bookingIo.observe(bookingSection);
+    } else {
+      loadCalendly();
+    }
   </script>
 </body>
 </html>
