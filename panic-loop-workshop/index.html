@@ -440,6 +440,34 @@
         linear-gradient(180deg, rgba(248, 244, 234, 0.78), rgba(242, 237, 225, 0));
     }
 
+    .story-panel {
+      display: grid;
+      grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
+      gap: 3rem;
+      align-items: start;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+      padding: clamp(1.35rem, 3vw, 2.2rem);
+    }
+
+    .story-panel .about-photo {
+      position: sticky;
+      top: 1.5rem;
+    }
+
+    .story-panel .about-photo img {
+      border-radius: 6px;
+    }
+
+    .story-note {
+      margin-top: 1.5rem;
+      padding-top: 1.35rem;
+      border-top: 1px solid var(--line-soft);
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
     .two-col {
       display: grid;
       grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
@@ -548,6 +576,49 @@
       color: var(--ink);
       font-size: 1rem;
       line-height: 1.45;
+    }
+
+    .outcome-grid,
+    .proof-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 2.5rem;
+    }
+
+    .outcome-card,
+    .proof-card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(248, 244, 234, 0.66);
+      padding: 1.35rem;
+    }
+
+    .outcome-card span,
+    .proof-card span {
+      display: block;
+      margin-bottom: 0.85rem;
+      font-size: 0.74rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent-ink);
+    }
+
+    .outcome-card p,
+    .proof-card p {
+      font-size: 0.98rem;
+      line-height: 1.55;
+    }
+
+    .proof-card {
+      background: var(--surface);
+    }
+
+    .proof-note {
+      margin-top: 1.35rem;
+      color: var(--muted);
+      font-size: 0.86rem;
     }
 
     .split-lists {
@@ -808,10 +879,16 @@
     @media (max-width: 1040px) {
       .hero-grid,
       .two-col,
+      .story-panel,
       .session-panel,
       .about-grid {
         grid-template-columns: 1fr;
         gap: 2.75rem;
+      }
+
+      .story-panel .about-photo {
+        position: static;
+        max-width: 28rem;
       }
 
       .offer-panel {
@@ -828,6 +905,11 @@
 
       .practical-list {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .outcome-grid,
+      .proof-grid {
+        grid-template-columns: 1fr;
       }
     }
 
@@ -1079,6 +1161,38 @@
       </div>
     </section>
 
+    <section class="reveal">
+      <div class="wrap-wide story-panel">
+        <figure class="about-photo">
+          <img src="../about-photo.jpg" alt="Enis Cirak" loading="lazy" />
+        </figure>
+        <div>
+          <p class="sec-label">Why I teach this</p>
+          <h2>I know how convincing panic can feel from the inside.</h2>
+          <p>
+            My name is Enis Cirak. I lived with panic attacks, depersonalization, and intense
+            anxiety for years. It changed the way I moved through ordinary life: social situations,
+            meetings, trying new foods, and even being in my own body could start to feel loaded.
+          </p>
+          <p>
+            I remember what it is like to look fine on the outside while quietly scanning your
+            sensations, planning around fear, and wondering why your nervous system will not just
+            settle down.
+          </p>
+          <p>
+            This workshop comes from that lived experience, along with years of studying meditation,
+            somatic awareness, cognitive tools, nervous-system education, and compassionate inner
+            work. It is not about pushing yourself harder. It is about understanding the loop clearly
+            enough that you can begin responding to it in a different way.
+          </p>
+          <p class="story-note">
+            The tone of this workshop is practical and human: clear education, simple practices, and
+            room for the part of you that is tired of fighting your own body.
+          </p>
+        </div>
+      </div>
+    </section>
+
     <section class="reveal" id="learn">
       <div class="wrap-wide">
         <p class="sec-label">What you&rsquo;ll learn</p>
@@ -1156,6 +1270,32 @@
 
     <section class="reveal">
       <div class="wrap-wide">
+        <p class="sec-label">The honest promise</p>
+        <h2>This is designed to give you a clearer map, not a miracle claim.</h2>
+        <p class="intro-copy">
+          No workshop can ethically promise that panic, DP/DR, or avoidance will disappear. What
+          this can give you is a calmer way to understand what is happening, a language for your
+          pattern, and a practice you can repeat when your body starts sounding the alarm.
+        </p>
+        <div class="outcome-grid" aria-label="Grounded workshop outcomes">
+          <article class="outcome-card">
+            <span>Less confusion</span>
+            <p>When sensations make more sense, they often become easier to meet without immediately treating them as danger.</p>
+          </article>
+          <article class="outcome-card">
+            <span>More choice</span>
+            <p>You will learn where checking, resistance, reassurance-seeking, and avoidance can keep the loop alive.</p>
+          </article>
+          <article class="outcome-card">
+            <span>A next practice</span>
+            <p>You will leave with a simple 7-day plan so the workshop turns into something you can actually work with.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <div class="wrap-wide">
         <div class="split-lists">
           <div>
             <p class="sec-label">Good fit</p>
@@ -1204,6 +1344,37 @@
           <li>A 7-day practice plan.</li>
           <li>A clearer sense of whether private coaching or community support is the right next step.</li>
         </ul>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <div class="wrap-wide">
+        <p class="sec-label">Related client feedback</p>
+        <h2>People are often looking for three things: to feel understood, to get a map, and to know what to practice next.</h2>
+        <p class="intro-copy">
+          This is a new workshop, so workshop-specific testimonials should be added only after
+          participants give permission. In the broader Inner Solutions coaching work, public client
+          feedback often centers on feeling understood by coaches who have been through anxiety
+          themselves, receiving practical next steps, and feeling less alone in the pattern.
+        </p>
+        <div class="proof-grid" aria-label="Themes from related coaching feedback">
+          <article class="proof-card">
+            <span>Feeling understood</span>
+            <p>Clients often respond to being met by someone who knows the fear from the inside, not just as an idea.</p>
+          </article>
+          <article class="proof-card">
+            <span>Practical support</span>
+            <p>The feedback tends to name simple tools and concrete steps as part of what makes the work feel useful.</p>
+          </article>
+          <article class="proof-card">
+            <span>More hope</span>
+            <p>People often describe relief when the pattern finally has a shape and they can see where to begin.</p>
+          </article>
+        </div>
+        <p class="proof-note">
+          <!-- TODO: Replace this related-feedback section with workshop-specific testimonials once participants give permission. -->
+          Social proof should stay specific, permission-based, and non-medical: no cure claims, no guaranteed outcomes.
+        </p>
       </div>
     </section>
 
