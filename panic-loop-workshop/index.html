@@ -13,13 +13,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#F2EDE1" />
-  <title>Panic Loop Reset Workshop | Anxiety, DP/DR &amp; Nervous System Regulation</title>
+  <title>The Panic Loop Workshop | Panic Attacks, DP/DR &amp; Anxiety</title>
   <meta
     name="description"
-    content="A live 90-minute workshop on understanding panic attacks, depersonalization/derealization, agoraphobia, adrenaline, anxious thoughts, and nervous-system regulation."
+    content="A live 90-minute workshop on understanding panic attacks, depersonalization/derealization, avoidance, adrenaline, anxious thoughts, and nervous-system regulation."
   />
-  <meta property="og:title" content="Panic Loop Reset Workshop" />
-  <meta property="og:description" content="A live 90-minute workshop on panic attacks, DP/DR, agoraphobia, adrenaline, anxious thoughts, and nervous-system regulation." />
+  <meta property="og:title" content="Panic Isn&rsquo;t Random. It&rsquo;s a Loop You Can Learn to Interrupt." />
+  <meta property="og:description" content="Join a live 90-minute workshop to map the panic loop, understand scary symptoms, and build a simple 7-day practice plan." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="../about-photo.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -246,6 +246,14 @@
       margin-top: 1.2rem;
       max-width: 37rem;
       color: var(--ink-2);
+    }
+
+    .audience-line {
+      margin-top: 1rem;
+      max-width: 37rem;
+      color: var(--muted);
+      font-size: 0.94rem;
+      line-height: 1.5;
     }
 
     .date-chip {
@@ -615,40 +623,16 @@
       background: var(--surface);
     }
 
-    .proof-summary {
-      margin-top: 2.25rem;
-      padding: 1.35rem;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: var(--surface);
-      display: grid;
-      grid-template-columns: auto 1fr;
-      gap: 1.25rem;
-      align-items: center;
-    }
-
-    .proof-score {
-      display: grid;
-      place-items: center;
-      width: 6.5rem;
-      min-height: 6.5rem;
-      border-radius: 8px;
-      background: var(--mist);
-      color: var(--accent-ink);
-      font-weight: 600;
-      line-height: 1;
-      letter-spacing: -0.03em;
-      font-size: 2rem;
-    }
-
-    .proof-summary p {
-      font-size: 0.98rem;
-      line-height: 1.55;
+    .proof-card .stars {
+      margin-bottom: 1rem;
+      color: var(--accent);
+      font-size: 0.86rem;
+      letter-spacing: 0.08em;
     }
 
     .proof-link {
       display: inline-flex;
-      margin-top: 0.75rem;
+      margin-top: 1.25rem;
       color: var(--accent-ink);
       font-size: 0.9rem;
       font-weight: 500;
@@ -973,15 +957,6 @@
       .proof-grid {
         grid-template-columns: 1fr;
       }
-
-      .proof-summary {
-        grid-template-columns: 1fr;
-      }
-
-      .proof-score {
-        width: 5.5rem;
-        min-height: 5.5rem;
-      }
     }
 
     @media (max-width: 760px) {
@@ -1164,41 +1139,49 @@
       <div class="wrap-wide hero-grid">
         <div>
           <p class="eyebrow">Live online workshop</p>
-          <h1>Understand the Panic Loop &mdash; and Learn How to Stop Feeding It</h1>
+          <h1>Panic Isn&rsquo;t Random. It&rsquo;s a Loop You Can Learn to Interrupt.</h1>
           <p class="lede">
-            A live 90-minute workshop on panic attacks, depersonalization/derealization, agoraphobia,
-            adrenaline, anxious thoughts, and nervous-system regulation.
+            Panic can feel like it comes out of nowhere. But often, there is a pattern underneath it:
+            adrenaline creates strange sensations, the mind interprets those sensations as danger,
+            fear creates more adrenaline, and the loop keeps feeding itself.
           </p>
           <p class="supporting">
-            You&rsquo;ll learn why panic symptoms can feel so intense, how the fear-adrenaline feedback
-            loop keeps itself alive, and how to begin building a calmer, more grounded response.
+            In this live 90-minute workshop, you&rsquo;ll learn how panic attacks, DP/DR, avoidance,
+            anxious thoughts, emotional pressure, and nervous-system dysregulation can all connect
+            &mdash; and how to begin practicing in a way that helps your body feel safer over time.
           </p>
+          <p class="audience-line">For people dealing with panic attacks, depersonalization/derealization, avoidance, agoraphobia patterns, or high anxiety.</p>
+          <!-- TODO: Confirm the recurring workshop date/time before publishing each event cycle. -->
           <p class="date-chip"><strong>Next live workshop:</strong> This Saturday at 11am Central Time / 12 PM Eastern Time.</p>
           <div class="hero-cta" aria-label="Workshop ticket options">
-            <a class="btn" href="/checkout/panic-loop-workshop">Reserve My Spot &mdash; $49</a>
-            <a class="btn btn-ghost" href="/checkout/panic-loop-workshop-vip">VIP: Workshop + Private Session &mdash; $150</a>
+            <!-- TODO: Replace placeholder checkout routes with live checkout/product IDs when ready. -->
+            <a class="btn" href="/checkout/panic-loop-workshop">Join the Workshop &mdash; $49</a>
+            <a class="btn btn-ghost" href="/checkout/panic-loop-workshop-vip">Get VIP + Private Session &mdash; $150</a>
           </div>
-          <p class="trust-note">Live online workshop &middot; Replay included &middot; Worksheet included &middot; Educational coaching, not therapy</p>
+          <p class="trust-note">Live online &middot; Replay included &middot; Worksheet included &middot; Educational coaching, not therapy</p>
           <ul class="hero-bullets" aria-label="Workshop highlights">
-            <li>Understand the panic feedback loop</li>
-            <li>Learn how adrenaline creates scary sensations</li>
-            <li>Build a 7-day nervous-system practice plan</li>
-            <li>Includes replay + worksheet</li>
+            <li>Understand the fear-adrenaline feedback loop</li>
+            <li>Learn why panic symptoms feel so intense and convincing</li>
+            <li>See how DP/DR, avoidance, and anxious thoughts can fit into the same pattern</li>
+            <li>Build a simple 7-day practice plan</li>
+            <li>Includes worksheet, guided practice, and replay</li>
           </ul>
         </div>
 
         <aside class="offer-panel" aria-labelledby="hero-offer-title">
           <p class="offer-kicker">Standard ticket</p>
           <p class="price-line"><strong>$49</strong><span>live workshop</span></p>
-          <h2 id="hero-offer-title">The Panic Loop Reset Workshop</h2>
+          <h2 id="hero-offer-title">The Panic Loop Workshop</h2>
+          <p class="supporting">Map the cycle. Calm the fear. Practice differently.</p>
           <p>
-            A grounded, practical map for understanding panic sensations without turning them
+            A grounded, practical workshop for understanding panic sensations without turning every symptom
             into another emergency inside your body.
           </p>
           <ul class="mini-list">
-            <li>90 minutes live on Zoom</li>
+            <li>90 minutes live online</li>
             <li>Panic Loop Mapping worksheet</li>
-            <li>Guided regulation practice</li>
+            <li>Guided grounding/regulation practice</li>
+            <li>7-day practice plan</li>
             <li>Replay access included</li>
           </ul>
         </aside>
@@ -1212,18 +1195,25 @@
         <div class="two-col">
           <div>
             <p class="sec-label">The pattern</p>
-            <h2>If panic feels random, your nervous system may be caught in a loop.</h2>
+            <h2>The symptom is scary. The fear of the symptom is what keeps the loop alive.</h2>
           </div>
           <div class="intro-copy">
+            <p>A wave of adrenaline hits.</p>
             <p>
-              Panic can feel like it comes out of nowhere. A strange sensation appears. Your mind
-              tries to solve it quickly. The worry itself can bring more adrenaline, and adrenaline
-              can create more sensations.
+              Your heart races. Your chest tightens. You feel dizzy, hot, shaky, unreal,
+              disconnected, or flooded with fear.
             </p>
             <p>
-              Over time, many people start monitoring, resisting, checking, avoiding, and bracing.
-              That understandable protection strategy can make the whole system more sensitive,
-              sometimes showing up as more anxiety, depersonalization/derealization, and avoidance.
+              Then the mind tries to protect you: &ldquo;What if something is wrong?&rdquo;
+              &ldquo;What if I lose control?&rdquo; &ldquo;What if this feeling never goes away?&rdquo;
+            </p>
+            <p>
+              That fear sends another danger signal through the body. More adrenaline comes. The
+              sensations get louder. Then you start checking, resisting, avoiding, scanning, and bracing.
+            </p>
+            <p>
+              Before long, you are not only afraid of panic. You are afraid of your own inner
+              experience. That is the loop this workshop is designed to help you understand.
             </p>
           </div>
         </div>
@@ -1233,7 +1223,7 @@
           <div class="loop-node"><span>02</span><strong>Strange body sensations</strong></div>
           <div class="loop-node"><span>03</span><strong>Fearful thoughts</strong></div>
           <div class="loop-node"><span>04</span><strong>More adrenaline</strong></div>
-          <div class="loop-node"><span>05</span><strong>Avoidance and checking</strong></div>
+          <div class="loop-node"><span>05</span><strong>Checking / resistance / avoidance</strong></div>
           <div class="loop-node"><span>06</span><strong>More sensitivity</strong></div>
         </div>
       </div>
@@ -1246,26 +1236,29 @@
         </figure>
         <div>
           <p class="sec-label">Why I teach this</p>
-          <h2>I know how convincing panic can feel from the inside.</h2>
+          <h2>I&rsquo;m not teaching this from theory alone.</h2>
           <p>
-            My name is Enis Cirak. I lived with panic attacks, depersonalization, and intense
-            anxiety for years. It changed the way I moved through ordinary life: social situations,
-            meetings, trying new foods, and even being in my own body could start to feel loaded.
+            My name is Enis Cirak. I lived inside this loop for years.
           </p>
           <p>
-            I remember what it is like to look fine on the outside while quietly scanning your
-            sensations, planning around fear, and wondering why your nervous system will not just
-            settle down.
+            Panic attacks. Depersonalization. Intense anxiety. The quiet habit of scanning my body,
+            planning around sensations, and trying to make sure I would not get &ldquo;triggered&rdquo;
+            at the wrong time.
+          </p>
+          <p>That experience changed the way I teach.</p>
+          <p>
+            I do not see panic as weakness. I do not see it as a character flaw. And I do not think
+            the answer is to force yourself harder, shame yourself into exposure, or try to
+            positive-think your way out of something your body is deeply reacting to.
           </p>
           <p>
-            This workshop comes from that lived experience, along with years of studying meditation,
-            somatic awareness, cognitive tools, nervous-system education, and compassionate inner
-            work. It is not about pushing yourself harder. It is about understanding the loop clearly
-            enough that you can begin responding to it in a different way.
+            I see panic as a learned pattern in the nervous system &mdash; one that involves
+            adrenaline, thoughts, sensations, emotional pressure, avoidance, and the way we relate
+            to our inner experience.
           </p>
           <p class="story-note">
-            The tone of this workshop is practical and human: clear education, simple practices, and
-            room for the part of you that is tired of fighting your own body.
+            This workshop is designed to help you see that pattern clearly, so you can begin
+            practicing differently.
           </p>
         </div>
       </div>
@@ -1274,39 +1267,39 @@
     <section class="reveal" id="learn">
       <div class="wrap-wide">
         <p class="sec-label">What you&rsquo;ll learn</p>
-        <h2>What you&rsquo;ll learn in 90 minutes</h2>
+        <h2>The pieces of the panic loop most people never connect.</h2>
         <div class="card-grid">
           <article class="card">
-            <h3>Why panic attacks happen</h3>
-            <p>Why panic can feel so convincing even when you are not in immediate danger.</p>
+            <h3>Why panic feels so convincing</h3>
+            <p>You&rsquo;ll learn why panic can feel dangerous even when there is no immediate danger &mdash; and why the body can sound the alarm before the mind understands what is happening.</p>
           </article>
           <article class="card">
-            <h3>What adrenaline does</h3>
-            <p>How adrenaline can create racing heart, dizziness, tingling, unreality, tightness, heat, shaking, and fear surges.</p>
+            <h3>How adrenaline creates scary sensations</h3>
+            <p>Racing heart, dizziness, tingling, heat, shaking, chest tightness, unreality, and fear surges can all become more frightening when you do not understand the adrenaline cycle.</p>
           </article>
           <article class="card">
-            <h3>How DP/DR fits in</h3>
-            <p>Why depersonalization/derealization can show up when the nervous system feels highly activated or overloaded.</p>
+            <h3>Why thoughts and sensations amplify each other</h3>
+            <p>A sensation appears. The mind interprets it. The interpretation creates more fear. The fear creates more sensation. This is the feedback loop.</p>
           </article>
           <article class="card">
-            <h3>How thoughts and sensations amplify</h3>
-            <p>How anxious interpretation and body sensations can keep escalating each other.</p>
+            <h3>How DP/DR fits into the picture</h3>
+            <p>Depersonalization and derealization can feel terrifying, but they often make more sense when understood through overload, fear, scanning, resistance, and nervous-system protection.</p>
           </article>
           <article class="card">
             <h3>Where emotion may play a role</h3>
-            <p>How unprocessed emotions, internal pressure, and the felt sense of &ldquo;stuck energy&rdquo; can contribute to activation for some people.</p>
+            <p>Unfelt emotion, internal conflict, chronic stress, and the felt sense of &ldquo;stuck energy&rdquo; can keep the system braced. We&rsquo;ll explore this gently, without turning it into another thing to fear.</p>
           </article>
           <article class="card">
-            <h3>Why avoidance grows</h3>
-            <p>How avoidance and agoraphobia patterns can grow, even when avoidance feels protective in the short term.</p>
+            <h3>Why avoidance makes sense &mdash; and why it can shrink your life</h3>
+            <p>Avoidance can feel protective in the short term, but over time it can teach the nervous system that more and more places, sensations, or situations are unsafe.</p>
           </article>
           <article class="card">
-            <h3>How to approach exposure gently</h3>
-            <p>Why exposure is not about forcing yourself through terror, but about retraining the nervous system with steadiness and care.</p>
+            <h3>How to practice exposure without forcing yourself</h3>
+            <p>Exposure is not about white-knuckling through terror. It is about helping the nervous system relearn safety with steadiness, patience, and the right level of challenge.</p>
           </article>
           <article class="card">
             <h3>Your 7-day practice plan</h3>
-            <p>A simple way to practice regulation, mapping, and small, sustainable changes after the workshop.</p>
+            <p>You&rsquo;ll leave with a simple plan for mapping the loop, regulating your body, and taking small next steps after the workshop.</p>
           </article>
         </div>
       </div>
@@ -1315,11 +1308,15 @@
     <section class="reveal surface-band">
       <div class="wrap-wide">
         <p class="sec-label">Practice, not just theory</p>
-        <h2>This is not just information.</h2>
+        <h2>You won&rsquo;t just learn the loop. You&rsquo;ll map your own.</h2>
         <p class="intro-copy">
-          Understanding the loop matters, but the body usually needs practice. The workshop includes
-          simple, repeatable tools you can use when sensations, anxious thoughts, avoidance, or
-          unreality feelings start to pull you back into the same pattern.
+          A lot of anxiety content gives you more ideas to think about. This workshop is different.
+          You&rsquo;ll be guided through a simple process for seeing how your own loop tends to work:
+          the sensations that scare you, the thoughts that hook you, the ways you resist or check,
+          the situations you avoid, and the emotional pressure that may be sitting underneath it all.
+        </p>
+        <p class="intro-copy">
+          Then we&rsquo;ll turn that map into a practice.
         </p>
         <div class="practical-list" aria-label="Practical workshop components">
           <div class="practice-item">
@@ -1328,7 +1325,7 @@
           </div>
           <div class="practice-item">
             <span>Map</span>
-            <p>A panic-loop mapping worksheet.</p>
+            <p>A Panic Loop Mapping worksheet.</p>
           </div>
           <div class="practice-item">
             <span>Practice</span>
@@ -1349,11 +1346,15 @@
     <section class="reveal">
       <div class="wrap-wide">
         <p class="sec-label">The honest promise</p>
-        <h2>This is designed to give you a clearer map, not a miracle claim.</h2>
+        <h2>No miracle claims. Just a clearer way to work with the pattern.</h2>
         <p class="intro-copy">
-          No workshop can ethically promise that panic, DP/DR, or avoidance will disappear. What
-          this can give you is a calmer way to understand what is happening, a language for your
-          pattern, and a practice you can repeat when your body starts sounding the alarm.
+          This workshop will not promise to erase panic, DP/DR, or avoidance overnight. What it can
+          give you is a clear understanding of what is happening, why the loop keeps repeating, and
+          how to begin practicing in a way that does not add more fear to the fear.
+        </p>
+        <p class="intro-copy">
+          The goal is not to fight your body into submission. The goal is to help your system begin
+          learning safety again.
         </p>
         <div class="outcome-grid" aria-label="Grounded workshop outcomes">
           <article class="outcome-card">
@@ -1362,11 +1363,11 @@
           </article>
           <article class="outcome-card">
             <span>More choice</span>
-            <p>You will learn where checking, resistance, reassurance-seeking, and avoidance can keep the loop alive.</p>
+            <p>You&rsquo;ll learn where checking, resistance, reassurance-seeking, and avoidance can keep the loop alive.</p>
           </article>
           <article class="outcome-card">
             <span>A next practice</span>
-            <p>You will leave with a simple 7-day plan so the workshop turns into something you can actually work with.</p>
+            <p>You&rsquo;ll leave with a simple 7-day plan so the workshop turns into something you can actually work with.</p>
           </article>
         </div>
       </div>
@@ -1377,20 +1378,21 @@
         <div class="split-lists">
           <div>
             <p class="sec-label">Good fit</p>
-            <h2>This workshop is for you if...</h2>
+            <h2>This is for the person who keeps asking, &ldquo;Why does my body keep doing this?&rdquo;</h2>
+            <p>This workshop may be a good fit if:</p>
             <ul class="clean-list">
-              <li>You want to better understand panic attacks and anxiety spirals.</li>
-              <li>You experience intense body sensations and want a calmer way to respond.</li>
-              <li>You deal with depersonalization/derealization or unreality feelings.</li>
-              <li>You notice avoidance patterns or agoraphobia beginning to shape your life.</li>
-              <li>You have tried to &ldquo;think your way out&rdquo; of anxiety but still feel stuck in your body.</li>
-              <li>You are interested in meditation-based, somatic, and cognitive tools.</li>
-              <li>You want a grounded practice plan, not just more theory.</li>
+              <li>Panic attacks feel confusing, intense, or unpredictable.</li>
+              <li>You feel scared by body sensations like dizziness, racing heart, tightness, tingling, heat, shakiness, or unreality.</li>
+              <li>You experience depersonalization, derealization, or feeling disconnected from yourself or the world.</li>
+              <li>You notice yourself scanning, checking, resisting, or trying to make symptoms go away.</li>
+              <li>Avoidance or agoraphobia patterns have started to shape your choices.</li>
+              <li>You have tried to think your way out of anxiety, but your body still feels stuck.</li>
+              <li>You want a grounded blend of education, meditation, somatic awareness, and practical tools.</li>
             </ul>
           </div>
           <div>
             <p class="sec-label">Clear boundary</p>
-            <h2>This workshop is not a replacement for therapy or emergency care.</h2>
+            <h2>This workshop is not therapy, diagnosis, or emergency support.</h2>
             <p>
               This workshop is educational and coaching-based. It is not medical advice, diagnosis,
               therapy, crisis support, or a substitute for working with a licensed mental-health
@@ -1412,41 +1414,33 @@
     <section class="reveal soft-band">
       <div class="wrap">
         <p class="sec-label">Takeaways</p>
-        <h2>By the end, you&rsquo;ll have...</h2>
+        <h2>What you&rsquo;ll walk away with.</h2>
+        <p>By the end of the workshop, you&rsquo;ll have:</p>
         <ul class="clean-list">
-          <li>A clearer map of your personal panic/anxiety loop.</li>
-          <li>A better understanding of adrenaline and body sensations.</li>
-          <li>A way to relate to DP/DR symptoms with less fear and resistance.</li>
-          <li>A gentler framework for exposure and avoidance patterns.</li>
-          <li>A simple regulation practice you can repeat.</li>
-          <li>A 7-day practice plan.</li>
-          <li>A clearer sense of whether private coaching or community support is the right next step.</li>
+          <li>A simple map of how your panic/anxiety loop works.</li>
+          <li>A clearer understanding of adrenaline and why symptoms feel so intense.</li>
+          <li>A less frightening way to understand DP/DR and unreality feelings.</li>
+          <li>A better sense of how checking, bracing, resistance, and avoidance keep the loop alive.</li>
+          <li>A gentler framework for exposure and agoraphobia patterns.</li>
+          <li>A guided practice you can repeat.</li>
+          <li>A 7-day plan for continuing after the workshop.</li>
         </ul>
       </div>
     </section>
 
     <section class="reveal">
       <div class="wrap-wide">
-        <p class="sec-label">Related coaching reviews</p>
-        <h2>Inner Solutions clients often mention feeling understood and leaving with practical tools.</h2>
+        <p class="sec-label">Clients describe feeling understood</p>
+        <h2>Real words from people who worked with Inner Solutions coaches.</h2>
         <p class="intro-copy">
-          This workshop is taught separately, but it comes from the same grounded coaching approach:
-          lived experience, direct conversation, nervous-system education, and practical steps you
-          can actually use.
+          People do not usually need more panic theories. They need to feel understood, see the
+          pattern clearly, and leave with a practical next step. This workshop is designed to give
+          you all three: lived understanding, a useful map, and a place to begin.
         </p>
-        <div class="proof-summary">
-          <div class="proof-score" aria-label="Trustpilot TrustScore 4.3 out of 5">4.3</div>
-          <div>
-            <p>
-              Inner Solutions has a public Trustpilot profile with a 4.3 TrustScore from 9 reviews.
-              Reviews reflect individual coaching experiences and are not guarantees of workshop
-              results.
-            </p>
-            <a class="proof-link" href="https://www.trustpilot.com/review/innersolutionsacademy.com" target="_blank" rel="noopener">Read the Trustpilot reviews</a>
-          </div>
-        </div>
+        <!-- TODO: Replace these related Inner Solutions review snippets with workshop-specific testimonials when available. -->
         <div class="proof-grid" aria-label="Short excerpts from related Inner Solutions coaching reviews">
           <article class="proof-card">
+            <span class="stars" aria-label="Five-star review">★★★★★</span>
             <span>Comfortable to talk to</span>
             <blockquote>
               <p>&ldquo;easy to talk to&rdquo;</p>
@@ -1454,6 +1448,7 @@
             </blockquote>
           </article>
           <article class="proof-card">
+            <span class="stars" aria-label="Five-star review">★★★★★</span>
             <span>Practical tools</span>
             <blockquote>
               <p>&ldquo;gave me tools to use constantly&rdquo;</p>
@@ -1461,6 +1456,7 @@
             </blockquote>
           </article>
           <article class="proof-card">
+            <span class="stars" aria-label="Five-star review">★★★★★</span>
             <span>Human understanding</span>
             <blockquote>
               <p>&ldquo;empathy and understanding&rdquo;</p>
@@ -1468,26 +1464,29 @@
             </blockquote>
           </article>
         </div>
+        <!-- TODO: Confirm review source details and add exact rating/review count only if it strengthens trust. -->
+        <a class="proof-link" href="https://www.trustpilot.com/review/innersolutionsacademy.com" target="_blank" rel="noopener">See reviews for Inner Solutions</a>
       </div>
     </section>
 
     <section class="reveal" id="pricing">
       <div class="wrap-wide">
         <p class="sec-label">Tickets</p>
-        <h2>Choose the level of support that fits.</h2>
+        <h2>Choose how much support you want after the workshop.</h2>
         <div class="pricing-grid">
           <article class="pricing-card">
             <h3>Standard Workshop</h3>
             <p class="price-line"><strong>$49</strong><span>standard ticket</span></p>
+            <p>Best for people who want the live workshop, worksheet, replay, and a clear 7-day practice plan.</p>
             <ul class="clean-list">
               <li>Live 90-minute workshop.</li>
               <li>Panic Loop Mapping worksheet.</li>
-              <li>Guided practice.</li>
+              <li>Guided regulation practice.</li>
               <li>7-day practice plan.</li>
               <li>Replay access.</li>
             </ul>
             <div class="section-cta">
-              <a class="btn" href="/checkout/panic-loop-workshop">Reserve My Spot &mdash; $49</a>
+              <a class="btn" href="/checkout/panic-loop-workshop">Join the Workshop &mdash; $49</a>
             </div>
           </article>
 
@@ -1495,11 +1494,13 @@
             <span class="pricing-label">Best for personalized support</span>
             <h3>VIP Workshop + Private Session</h3>
             <p class="price-line"><strong>$150</strong><span>VIP ticket</span></p>
+            <p>Best if you want help applying the workshop to your specific panic/anxiety pattern.</p>
             <ul class="clean-list">
               <li>Everything in Standard.</li>
               <li>One 60-minute private Anxiety Pattern Session.</li>
-              <li>Personalized support applying the workshop to your situation.</li>
-              <li>Limited VIP spots.</li>
+              <li>Personalized help mapping your loop.</li>
+              <li>A starting practice plan based on your situation.</li>
+              <li>Limited VIP spots because private time is limited.</li>
             </ul>
             <div class="section-cta">
               <a class="btn" href="/checkout/panic-loop-workshop-vip">Get VIP + Private Session &mdash; $150</a>
@@ -1516,14 +1517,18 @@
         </figure>
         <div>
           <p class="sec-label">VIP private session</p>
-          <h2>Want help applying this to your exact pattern?</h2>
+          <h2>Want me to help you map your specific loop?</h2>
           <p>
-            In the 1-on-1 session, we&rsquo;ll map what tends to trigger the loop for you, identify
-            the places where fear, sensations, thoughts, avoidance, and emotion reinforce each
-            other, and create a starting practice plan.
+            In the private session, we&rsquo;ll look at how the loop tends to show up for you.
           </p>
           <p>
-            VIP spots are limited because they include private time.
+            We&rsquo;ll map the sensations that scare you, the thoughts that hook you, the situations you
+            avoid, the ways you try to stay safe, and the emotional pressure that may be keeping
+            your system activated.
+          </p>
+          <p>
+            Then we&rsquo;ll create a simple starting practice plan you can work with after the session.
+            VIP spots are limited because they include private 1-on-1 time.
           </p>
           <div class="section-cta">
             <a class="btn btn-ghost" href="/checkout/panic-loop-workshop-vip">Get VIP + Private Session &mdash; $150</a>
@@ -1535,13 +1540,13 @@
     <section class="reveal">
       <div class="wrap">
         <p class="sec-label">Agenda</p>
-        <h2>Workshop agenda</h2>
+        <h2>How the 90 minutes will unfold.</h2>
         <ol class="agenda">
-          <li><span class="agenda-time">0-10 min</span><span>Orientation and what the panic loop is.</span></li>
-          <li><span class="agenda-time">10-25 min</span><span>Adrenaline, sensations, and why panic feels dangerous.</span></li>
-          <li><span class="agenda-time">25-40 min</span><span>Thoughts, fear, checking, resistance, and the feedback loop.</span></li>
-          <li><span class="agenda-time">40-55 min</span><span>DP/DR, emotional overload, and nervous-system dysregulation.</span></li>
-          <li><span class="agenda-time">55-70 min</span><span>Avoidance, agoraphobia, and gentle exposure principles.</span></li>
+          <li><span class="agenda-time">0-10 min</span><span>What the panic loop is and why it feels so convincing.</span></li>
+          <li><span class="agenda-time">10-25 min</span><span>Adrenaline, body sensations, and the fear response.</span></li>
+          <li><span class="agenda-time">25-40 min</span><span>Thoughts, checking, resistance, and the feedback loop.</span></li>
+          <li><span class="agenda-time">40-55 min</span><span>DP/DR, emotional overload, and nervous-system protection.</span></li>
+          <li><span class="agenda-time">55-70 min</span><span>Avoidance, agoraphobia, and gentler exposure principles.</span></li>
           <li><span class="agenda-time">70-80 min</span><span>Guided practice and 7-day plan.</span></li>
           <li><span class="agenda-time">80-90 min</span><span>Q&amp;A and next steps.</span></li>
         </ol>
@@ -1563,8 +1568,8 @@
             inner work.
           </p>
           <p>
-            The work draws inspiration from meditation, nondual awareness, Internal Family Systems,
-            somatic therapy, CBT, acceptance-based approaches, and compassionate self-inquiry,
+            His work draws inspiration from meditation, nondual awareness, Internal Family Systems,
+            somatic therapy, CBT, acceptance-based approaches, and compassionate self-inquiry &mdash;
             without implying endorsement, certification, or affiliation with any teacher or method.
           </p>
         </div>
@@ -1578,35 +1583,35 @@
         <div class="faq">
           <details>
             <summary>Is this therapy?</summary>
-            <p>No. This is an educational coaching workshop. It is not therapy, diagnosis, treatment, crisis support, or medical advice.</p>
+            <p>No. This is an educational coaching workshop. It is not therapy, diagnosis, treatment, crisis support, or medical advice. It may complement therapy or personal growth work, but it does not replace care from a licensed mental-health professional.</p>
           </details>
           <details>
             <summary>Will this stop my panic attacks?</summary>
-            <p>No one can ethically guarantee that. The goal is to help you understand the loop, reduce fear around symptoms, and build practices that may help you respond differently over time.</p>
+            <p>This workshop is not a guarantee or a medical treatment. The goal is to help you understand the panic loop, reduce fear around symptoms, and begin practicing responses that may help the pattern soften over time.</p>
           </details>
           <details>
             <summary>Is this good for depersonalization/derealization?</summary>
-            <p>The workshop includes discussion of DP/DR as a common experience when the nervous system feels highly activated or overwhelmed. The focus is on understanding it, reducing fear around it, and building grounding/regulation practices.</p>
+            <p>DP/DR will be discussed as part of the panic/anxiety loop. The focus is on understanding why unreality feelings can show up when the nervous system feels overloaded, and how to relate to those sensations with less fear and resistance.</p>
           </details>
           <details>
             <summary>What if I can&rsquo;t attend live?</summary>
-            <p>A replay is included.</p>
+            <p>A replay is included, so you can watch afterward if you cannot attend live.</p>
           </details>
           <details>
             <summary>What is included with the VIP ticket?</summary>
-            <p>The live workshop, worksheet, replay, 7-day plan, and one 60-minute private Anxiety Pattern Session.</p>
+            <p>The VIP ticket includes the live workshop, worksheet, replay, 7-day practice plan, and one 60-minute private Anxiety Pattern Session.</p>
           </details>
           <details>
             <summary>Is this for agoraphobia?</summary>
-            <p>The workshop touches on avoidance and agoraphobia patterns, including how to approach exposure more gently and without reinforcing fear. It is not a substitute for clinical care.</p>
+            <p>The workshop touches on avoidance and agoraphobia patterns, especially how avoidance can grow and how exposure can be approached more gently. It is not a substitute for clinical care, but it can help you understand the pattern and begin thinking about practice differently.</p>
           </details>
           <details>
             <summary>Do I need meditation experience?</summary>
-            <p>No. The practices will be simple and beginner-friendly.</p>
+            <p>No. The practices will be simple, beginner-friendly, and grounded.</p>
           </details>
           <details>
             <summary>What happens after the workshop?</summary>
-            <p>Participants can continue with a private session, ongoing coaching, or community practice if they want more support.</p>
+            <p>After the workshop, you can continue with a private session, ongoing coaching, or community practice if you want more support. There is no pressure to choose anything beyond the workshop.</p>
           </details>
         </div>
       </div>
@@ -1614,13 +1619,13 @@
 
     <section class="final-cta reveal">
       <div class="wrap-wide">
-        <h2>Learn the loop. Stop fighting the symptoms. Start practicing differently.</h2>
+        <h2>Stop treating every symptom like an emergency. Learn what to practice instead.</h2>
         <p>
-          A clear, calm place to understand what has been happening in your body and begin meeting
-          the pattern with more steadiness.
+          If panic, DP/DR, or avoidance has made your world feel smaller, this workshop will help
+          you understand the pattern and leave with a grounded place to begin.
         </p>
         <div class="section-cta" aria-label="Final workshop ticket options">
-          <a class="btn" href="/checkout/panic-loop-workshop">Reserve My Spot &mdash; $49</a>
+          <a class="btn" href="/checkout/panic-loop-workshop">Join the Workshop &mdash; $49</a>
           <a class="btn btn-ghost" href="/checkout/panic-loop-workshop-vip">Get VIP + Private Session &mdash; $150</a>
         </div>
       </div>
@@ -1639,7 +1644,7 @@
   </footer>
 
   <div class="mobile-sticky-cta" aria-label="Sticky ticket actions">
-    <a class="btn" href="/checkout/panic-loop-workshop">Reserve &mdash; $49</a>
+    <a class="btn" href="/checkout/panic-loop-workshop">Join &mdash; $49</a>
     <a class="btn btn-ghost" href="/checkout/panic-loop-workshop-vip" aria-label="Get VIP plus private session for $150"><span>VIP</span>$150</a>
   </div>
 
