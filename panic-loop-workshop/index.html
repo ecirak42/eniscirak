@@ -19,7 +19,7 @@
     content="A live 90-minute workshop on understanding panic attacks, depersonalization/derealization, agoraphobia, adrenaline, anxious thoughts, and nervous-system regulation."
   />
   <meta property="og:title" content="Panic Isn&rsquo;t Random. It&rsquo;s a Loop You Can Learn to Interrupt." />
-  <meta property="og:description" content="Join a live 90-minute workshop to map the panic loop, understand scary symptoms, and build a simple 7-day practice plan." />
+  <meta property="og:description" content="Join a live 90-minute workshop to understand the panic loop, scary symptoms, DP/DR, avoidance, and nervous-system regulation." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://eniscirak.com/assets/enis-garden.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -103,56 +103,6 @@
       margin: 0 auto;
       height: 1px;
       background: var(--line);
-    }
-
-    .topbar {
-      padding: 1.5rem 0 0;
-    }
-
-    .topbar-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
-      font-family: "Inter", system-ui, sans-serif;
-      font-size: 0.82rem;
-      letter-spacing: 0.02em;
-      color: var(--ink-2);
-    }
-
-    .wordmark {
-      font-weight: 600;
-      font-size: 0.98rem;
-      letter-spacing: -0.01em;
-      color: var(--ink);
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 1.35rem;
-    }
-
-    .nav-links a {
-      color: var(--ink-2);
-      transition: color .2s ease;
-    }
-
-    .nav-links a:hover,
-    .nav-links a:focus-visible {
-      color: var(--ink);
-      outline: none;
-    }
-
-    .nav-reserve::after {
-      content: "\2009\2192";
-      display: inline-block;
-      transition: transform .25s ease;
-    }
-
-    .nav-reserve:hover::after,
-    .nav-reserve:focus-visible::after {
-      transform: translateX(3px);
     }
 
     .hero {
@@ -623,55 +573,12 @@
       font-weight: 500;
     }
 
-    .connection-map {
-      margin-top: 2.75rem;
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 0.85rem;
-      align-items: stretch;
-    }
-
-    .map-hub,
-    .map-node,
     .visual-card,
     .worksheet-preview,
-    .practice-plan,
     .vip-step {
       border: 1px solid var(--line);
       border-radius: 8px;
       background: rgba(248, 244, 234, 0.72);
-    }
-
-    .map-hub {
-      grid-column: 2 / 4;
-      padding: 1.5rem;
-      display: grid;
-      place-items: center;
-      text-align: center;
-      min-height: 9rem;
-      background:
-        radial-gradient(circle at center, rgba(222, 232, 227, 0.95), rgba(248, 244, 234, 0.78) 68%);
-      color: var(--accent-ink);
-      font-weight: 600;
-      letter-spacing: -0.01em;
-    }
-
-    .map-node {
-      padding: 1rem;
-      color: var(--ink);
-      font-size: 0.94rem;
-      line-height: 1.4;
-      position: relative;
-    }
-
-    .map-node::before {
-      content: "";
-      display: block;
-      width: 0.45rem;
-      height: 0.45rem;
-      margin-bottom: 0.7rem;
-      border-radius: 999px;
-      background: var(--accent);
     }
 
     .visual-grid {
@@ -691,33 +598,95 @@
       margin-bottom: 0.75rem;
     }
 
-    .chip-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.55rem;
-      margin-top: 1.25rem;
-    }
-
-    .chip {
-      display: inline-flex;
-      padding: 0.5rem 0.68rem;
-      border: 1px solid var(--line-soft);
-      border-radius: 999px;
-      background: var(--paper);
-      color: var(--ink-2);
-      font-size: 0.84rem;
-      line-height: 1.2;
-    }
-
-    .fog-shape {
+    .body-alarm,
+    .dpdr-scene {
       margin-top: 1.4rem;
-      min-height: 8rem;
-      border-radius: 8px;
-      background:
-        radial-gradient(circle at 35% 45%, rgba(222, 232, 227, 0.95), rgba(222, 232, 227, 0) 45%),
-        radial-gradient(circle at 65% 50%, rgba(248, 244, 234, 0.98), rgba(248, 244, 234, 0) 48%),
-        linear-gradient(135deg, rgba(78, 104, 113, 0.16), rgba(95, 116, 99, 0.08));
+      min-height: 12rem;
       border: 1px solid var(--line-soft);
+      border-radius: 8px;
+      background: var(--paper);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .body-alarm {
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(circle at center, rgba(95, 116, 99, 0.18), rgba(95, 116, 99, 0) 55%),
+        var(--paper);
+    }
+
+    .alarm-wave {
+      position: absolute;
+      border: 1px solid rgba(95, 116, 99, 0.28);
+      border-radius: 999px;
+    }
+
+    .alarm-wave-one {
+      width: 5rem;
+      height: 5rem;
+    }
+
+    .alarm-wave-two {
+      width: 8rem;
+      height: 8rem;
+    }
+
+    .alarm-wave-three {
+      width: 11rem;
+      height: 11rem;
+    }
+
+    .alarm-core {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      place-items: center;
+      width: 4.6rem;
+      height: 4.6rem;
+      border-radius: 999px;
+      background: var(--accent);
+      color: var(--paper);
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .dpdr-scene {
+      display: grid;
+      place-items: center;
+      background:
+        linear-gradient(135deg, rgba(222, 232, 227, 0.7), rgba(248, 244, 234, 0.88)),
+        var(--paper);
+    }
+
+    .dpdr-world,
+    .dpdr-self {
+      position: absolute;
+      border: 1px solid var(--line-soft);
+      border-radius: 8px;
+      background: rgba(248, 244, 234, 0.72);
+      color: var(--ink-2);
+      font-size: 0.86rem;
+      line-height: 1.2;
+      text-align: center;
+    }
+
+    .dpdr-world {
+      inset: 1rem;
+      display: grid;
+      place-items: start center;
+      padding-top: 1.2rem;
+      filter: blur(1.1px);
+      opacity: 0.72;
+    }
+
+    .dpdr-self {
+      width: min(14rem, 70%);
+      padding: 1rem;
+      box-shadow: 0 1.2rem 3rem rgba(30, 33, 29, 0.09);
     }
 
     .avoidance-rings {
@@ -767,7 +736,7 @@
 
     .practical-list {
       display: grid;
-      grid-template-columns: repeat(5, minmax(0, 1fr));
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 1px;
       margin-top: 2.5rem;
       border: 1px solid var(--line);
@@ -801,19 +770,18 @@
     .practice-previews {
       margin-top: 2.5rem;
       display: grid;
-      grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+      grid-template-columns: minmax(0, 1fr);
       gap: 1rem;
       align-items: stretch;
+      max-width: 42rem;
     }
 
-    .worksheet-preview,
-    .practice-plan {
+    .worksheet-preview {
       padding: 1.35rem;
       background: var(--surface);
     }
 
-    .worksheet-title,
-    .practice-plan h3 {
+    .worksheet-title {
       margin: 0 0 1rem;
       font-weight: 600;
       color: var(--ink);
@@ -834,32 +802,6 @@
       height: 0.55rem;
       border-radius: 999px;
       background: linear-gradient(90deg, rgba(95, 116, 99, 0.16), rgba(95, 116, 99, 0.04));
-    }
-
-    .plan-days {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 0.55rem;
-    }
-
-    .plan-day {
-      padding: 0.75rem;
-      border: 1px solid var(--line-soft);
-      border-radius: 8px;
-      background: var(--paper);
-      color: var(--ink);
-      font-size: 0.86rem;
-      line-height: 1.35;
-    }
-
-    .plan-day span {
-      display: block;
-      margin-bottom: 0.25rem;
-      color: var(--accent-ink);
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
     }
 
     .outcome-grid,
@@ -924,22 +866,6 @@
       font-size: 0.84rem;
       font-style: normal;
       line-height: 1.4;
-    }
-
-    .split-lists {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 3rem;
-      margin-top: 2.25rem;
-    }
-
-    .boundary-note {
-      margin-top: 1.75rem;
-      padding: 1.25rem 1.35rem;
-      border-left: 2px solid var(--accent);
-      background: rgba(248, 244, 234, 0.68);
-      color: var(--ink-2);
-      font-size: 0.98rem;
     }
 
     .pricing-grid {
@@ -1283,15 +1209,6 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
-      .connection-map {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .map-hub {
-        grid-column: 1 / -1;
-        min-height: 7rem;
-      }
-
       .visual-grid,
       .practice-previews,
       .vip-flow {
@@ -1308,20 +1225,6 @@
       section { padding: 4.75rem 0; }
       .hero { padding: 3.5rem 0 5rem; }
 
-      .topbar-inner {
-        align-items: flex-start;
-      }
-
-      .nav-links {
-        gap: 0.95rem;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-      }
-
-      .nav-links a:not(.nav-reserve) {
-        display: none;
-      }
-
       .date-chip {
         align-items: flex-start;
         border-radius: 8px;
@@ -1333,14 +1236,8 @@
       }
 
       .card-grid,
-      .pricing-grid,
-      .split-lists,
-      .connection-map {
+      .pricing-grid {
         grid-template-columns: 1fr;
-      }
-
-      .map-hub {
-        grid-column: auto;
       }
 
       .loop-visual {
@@ -1372,7 +1269,6 @@
         min-height: auto;
       }
 
-      .plan-days,
       .exposure-steps {
         grid-template-columns: 1fr;
       }
@@ -1420,7 +1316,6 @@
       .card,
       .visual-card,
       .worksheet-preview,
-      .practice-plan,
       .pricing-card,
       .session-panel {
         border-radius: 6px;
@@ -1444,18 +1339,6 @@
 </head>
 <body>
 
-  <header class="topbar">
-    <div class="wrap-wide topbar-inner">
-      <a href="../" class="wordmark">Enis&nbsp;Cirak</a>
-      <nav class="nav-links" aria-label="Workshop navigation">
-        <a href="#learn">What you&rsquo;ll learn</a>
-        <a href="#pricing">Tickets</a>
-        <a href="#faq">FAQ</a>
-        <a href="#pricing" class="nav-reserve">Reserve</a>
-      </nav>
-    </div>
-  </header>
-
   <main id="top">
 
     <section class="hero">
@@ -1477,16 +1360,14 @@
           </div>
           <p class="trust-note">Live online &middot; Replay included &middot; Worksheet included &middot; Practical coaching workshop</p>
           <p class="supporting">
-            You&rsquo;ll learn how panic attacks, DP/DR, avoidance, anxious thoughts, emotional pressure,
-            and nervous-system dysregulation can connect &mdash; and how to begin practicing in a way
-            that helps your body feel safer over time.
+            You&rsquo;ll learn what is happening in your body, why the symptoms can feel so scary, and
+            how to respond without adding more fear to the loop.
           </p>
-          <p class="audience-line">For people dealing with panic attacks, depersonalization/derealization, avoidance, agoraphobia patterns, or high anxiety.</p>
+          <p class="audience-line">For people dealing with panic attacks, DP/DR, avoidance, agoraphobia patterns, or high anxiety.</p>
           <ul class="hero-bullets" aria-label="Workshop highlights">
             <li>Understand the fear-adrenaline feedback loop</li>
             <li>Learn why panic symptoms feel so intense and convincing</li>
-            <li>See how DP/DR, avoidance, and anxious thoughts can fit into the same pattern</li>
-            <li>Build a simple 7-day practice plan</li>
+            <li>See how DP/DR, avoidance, and anxious thoughts fit into the pattern</li>
             <li>Includes worksheet, guided practice, and replay</li>
           </ul>
         </div>
@@ -1501,7 +1382,7 @@
             <li>Checking / resistance / avoidance</li>
             <li>More sensitivity</li>
           </ul>
-          <p class="loop-card-note">In the workshop, you&rsquo;ll map your own version of this loop.</p>
+          <p class="loop-card-note">In the workshop, you&rsquo;ll see where this loop starts for you and what keeps it going.</p>
         </aside>
       </div>
     </section>
@@ -1549,29 +1430,6 @@
     </section>
 
     <section class="reveal">
-      <div class="wrap-wide">
-        <p class="sec-label">Connection map</p>
-        <h2>How the pieces connect</h2>
-        <p class="intro-copy">
-          Panic attacks, DP/DR, avoidance, emotional pressure, anxious thoughts, and body sensations
-          can feel like separate problems. In the workshop, we&rsquo;ll look at how they can reinforce
-          each other inside one larger pattern.
-        </p>
-        <div class="connection-map" aria-label="How anxiety loop pieces connect">
-          <div class="map-hub">Nervous-system activation</div>
-          <div class="map-node">Adrenaline</div>
-          <div class="map-node">Body sensations</div>
-          <div class="map-node">Anxious thoughts</div>
-          <div class="map-node">Checking / resistance</div>
-          <div class="map-node">DP/DR</div>
-          <div class="map-node">Avoidance</div>
-          <div class="map-node">Agoraphobia patterns</div>
-          <div class="map-node">Emotional pressure</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="reveal">
       <div class="wrap-wide story-panel">
         <figure class="about-photo">
           <img src="../assets/enis-garden.jpg" alt="Enis Cirak outdoors" loading="lazy" />
@@ -1587,20 +1445,20 @@
             planning around sensations, and trying to make sure I would not get &ldquo;triggered&rdquo;
             at the wrong time.
           </p>
-          <p>That experience changed the way I teach.</p>
+          <p>That experience changed how I talk about anxiety.</p>
           <p>
             I do not see panic as weakness. I do not see it as a character flaw. And I do not think
             the answer is to force yourself harder, shame yourself into exposure, or try to
             positive-think your way out of something your body is deeply reacting to.
           </p>
           <p>
-            I see panic as a learned pattern in the nervous system &mdash; one that involves
-            adrenaline, thoughts, sensations, emotional pressure, avoidance, and the way we relate
-            to our inner experience.
+            I see panic as a pattern your body can learn. It involves adrenaline, thoughts,
+            sensations, emotional pressure, avoidance, and the way you respond to what is happening
+            inside you.
           </p>
           <p class="story-note">
-            This workshop is designed to help you see that pattern clearly, so you can begin
-            practicing differently.
+            This workshop is here to help you understand the pattern and respond with a little more
+            steadiness.
           </p>
         </div>
       </div>
@@ -1609,39 +1467,35 @@
     <section class="reveal" id="learn">
       <div class="wrap-wide">
         <p class="sec-label">What you&rsquo;ll learn</p>
-        <h2>The pieces of the panic loop most people never connect.</h2>
+        <h2>What we&rsquo;ll cover in 90 minutes.</h2>
         <div class="card-grid">
           <article class="card">
             <h3>Why panic feels so convincing</h3>
-            <p>You&rsquo;ll learn why panic can feel dangerous even when there is no immediate danger &mdash; and why the body can sound the alarm before the mind understands what is happening.</p>
+            <p>Why your body can sound the alarm even when nothing dangerous is actually happening.</p>
           </article>
           <article class="card">
             <h3>How adrenaline creates scary sensations</h3>
-            <p>Racing heart, dizziness, tingling, heat, shaking, chest tightness, unreality, and fear surges can all become more frightening when you do not understand the adrenaline cycle.</p>
+            <p>Racing heart, dizziness, heat, shaking, chest tightness, tingling, unreality, and fear surges can all be part of the adrenaline cycle.</p>
           </article>
           <article class="card">
             <h3>Why thoughts and sensations amplify each other</h3>
-            <p>A sensation appears. The mind interprets it. The interpretation creates more fear. The fear creates more sensation. This is the feedback loop.</p>
+            <p>A sensation appears. The mind interprets it as danger. Fear rises. The body creates more sensation.</p>
           </article>
           <article class="card">
             <h3>How DP/DR fits into the picture</h3>
-            <p>Depersonalization and derealization can feel terrifying, but they often make more sense when understood through overload, fear, scanning, resistance, and nervous-system protection.</p>
+            <p>Why unreality feelings can show up when your system is overloaded, and why fearing them tends to make them stickier.</p>
           </article>
           <article class="card">
             <h3>Where emotion may play a role</h3>
-            <p>Unfelt emotion, internal conflict, chronic stress, and the felt sense of &ldquo;stuck energy&rdquo; can keep the system braced. We&rsquo;ll explore this gently, without turning it into another thing to fear.</p>
+            <p>How stress, internal pressure, and unprocessed emotion can keep your system on alert.</p>
           </article>
           <article class="card">
             <h3>Why avoidance makes sense &mdash; and why it can shrink your life</h3>
-            <p>Avoidance can feel protective in the short term, but over time it can teach the nervous system that more and more places, sensations, or situations are unsafe.</p>
+            <p>Avoidance can help you feel safer in the moment, but it can also teach your body that more places are dangerous.</p>
           </article>
           <article class="card">
             <h3>How to practice exposure without forcing yourself</h3>
-            <p>Exposure is not about white-knuckling through terror. It is about helping the nervous system relearn safety with steadiness, patience, and the right level of challenge.</p>
-          </article>
-          <article class="card">
-            <h3>Your 7-day practice plan</h3>
-            <p>You&rsquo;ll leave with a simple plan for mapping the loop, regulating your body, and taking small next steps after the workshop.</p>
+            <p>Exposure works better when it feels like retraining, not punishing yourself into being brave.</p>
           </article>
         </div>
       </div>
@@ -1649,40 +1503,38 @@
 
     <section class="reveal">
       <div class="wrap-wide">
-        <p class="sec-label">What it can look like</p>
-        <h2>The loop can show up in the body, in perception, and in the places you avoid.</h2>
+        <p class="sec-label">What this can feel like</p>
+        <h2>Panic can show up in the body, in perception, and in daily life.</h2>
         <div class="visual-grid">
           <article class="visual-card">
-            <h3>Why panic symptoms feel so convincing</h3>
+            <h3>The body alarm gets loud</h3>
             <p>
-              When adrenaline moves through the body, the sensations can feel intense, strange, and
-              urgent. Understanding the pattern can help reduce the fear of the sensations.
+              Adrenaline can make normal body sensations feel urgent: heart racing, dizziness,
+              heat, shaking, chest tightness, tingling, or a sudden rush of fear.
             </p>
-            <div class="chip-grid" aria-label="Common panic sensations">
-              <span class="chip">racing heart</span>
-              <span class="chip">chest tightness</span>
-              <span class="chip">dizziness</span>
-              <span class="chip">tingling</span>
-              <span class="chip">heat</span>
-              <span class="chip">shaking</span>
-              <span class="chip">throat tightness</span>
-              <span class="chip">stomach drop</span>
-              <span class="chip">unreality / floating</span>
+            <div class="body-alarm" aria-label="Body alarm becoming louder">
+              <span class="alarm-wave alarm-wave-one"></span>
+              <span class="alarm-wave alarm-wave-two"></span>
+              <span class="alarm-wave alarm-wave-three"></span>
+              <span class="alarm-core">Alarm</span>
             </div>
           </article>
           <article class="visual-card">
-            <h3>DP/DR can feel terrifying. It does not mean you are broken.</h3>
+            <h3>DP/DR can make everything feel unreal</h3>
             <p>
-              Depersonalization and derealization often make more sense when understood through
-              overload, fear, scanning, resistance, and nervous-system protection.
+              Depersonalization and derealization can feel like being distant from yourself or the
+              room around you. The workshop explains why this can happen when your system is overloaded.
             </p>
-            <div class="fog-shape" aria-hidden="true"></div>
+            <div class="dpdr-scene" aria-label="Derealization and depersonalization visual">
+              <div class="dpdr-world">world feels distant</div>
+              <div class="dpdr-self">you are still here</div>
+            </div>
           </article>
           <article class="visual-card">
-            <h3>Avoidance makes sense &mdash; until your world starts shrinking.</h3>
+            <h3>Avoidance can quietly shrink your life</h3>
             <p>
-              Avoidance can feel protective in the short term. Over time, it can teach the nervous
-              system that more places, sensations, and situations are unsafe.
+              Avoiding scary places can bring relief at first. Over time, your nervous system may
+              start treating more situations as unsafe.
             </p>
             <div class="avoidance-rings" aria-label="Avoidance can affect more areas over time">
               <span>Home</span>
@@ -1694,10 +1546,10 @@
             </div>
           </article>
           <article class="visual-card">
-            <h3>Exposure is not about forcing yourself through terror.</h3>
+            <h3>Exposure should feel like retraining, not punishment</h3>
             <p>
-              Gentle exposure is about helping the nervous system relearn safety with steadiness,
-              patience, and the right level of challenge.
+              Good exposure is not white-knuckling through terror. It is taking small steps that
+              teach your body, &ldquo;I can be here and let this pass.&rdquo;
             </p>
             <div class="exposure-steps" aria-label="Gentle exposure steps">
               <div class="exposure-step" style="--step: 1;">Orient</div>
@@ -1714,15 +1566,14 @@
     <section class="reveal surface-band">
       <div class="wrap-wide">
         <p class="sec-label">Practice, not just theory</p>
-        <h2>You won&rsquo;t just learn the loop. You&rsquo;ll map your own.</h2>
+        <h2>You&rsquo;ll write down what actually happens when anxiety hits.</h2>
         <p class="intro-copy">
-          A lot of anxiety content gives you more ideas to think about. This workshop is different.
-          You&rsquo;ll be guided through a simple process for seeing how your own loop tends to work:
-          the sensations that scare you, the thoughts that hook you, the ways you resist or check,
-          the situations you avoid, and the emotional pressure that may be sitting underneath it all.
+          A lot of anxiety content gives you more ideas to think about. In this workshop, we&rsquo;ll
+          slow the pattern down and write it out in plain language: what you feel, what you fear,
+          what you do to feel safe, and what you can try instead.
         </p>
         <p class="intro-copy">
-          Then we&rsquo;ll turn that map into a practice.
+          You&rsquo;ll also do a short grounding practice and have time for Q&amp;A.
         </p>
         <div class="practical-list" aria-label="Practical workshop components">
           <div class="practice-item">
@@ -1730,12 +1581,8 @@
             <p>A guided grounding and regulation practice.</p>
           </div>
           <div class="practice-item">
-            <span>Map</span>
-            <p>A Panic Loop Mapping worksheet.</p>
-          </div>
-          <div class="practice-item">
-            <span>Practice</span>
-            <p>A 7-day plan for nervous-system support.</p>
+            <span>Write</span>
+            <p>A simple Panic Pattern worksheet.</p>
           </div>
           <div class="practice-item">
             <span>Ask</span>
@@ -1747,27 +1594,14 @@
           </div>
         </div>
         <div class="practice-previews">
-          <div class="worksheet-preview" aria-label="Panic Loop Mapping worksheet preview">
-            <p class="worksheet-title">My Panic Loop Map</p>
+          <div class="worksheet-preview" aria-label="Panic Pattern worksheet preview">
+            <p class="worksheet-title">My Panic Pattern</p>
             <div class="worksheet-row"><span>Sensations I fear:</span><span class="worksheet-line"></span></div>
             <div class="worksheet-row"><span>Thoughts that hook me:</span><span class="worksheet-line"></span></div>
             <div class="worksheet-row"><span>What I do to feel safe:</span><span class="worksheet-line"></span></div>
             <div class="worksheet-row"><span>What I avoid:</span><span class="worksheet-line"></span></div>
             <div class="worksheet-row"><span>Emotional pressure underneath:</span><span class="worksheet-line"></span></div>
             <div class="worksheet-row"><span>New response to practice:</span><span class="worksheet-line"></span></div>
-            <div class="worksheet-row"><span>My 7-day plan:</span><span class="worksheet-line"></span></div>
-          </div>
-          <div class="practice-plan">
-            <h3>A simple 7-day practice preview</h3>
-            <div class="plan-days" aria-label="Seven-day practice plan preview">
-              <div class="plan-day"><span>Day 1</span>Map the loop</div>
-              <div class="plan-day"><span>Day 2</span>Notice sensations</div>
-              <div class="plan-day"><span>Day 3</span>Practice grounding</div>
-              <div class="plan-day"><span>Day 4</span>Reduce checking</div>
-              <div class="plan-day"><span>Day 5</span>Meet one avoided edge</div>
-              <div class="plan-day"><span>Day 6</span>Work with emotion</div>
-              <div class="plan-day"><span>Day 7</span>Reflect and adjust</div>
-            </div>
           </div>
         </div>
       </div>
@@ -1776,14 +1610,14 @@
     <section class="reveal">
       <div class="wrap-wide">
         <p class="sec-label">What can shift</p>
-        <h2>A clearer way to work with the pattern.</h2>
+        <h2>A clearer way to respond when symptoms show up.</h2>
         <p class="intro-copy">
-          You will leave with a simple map of what is happening, why the loop keeps repeating, and
-          how to begin practicing in a way that does not add more fear to the fear.
+          You will leave with a clearer picture of what is happening, why the loop keeps repeating,
+          and how to practice without adding more fear to the fear.
         </p>
         <p class="intro-copy">
-          The goal is not to fight your body into submission. It is to help your system begin
-          learning safety again, one workable step at a time.
+          The goal is not to win a fight against your body. It is to help your system learn,
+          little by little, that these sensations do not have to be treated like danger.
         </p>
         <div class="outcome-grid" aria-label="Grounded workshop outcomes">
           <article class="outcome-card">
@@ -1796,43 +1630,24 @@
           </article>
           <article class="outcome-card">
             <span>A next practice</span>
-            <p>You&rsquo;ll leave with a simple 7-day plan so the workshop turns into something you can actually work with.</p>
+            <p>You&rsquo;ll leave with one practical place to begin, instead of ten more things to obsess over.</p>
           </article>
         </div>
       </div>
     </section>
 
     <section class="reveal">
-      <div class="wrap-wide">
-        <div class="split-lists">
-          <div>
-            <p class="sec-label">Good fit</p>
-            <h2>This is for the person who keeps asking, &ldquo;Why does my body keep doing this?&rdquo;</h2>
-            <p>This workshop may be a good fit if:</p>
-            <ul class="clean-list">
-              <li>Panic attacks feel confusing, intense, or unpredictable.</li>
-              <li>You feel scared by body sensations like dizziness, racing heart, tightness, tingling, heat, shakiness, or unreality.</li>
-              <li>You experience depersonalization, derealization, or feeling disconnected from yourself or the world.</li>
-              <li>You notice yourself scanning, checking, resisting, or trying to make symptoms go away.</li>
-              <li>Avoidance or agoraphobia patterns have started to shape your choices.</li>
-              <li>You have tried to think your way out of anxiety, but your body still feels stuck.</li>
-              <li>You want a grounded blend of education, meditation, somatic awareness, and practical tools.</li>
-            </ul>
-          </div>
-          <div>
-            <p class="sec-label">Good to know</p>
-            <h2>This is coaching and education, not emergency care.</h2>
-            <p>
-              This workshop is for learning, reflection, and practice. It can sit alongside therapy,
-              medication, or personal growth work, but it is not meant to replace professional care
-              when that is what you need.
-            </p>
-            <p class="boundary-note">
-              If you are in crisis or need immediate support, please contact emergency services, a
-              crisis line, or a licensed provider.
-            </p>
-          </div>
-        </div>
+      <div class="wrap">
+        <p class="sec-label">Good fit</p>
+        <h2>This is for you if you keep asking, &ldquo;Why does my body keep doing this?&rdquo;</h2>
+        <ul class="clean-list">
+          <li>Panic feels confusing, intense, or random.</li>
+          <li>Body sensations make you worry something is wrong.</li>
+          <li>You deal with DP/DR, unreality, or feeling disconnected.</li>
+          <li>You scan, check, resist, or try hard to make symptoms go away.</li>
+          <li>Avoidance or agoraphobia has started to shape your life.</li>
+          <li>You want simple, grounded tools without hype.</li>
+        </ul>
       </div>
     </section>
 
@@ -1842,13 +1657,13 @@
         <h2>What you&rsquo;ll walk away with.</h2>
         <p>By the end of the workshop, you&rsquo;ll have:</p>
         <ul class="clean-list">
-          <li>A simple map of how your panic/anxiety loop works.</li>
+          <li>A clearer picture of how your panic/anxiety loop works.</li>
           <li>A clearer understanding of adrenaline and why symptoms feel so intense.</li>
           <li>A less frightening way to understand DP/DR and unreality feelings.</li>
           <li>A better sense of how checking, bracing, resistance, and avoidance keep the loop alive.</li>
           <li>A gentler framework for exposure and agoraphobia patterns.</li>
           <li>A guided practice you can repeat.</li>
-          <li>A 7-day plan for continuing after the workshop.</li>
+          <li>One simple next step to practice after the workshop.</li>
         </ul>
       </div>
     </section>
@@ -1856,17 +1671,11 @@
     <section class="reveal">
       <div class="wrap-wide">
         <p class="sec-label">Clients love their transformation</p>
-        <h2>A few words from Inner Solutions coaching clients.</h2>
-        <p class="intro-copy">
-          These are related coaching experiences, not promises about this workshop. I am including
-          them because they reflect the same practical, human style behind the work: clear teaching,
-          steady presence, and support that feels personal.
-        </p>
+        <h2>Real stories from Inner Solutions coaching clients.</h2>
         <!-- TODO: Replace these related Inner Solutions stories with workshop-specific testimonials when available. -->
         <div class="proof-grid" aria-label="Short excerpts from Inner Solutions client stories">
           <article class="proof-card">
             <span class="stars" aria-label="Five-star review">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-            <span>They understand</span>
             <blockquote>
               <p>&ldquo;They really understand what you are going through.&rdquo;</p>
               <cite>Stephine Stoltz</cite>
@@ -1874,7 +1683,6 @@
           </article>
           <article class="proof-card">
             <span class="stars" aria-label="Five-star review">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-            <span>Comfortable support</span>
             <blockquote>
               <p>&ldquo;Super nice, made me feel comfortable.&rdquo;</p>
               <cite>Michelle Berry</cite>
@@ -1882,9 +1690,8 @@
           </article>
           <article class="proof-card">
             <span class="stars" aria-label="Five-star review">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-            <span>Tools to try</span>
             <blockquote>
-              <p>A practical next step gave Daniel something simple to try right away.</p>
+              <p>&ldquo;He gave me advice and some things to try.&rdquo;</p>
               <cite>Daniel P.</cite>
             </blockquote>
           </article>
@@ -1900,13 +1707,13 @@
           <article class="pricing-card">
             <h3>Standard Workshop</h3>
             <p class="price-line"><strong>$49</strong><span>standard ticket</span></p>
-            <p class="pricing-caption">Learn the map.</p>
-            <p>Best for people who want the live workshop, worksheet, replay, and a clear 7-day practice plan.</p>
+            <p class="pricing-caption">Understand the pattern.</p>
+            <p>Best for people who want the live workshop, worksheet, replay, and a practical place to start.</p>
             <ul class="clean-list">
               <li>Live 90-minute workshop.</li>
-              <li>Panic Loop Mapping worksheet.</li>
+              <li>Panic Pattern worksheet.</li>
               <li>Guided regulation practice.</li>
-              <li>7-day practice plan.</li>
+              <li>Simple next-step practice.</li>
               <li>Replay access.</li>
             </ul>
             <div class="section-cta">
@@ -1918,13 +1725,13 @@
             <span class="pricing-label">Best for personalized support</span>
             <h3>VIP Workshop + Private Session</h3>
             <p class="price-line"><strong>$150</strong><span>VIP ticket</span></p>
-            <p class="pricing-caption">Apply the map to your exact pattern.</p>
+            <p class="pricing-caption">Apply the workshop to your exact situation.</p>
             <p>Best if you want help applying the workshop to your specific panic/anxiety pattern.</p>
             <ul class="clean-list">
               <li>Everything in Standard.</li>
               <li>One 60-minute private Anxiety Pattern Session.</li>
-              <li>Personalized help mapping your loop.</li>
-              <li>A starting practice plan based on your situation.</li>
+              <li>Personalized help understanding your pattern.</li>
+              <li>A simple next step based on your situation.</li>
               <li>Limited VIP spots because private time is limited.</li>
             </ul>
             <div class="section-cta">
@@ -1938,37 +1745,37 @@
     <section class="reveal">
       <div class="wrap-wide session-panel">
         <figure class="session-photo">
-          <img src="../assets/enis-coast.jpg" alt="Enis Cirak by the coast" loading="lazy" />
+          <img src="../assets/enis-tree.jpg" alt="Enis Cirak outdoors" loading="lazy" />
         </figure>
         <div>
           <p class="sec-label">VIP private session</p>
-          <h2>Want me to help you map your specific loop?</h2>
+          <h2>Want help applying this to your situation?</h2>
           <p>
             In the private session, we&rsquo;ll look at how the loop tends to show up for you.
           </p>
           <p>
-            We&rsquo;ll map the sensations that scare you, the thoughts that hook you, the situations you
+            We&rsquo;ll look at the sensations that scare you, the thoughts that hook you, the situations you
             avoid, the ways you try to stay safe, and the emotional pressure that may be keeping
             your system activated.
           </p>
           <p>
-            Then we&rsquo;ll create a simple starting practice plan you can work with after the session.
-            VIP spots are limited because they include private 1-on-1 time.
+            Then we&rsquo;ll choose one simple place to start. VIP spots are limited because they include
+            private 1-on-1 time.
           </p>
           <div class="vip-flow" aria-label="What happens in the private session">
             <div class="vip-step">
               <span>1</span>
-              <h3>Map your loop</h3>
+              <h3>Look at what happens</h3>
               <p>Sensations, thoughts, triggers, avoidance, and emotional pressure.</p>
             </div>
             <div class="vip-step">
               <span>2</span>
-              <h3>Find the leverage points</h3>
+              <h3>Find the stuck points</h3>
               <p>Where fear, checking, resistance, or avoidance keep the pattern alive.</p>
             </div>
             <div class="vip-step">
               <span>3</span>
-              <h3>Build your practice plan</h3>
+              <h3>Choose what to try next</h3>
               <p>A simple next step based on your actual situation.</p>
             </div>
           </div>
@@ -1989,7 +1796,7 @@
           <li><span class="agenda-time">25-40 min</span><span>Thoughts, checking, resistance, and the feedback loop.</span></li>
           <li><span class="agenda-time">40-55 min</span><span>DP/DR, emotional overload, and nervous-system protection.</span></li>
           <li><span class="agenda-time">55-70 min</span><span>Avoidance, agoraphobia, and gentler exposure principles.</span></li>
-          <li><span class="agenda-time">70-80 min</span><span>Guided practice and 7-day plan.</span></li>
+          <li><span class="agenda-time">70-80 min</span><span>Guided practice and what to try next.</span></li>
           <li><span class="agenda-time">80-90 min</span><span>Q&amp;A and next steps.</span></li>
         </ol>
       </div>
@@ -2005,14 +1812,12 @@
           <h2>About Enis Cirak</h2>
           <p>
             Enis Cirak is an anxiety coach who helps people understand panic,
-            depersonalization/derealization, avoidance, and nervous-system dysregulation through a
-            grounded blend of meditation, somatic awareness, cognitive tools, and compassionate
-            inner work.
+            depersonalization/derealization, avoidance, and nervous-system activation with simple
+            education, body awareness, practical tools, and compassionate self-inquiry.
           </p>
           <p>
-            His work draws inspiration from meditation, nondual awareness, Internal Family Systems,
-            somatic therapy, CBT, acceptance-based approaches, and compassionate self-inquiry &mdash;
-            without implying endorsement, certification, or affiliation with any teacher or method.
+            His work is influenced by meditation, somatic therapy, CBT, acceptance-based tools, and
+            parts work, without claiming affiliation with any specific teacher or method.
           </p>
         </div>
       </div>
@@ -2041,7 +1846,7 @@
           </details>
           <details>
             <summary>What is included with the VIP ticket?</summary>
-            <p>The VIP ticket includes the live workshop, worksheet, replay, 7-day practice plan, and one 60-minute private Anxiety Pattern Session.</p>
+            <p>The VIP ticket includes the live workshop, worksheet, replay, guided practice, and one 60-minute private Anxiety Pattern Session.</p>
           </details>
           <details>
             <summary>Is this for agoraphobia?</summary>
@@ -2061,10 +1866,10 @@
 
     <section class="final-cta reveal">
       <div class="wrap-wide">
-        <h2>Stop treating every symptom like an emergency. Learn what to practice instead.</h2>
+        <h2>Understand the loop. Practice a different response.</h2>
         <p>
           If panic, DP/DR, or avoidance has made your world feel smaller, this workshop will help
-          you understand the pattern and leave with a grounded place to begin.
+          you understand what is happening and leave with a clear place to begin.
         </p>
         <div class="section-cta" aria-label="Final workshop ticket options">
           <a class="btn" href="/checkout/panic-loop-workshop">Reserve My Spot &mdash; $49</a>
