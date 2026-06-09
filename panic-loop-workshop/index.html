@@ -376,23 +376,6 @@
       background: var(--accent);
     }
 
-    .offer-panel {
-      border: 1px solid var(--line);
-      background: rgba(248, 244, 234, 0.8);
-      border-radius: 8px;
-      padding: clamp(1.35rem, 3vw, 2rem);
-      box-shadow: 0 24px 70px rgba(62, 79, 68, 0.08);
-    }
-
-    .offer-kicker {
-      margin: 0 0 1rem;
-      font-size: 0.76rem;
-      font-weight: 600;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--blue-ink);
-    }
-
     .price-line {
       display: flex;
       align-items: baseline;
@@ -412,18 +395,85 @@
       font-size: 0.9rem;
     }
 
-    .mini-list {
-      margin: 1.5rem 0 0;
-      padding: 0;
-      list-style: none;
-      display: grid;
-      gap: 0.85rem;
-      font-size: 0.95rem;
+    .hero-loop-card {
+      border: 1px solid var(--line);
+      background:
+        linear-gradient(180deg, rgba(248, 244, 234, 0.92), rgba(235, 229, 214, 0.56));
+      border-radius: 8px;
+      padding: clamp(1.35rem, 3vw, 2rem);
+      box-shadow: 0 24px 70px rgba(62, 79, 68, 0.08);
     }
 
-    .mini-list li {
-      padding-top: 0.85rem;
+    .loop-card-title {
+      margin: 0 0 1.25rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent-ink);
+    }
+
+    .feedback-track {
+      display: grid;
+      gap: 0.7rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      position: relative;
+    }
+
+    .feedback-track::after {
+      content: "\21BA";
+      width: 2rem;
+      height: 2rem;
+      display: grid;
+      place-items: center;
+      margin: 0.2rem auto 0;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--paper);
+      color: var(--accent-ink);
+      font-size: 1rem;
+    }
+
+    .feedback-track li {
+      display: grid;
+      grid-template-columns: 1.75rem 1fr;
+      gap: 0.75rem;
+      align-items: center;
+      padding: 0.85rem 0.95rem;
+      border: 1px solid var(--line-soft);
+      border-radius: 8px;
+      background: rgba(248, 244, 234, 0.72);
+      color: var(--ink);
+      font-weight: 500;
+      line-height: 1.35;
+    }
+
+    .feedback-track li::before {
+      content: "\2192";
+      width: 1.45rem;
+      height: 1.45rem;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      background: var(--mist);
+      color: var(--accent-ink);
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
+
+    .feedback-track li:first-child::before {
+      content: "1";
+    }
+
+    .loop-card-note {
+      margin-top: 1.25rem;
+      padding-top: 1.1rem;
       border-top: 1px solid var(--line-soft);
+      color: var(--ink-2);
+      font-size: 0.95rem;
+      line-height: 1.55;
     }
 
     .sec-label {
@@ -506,17 +556,17 @@
     .loop-visual {
       margin-top: 2.5rem;
       display: grid;
-      grid-template-columns: repeat(6, minmax(0, 1fr));
-      gap: 0.55rem;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.75rem;
+      position: relative;
     }
 
     .loop-node {
-      min-height: 8.3rem;
+      min-height: 10.25rem;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      gap: 1rem;
-      padding: 1rem;
+      gap: 0.65rem;
+      padding: 1.1rem;
       border: 1px solid var(--line);
       border-radius: 8px;
       background: rgba(248, 244, 234, 0.72);
@@ -553,6 +603,168 @@
       line-height: 1.25;
     }
 
+    .loop-node p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.88rem;
+      line-height: 1.45;
+    }
+
+    .loop-return {
+      grid-column: 1 / -1;
+      justify-self: center;
+      margin-top: 0.45rem;
+      padding: 0.65rem 0.9rem;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--surface);
+      color: var(--accent-ink);
+      font-size: 0.88rem;
+      font-weight: 500;
+    }
+
+    .connection-map {
+      margin-top: 2.75rem;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 0.85rem;
+      align-items: stretch;
+    }
+
+    .map-hub,
+    .map-node,
+    .visual-card,
+    .worksheet-preview,
+    .practice-plan,
+    .vip-step {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(248, 244, 234, 0.72);
+    }
+
+    .map-hub {
+      grid-column: 2 / 4;
+      padding: 1.5rem;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      min-height: 9rem;
+      background:
+        radial-gradient(circle at center, rgba(222, 232, 227, 0.95), rgba(248, 244, 234, 0.78) 68%);
+      color: var(--accent-ink);
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    .map-node {
+      padding: 1rem;
+      color: var(--ink);
+      font-size: 0.94rem;
+      line-height: 1.4;
+      position: relative;
+    }
+
+    .map-node::before {
+      content: "";
+      display: block;
+      width: 0.45rem;
+      height: 0.45rem;
+      margin-bottom: 0.7rem;
+      border-radius: 999px;
+      background: var(--accent);
+    }
+
+    .visual-grid {
+      margin-top: 2.5rem;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      align-items: stretch;
+    }
+
+    .visual-card {
+      padding: 1.35rem;
+      overflow: hidden;
+    }
+
+    .visual-card h3 {
+      margin-bottom: 0.75rem;
+    }
+
+    .chip-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      margin-top: 1.25rem;
+    }
+
+    .chip {
+      display: inline-flex;
+      padding: 0.5rem 0.68rem;
+      border: 1px solid var(--line-soft);
+      border-radius: 999px;
+      background: var(--paper);
+      color: var(--ink-2);
+      font-size: 0.84rem;
+      line-height: 1.2;
+    }
+
+    .fog-shape {
+      margin-top: 1.4rem;
+      min-height: 8rem;
+      border-radius: 8px;
+      background:
+        radial-gradient(circle at 35% 45%, rgba(222, 232, 227, 0.95), rgba(222, 232, 227, 0) 45%),
+        radial-gradient(circle at 65% 50%, rgba(248, 244, 234, 0.98), rgba(248, 244, 234, 0) 48%),
+        linear-gradient(135deg, rgba(78, 104, 113, 0.16), rgba(95, 116, 99, 0.08));
+      border: 1px solid var(--line-soft);
+    }
+
+    .avoidance-rings {
+      margin-top: 1.4rem;
+      display: grid;
+      gap: 0.45rem;
+    }
+
+    .avoidance-rings span {
+      display: block;
+      padding: 0.55rem 0.75rem;
+      border: 1px solid var(--line-soft);
+      border-radius: 999px;
+      background: var(--paper);
+      color: var(--ink-2);
+      font-size: 0.86rem;
+      text-align: center;
+    }
+
+    .avoidance-rings span:nth-child(1) { width: 48%; }
+    .avoidance-rings span:nth-child(2) { width: 58%; }
+    .avoidance-rings span:nth-child(3) { width: 68%; }
+    .avoidance-rings span:nth-child(4) { width: 78%; }
+    .avoidance-rings span:nth-child(5) { width: 88%; }
+    .avoidance-rings span:nth-child(6) { width: 100%; }
+
+    .exposure-steps {
+      margin-top: 1.4rem;
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 0.45rem;
+      align-items: end;
+    }
+
+    .exposure-step {
+      display: flex;
+      align-items: end;
+      min-height: calc(4.25rem + var(--step) * 0.75rem);
+      padding: 0.7rem;
+      border: 1px solid var(--line-soft);
+      border-radius: 8px;
+      background: var(--paper);
+      color: var(--ink);
+      font-size: 0.82rem;
+      line-height: 1.25;
+    }
+
     .practical-list {
       display: grid;
       grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -584,6 +796,70 @@
       color: var(--ink);
       font-size: 1rem;
       line-height: 1.45;
+    }
+
+    .practice-previews {
+      margin-top: 2.5rem;
+      display: grid;
+      grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+      gap: 1rem;
+      align-items: stretch;
+    }
+
+    .worksheet-preview,
+    .practice-plan {
+      padding: 1.35rem;
+      background: var(--surface);
+    }
+
+    .worksheet-title,
+    .practice-plan h3 {
+      margin: 0 0 1rem;
+      font-weight: 600;
+      color: var(--ink);
+      letter-spacing: -0.01em;
+    }
+
+    .worksheet-row {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.35rem;
+      padding: 0.7rem 0;
+      border-top: 1px solid var(--line-soft);
+      color: var(--ink-2);
+      font-size: 0.9rem;
+    }
+
+    .worksheet-line {
+      height: 0.55rem;
+      border-radius: 999px;
+      background: linear-gradient(90deg, rgba(95, 116, 99, 0.16), rgba(95, 116, 99, 0.04));
+    }
+
+    .plan-days {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.55rem;
+    }
+
+    .plan-day {
+      padding: 0.75rem;
+      border: 1px solid var(--line-soft);
+      border-radius: 8px;
+      background: var(--paper);
+      color: var(--ink);
+      font-size: 0.86rem;
+      line-height: 1.35;
+    }
+
+    .plan-day span {
+      display: block;
+      margin-bottom: 0.25rem;
+      color: var(--accent-ink);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
     }
 
     .outcome-grid,
@@ -727,6 +1003,15 @@
       margin-top: 1rem;
     }
 
+    .pricing-caption {
+      margin-top: 0.8rem;
+      padding-top: 0.85rem;
+      border-top: 1px solid var(--line-soft);
+      color: var(--accent-ink);
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
     .pricing-card .clean-list {
       margin-top: 1rem;
       display: grid;
@@ -767,10 +1052,55 @@
       filter: saturate(0.92);
     }
 
+    .vip-flow {
+      margin-top: 1.75rem;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.75rem;
+    }
+
+    .vip-step {
+      padding: 1rem;
+    }
+
+    .vip-step span {
+      display: inline-grid;
+      place-items: center;
+      width: 1.75rem;
+      height: 1.75rem;
+      margin-bottom: 0.8rem;
+      border-radius: 999px;
+      background: var(--mist);
+      color: var(--accent-ink);
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
+
+    .vip-step h3 {
+      font-size: 1rem;
+      margin-bottom: 0.55rem;
+    }
+
+    .vip-step p {
+      font-size: 0.88rem;
+      line-height: 1.45;
+    }
+
     .agenda {
       margin: 2.5rem 0 0;
       padding: 0;
       list-style: none;
+      position: relative;
+    }
+
+    .agenda::before {
+      content: "";
+      position: absolute;
+      left: 4.15rem;
+      top: 0.7rem;
+      bottom: 0.7rem;
+      width: 1px;
+      background: var(--line);
     }
 
     .agenda li {
@@ -780,6 +1110,7 @@
       padding: 1.2rem 0;
       border-top: 1px solid var(--line-soft);
       align-items: baseline;
+      position: relative;
     }
 
     .agenda li:last-child {
@@ -791,6 +1122,21 @@
       font-weight: 600;
       letter-spacing: 0.05em;
       text-transform: uppercase;
+      position: relative;
+      color: var(--accent-ink);
+    }
+
+    .agenda-time::after {
+      content: "";
+      position: absolute;
+      right: -0.9rem;
+      top: 0.42rem;
+      width: 0.65rem;
+      height: 0.65rem;
+      border-radius: 999px;
+      border: 2px solid var(--paper);
+      background: var(--accent);
+      box-shadow: 0 0 0 1px var(--line);
     }
 
     .about-grid {
@@ -905,10 +1251,6 @@
       color: var(--muted);
     }
 
-    .mobile-sticky-cta {
-      display: none;
-    }
-
     .reveal {
       opacity: 0;
       transform: translateY(12px);
@@ -937,7 +1279,7 @@
         max-width: 28rem;
       }
 
-      .offer-panel {
+      .hero-loop-card {
         max-width: 34rem;
       }
 
@@ -953,6 +1295,21 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
+      .connection-map {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .map-hub {
+        grid-column: 1 / -1;
+        min-height: 7rem;
+      }
+
+      .visual-grid,
+      .practice-previews,
+      .vip-flow {
+        grid-template-columns: 1fr;
+      }
+
       .outcome-grid,
       .proof-grid {
         grid-template-columns: 1fr;
@@ -960,10 +1317,6 @@
     }
 
     @media (max-width: 760px) {
-      body {
-        padding-bottom: 5.7rem;
-      }
-
       section { padding: 4.75rem 0; }
       .hero { padding: 3.5rem 0 5rem; }
 
@@ -993,8 +1346,13 @@
 
       .card-grid,
       .pricing-grid,
-      .split-lists {
+      .split-lists,
+      .connection-map {
         grid-template-columns: 1fr;
+      }
+
+      .map-hub {
+        grid-column: auto;
       }
 
       .loop-visual {
@@ -1026,60 +1384,34 @@
         min-height: auto;
       }
 
+      .plan-days,
+      .exposure-steps {
+        grid-template-columns: 1fr;
+      }
+
+      .exposure-step {
+        min-height: auto;
+      }
+
+      .avoidance-rings span {
+        width: 100% !important;
+      }
+
+      .agenda::before {
+        left: 0.32rem;
+      }
+
       .agenda li {
         grid-template-columns: 1fr;
         gap: 0.35rem;
+        padding-left: 1.6rem;
       }
 
-      .mobile-sticky-cta {
-        position: fixed;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 20;
-        display: grid;
-        grid-template-columns: 1fr auto;
-        gap: 0.65rem;
-        padding: 0.75rem;
-        background: rgba(242, 237, 225, 0.96);
-        border-top: 1px solid var(--line);
-        box-shadow: 0 -12px 36px rgba(30, 33, 29, 0.08);
-        backdrop-filter: blur(10px);
-        opacity: 0;
-        pointer-events: none;
-        transform: translateY(110%);
-        transition: opacity .22s ease, transform .22s ease;
+      .agenda-time::after {
+        left: -1.6rem;
+        right: auto;
       }
 
-      .mobile-sticky-cta.is-visible {
-        opacity: 1;
-        pointer-events: auto;
-        transform: none;
-      }
-
-      .mobile-sticky-cta .btn {
-        min-height: 2.8rem;
-        padding: 0.72rem 0.9rem;
-        font-size: 0.82rem;
-        white-space: nowrap;
-      }
-
-      .mobile-sticky-cta .btn-ghost {
-        width: 3.2rem;
-        padding-inline: 0;
-      }
-
-      .mobile-sticky-cta .btn-ghost span {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-        white-space: nowrap;
-        border: 0;
-      }
     }
 
     @media (max-width: 460px) {
@@ -1096,8 +1428,11 @@
         font-size: clamp(2.15rem, 13vw, 3.1rem);
       }
 
-      .offer-panel,
+      .hero-loop-card,
       .card,
+      .visual-card,
+      .worksheet-preview,
+      .practice-plan,
       .pricing-card,
       .session-panel {
         border-radius: 6px;
@@ -1168,22 +1503,17 @@
           </ul>
         </div>
 
-        <aside class="offer-panel" aria-labelledby="hero-offer-title">
-          <p class="offer-kicker">Standard ticket</p>
-          <p class="price-line"><strong>$49</strong><span>live workshop</span></p>
-          <h2 id="hero-offer-title">The Panic Loop Workshop</h2>
-          <p class="supporting">Map the cycle. Calm the fear. Practice differently.</p>
-          <p>
-            A grounded, practical workshop for understanding panic sensations without turning every symptom
-            into another emergency inside your body.
-          </p>
-          <ul class="mini-list">
-            <li>90 minutes live online</li>
-            <li>Panic Loop Mapping worksheet</li>
-            <li>Guided grounding/regulation practice</li>
-            <li>7-day practice plan</li>
-            <li>Replay access included</li>
+        <aside class="hero-loop-card" aria-labelledby="hero-loop-title">
+          <p class="loop-card-title" id="hero-loop-title">The Panic Feedback Loop</p>
+          <ul class="feedback-track" aria-label="Panic feedback loop">
+            <li>Adrenaline</li>
+            <li>Scary sensations</li>
+            <li>Fearful thoughts</li>
+            <li>More adrenaline</li>
+            <li>Checking / resistance / avoidance</li>
+            <li>More sensitivity</li>
           </ul>
+          <p class="loop-card-note">In the workshop, you&rsquo;ll map your own version of this loop.</p>
         </aside>
       </div>
     </section>
@@ -1219,12 +1549,36 @@
         </div>
 
         <div class="loop-visual" aria-label="Panic feedback loop">
-          <div class="loop-node"><span>01</span><strong>Adrenaline</strong></div>
-          <div class="loop-node"><span>02</span><strong>Strange body sensations</strong></div>
-          <div class="loop-node"><span>03</span><strong>Fearful thoughts</strong></div>
-          <div class="loop-node"><span>04</span><strong>More adrenaline</strong></div>
-          <div class="loop-node"><span>05</span><strong>Checking / resistance / avoidance</strong></div>
-          <div class="loop-node"><span>06</span><strong>More sensitivity</strong></div>
+          <div class="loop-node"><span>01</span><strong>Adrenaline</strong><p>Your body releases energy.</p></div>
+          <div class="loop-node"><span>02</span><strong>Scary sensations</strong><p>Racing heart, dizziness, heat, shaking, unreality.</p></div>
+          <div class="loop-node"><span>03</span><strong>Fearful thoughts</strong><p>&ldquo;What if something is wrong?&rdquo;</p></div>
+          <div class="loop-node"><span>04</span><strong>More adrenaline</strong><p>The body hears danger again.</p></div>
+          <div class="loop-node"><span>05</span><strong>Checking / resistance / avoidance</strong><p>You scan, brace, resist, escape, or seek reassurance.</p></div>
+          <div class="loop-node"><span>06</span><strong>More sensitivity</strong><p>The system becomes easier to trigger.</p></div>
+          <div class="loop-return">The loop can feed back into adrenaline.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <div class="wrap-wide">
+        <p class="sec-label">Connection map</p>
+        <h2>How the pieces connect</h2>
+        <p class="intro-copy">
+          Panic attacks, DP/DR, avoidance, emotional pressure, anxious thoughts, and body sensations
+          can feel like separate problems. In the workshop, we&rsquo;ll look at how they can reinforce
+          each other inside one larger pattern.
+        </p>
+        <div class="connection-map" aria-label="How anxiety loop pieces connect">
+          <div class="map-hub">Nervous-system activation</div>
+          <div class="map-node">Adrenaline</div>
+          <div class="map-node">Body sensations</div>
+          <div class="map-node">Anxious thoughts</div>
+          <div class="map-node">Checking / resistance</div>
+          <div class="map-node">DP/DR</div>
+          <div class="map-node">Avoidance</div>
+          <div class="map-node">Agoraphobia patterns</div>
+          <div class="map-node">Emotional pressure</div>
         </div>
       </div>
     </section>
@@ -1305,6 +1659,70 @@
       </div>
     </section>
 
+    <section class="reveal">
+      <div class="wrap-wide">
+        <p class="sec-label">What it can look like</p>
+        <h2>The loop can show up in the body, in perception, and in the places you avoid.</h2>
+        <div class="visual-grid">
+          <article class="visual-card">
+            <h3>Why panic symptoms feel so convincing</h3>
+            <p>
+              When adrenaline moves through the body, the sensations can feel intense, strange, and
+              urgent. Understanding the pattern can help reduce the fear of the sensations.
+            </p>
+            <div class="chip-grid" aria-label="Common panic sensations">
+              <span class="chip">racing heart</span>
+              <span class="chip">chest tightness</span>
+              <span class="chip">dizziness</span>
+              <span class="chip">tingling</span>
+              <span class="chip">heat</span>
+              <span class="chip">shaking</span>
+              <span class="chip">throat tightness</span>
+              <span class="chip">stomach drop</span>
+              <span class="chip">unreality / floating</span>
+            </div>
+          </article>
+          <article class="visual-card">
+            <h3>DP/DR can feel terrifying. It does not mean you are broken.</h3>
+            <p>
+              Depersonalization and derealization often make more sense when understood through
+              overload, fear, scanning, resistance, and nervous-system protection.
+            </p>
+            <div class="fog-shape" aria-hidden="true"></div>
+          </article>
+          <article class="visual-card">
+            <h3>Avoidance makes sense &mdash; until your world starts shrinking.</h3>
+            <p>
+              Avoidance can feel protective in the short term. Over time, it can teach the nervous
+              system that more places, sensations, and situations are unsafe.
+            </p>
+            <div class="avoidance-rings" aria-label="Avoidance can affect more areas over time">
+              <span>Home</span>
+              <span>Neighborhood</span>
+              <span>Driving</span>
+              <span>Stores</span>
+              <span>Restaurants</span>
+              <span>Travel / social life</span>
+            </div>
+          </article>
+          <article class="visual-card">
+            <h3>Exposure is not about forcing yourself through terror.</h3>
+            <p>
+              Gentle exposure is about helping the nervous system relearn safety with steadiness,
+              patience, and the right level of challenge.
+            </p>
+            <div class="exposure-steps" aria-label="Gentle exposure steps">
+              <div class="exposure-step" style="--step: 1;">Orient</div>
+              <div class="exposure-step" style="--step: 2;">Approach</div>
+              <div class="exposure-step" style="--step: 3;">Stay gently</div>
+              <div class="exposure-step" style="--step: 4;">Reduce safety behaviors</div>
+              <div class="exposure-step" style="--step: 5;">Repeat and integrate</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="reveal surface-band">
       <div class="wrap-wide">
         <p class="sec-label">Practice, not just theory</p>
@@ -1338,6 +1756,30 @@
           <div class="practice-item">
             <span>Replay</span>
             <p>Replay access included if you want to revisit it.</p>
+          </div>
+        </div>
+        <div class="practice-previews">
+          <div class="worksheet-preview" aria-label="Panic Loop Mapping worksheet preview">
+            <p class="worksheet-title">My Panic Loop Map</p>
+            <div class="worksheet-row"><span>Sensations I fear:</span><span class="worksheet-line"></span></div>
+            <div class="worksheet-row"><span>Thoughts that hook me:</span><span class="worksheet-line"></span></div>
+            <div class="worksheet-row"><span>What I do to feel safe:</span><span class="worksheet-line"></span></div>
+            <div class="worksheet-row"><span>What I avoid:</span><span class="worksheet-line"></span></div>
+            <div class="worksheet-row"><span>Emotional pressure underneath:</span><span class="worksheet-line"></span></div>
+            <div class="worksheet-row"><span>New response to practice:</span><span class="worksheet-line"></span></div>
+            <div class="worksheet-row"><span>My 7-day plan:</span><span class="worksheet-line"></span></div>
+          </div>
+          <div class="practice-plan">
+            <h3>A simple 7-day practice preview</h3>
+            <div class="plan-days" aria-label="Seven-day practice plan preview">
+              <div class="plan-day"><span>Day 1</span>Map the loop</div>
+              <div class="plan-day"><span>Day 2</span>Notice sensations</div>
+              <div class="plan-day"><span>Day 3</span>Practice grounding</div>
+              <div class="plan-day"><span>Day 4</span>Reduce checking</div>
+              <div class="plan-day"><span>Day 5</span>Meet one avoided edge</div>
+              <div class="plan-day"><span>Day 6</span>Work with emotion</div>
+              <div class="plan-day"><span>Day 7</span>Reflect and adjust</div>
+            </div>
           </div>
         </div>
       </div>
@@ -1477,6 +1919,7 @@
           <article class="pricing-card">
             <h3>Standard Workshop</h3>
             <p class="price-line"><strong>$49</strong><span>standard ticket</span></p>
+            <p class="pricing-caption">Learn the map.</p>
             <p>Best for people who want the live workshop, worksheet, replay, and a clear 7-day practice plan.</p>
             <ul class="clean-list">
               <li>Live 90-minute workshop.</li>
@@ -1494,6 +1937,7 @@
             <span class="pricing-label">Best for personalized support</span>
             <h3>VIP Workshop + Private Session</h3>
             <p class="price-line"><strong>$150</strong><span>VIP ticket</span></p>
+            <p class="pricing-caption">Apply the map to your exact pattern.</p>
             <p>Best if you want help applying the workshop to your specific panic/anxiety pattern.</p>
             <ul class="clean-list">
               <li>Everything in Standard.</li>
@@ -1530,6 +1974,23 @@
             Then we&rsquo;ll create a simple starting practice plan you can work with after the session.
             VIP spots are limited because they include private 1-on-1 time.
           </p>
+          <div class="vip-flow" aria-label="What happens in the private session">
+            <div class="vip-step">
+              <span>1</span>
+              <h3>Map your loop</h3>
+              <p>Sensations, thoughts, triggers, avoidance, and emotional pressure.</p>
+            </div>
+            <div class="vip-step">
+              <span>2</span>
+              <h3>Find the leverage points</h3>
+              <p>Where fear, checking, resistance, or avoidance keep the pattern alive.</p>
+            </div>
+            <div class="vip-step">
+              <span>3</span>
+              <h3>Build your practice plan</h3>
+              <p>A simple next step based on your actual situation.</p>
+            </div>
+          </div>
           <div class="section-cta">
             <a class="btn btn-ghost" href="/checkout/panic-loop-workshop-vip">Get VIP + Private Session &mdash; $150</a>
           </div>
@@ -1643,11 +2104,6 @@
     </div>
   </footer>
 
-  <div class="mobile-sticky-cta" aria-label="Sticky ticket actions">
-    <a class="btn" href="/checkout/panic-loop-workshop">Join &mdash; $49</a>
-    <a class="btn btn-ghost" href="/checkout/panic-loop-workshop-vip" aria-label="Get VIP plus private session for $150"><span>VIP</span>$150</a>
-  </div>
-
   <script>
     document.querySelectorAll('a[href^="#"]').forEach(function (link) {
       link.addEventListener("click", function (event) {
@@ -1686,40 +2142,6 @@
       revealEls.forEach(function (el) { el.classList.add("is-visible"); });
     }
 
-    var stickyCta = document.querySelector(".mobile-sticky-cta");
-    var heroSection = document.querySelector(".hero");
-    var mobileQuery = window.matchMedia("(max-width: 760px)");
-
-    function setStickyCtaVisible(visible) {
-      if (!stickyCta) return;
-      stickyCta.classList.toggle("is-visible", Boolean(visible && mobileQuery.matches));
-    }
-
-    function updateStickyCta() {
-      if (!stickyCta || !heroSection) return;
-      setStickyCtaVisible(heroSection.getBoundingClientRect().bottom <= 0);
-    }
-
-    if (stickyCta && heroSection) {
-      if ("IntersectionObserver" in window) {
-        var stickyIo = new IntersectionObserver(function (entries) {
-          entries.forEach(function (entry) {
-            setStickyCtaVisible(!entry.isIntersecting && window.scrollY > 0);
-          });
-        }, { threshold: 0 });
-        stickyIo.observe(heroSection);
-      } else {
-        window.addEventListener("scroll", updateStickyCta, { passive: true });
-      }
-
-      if (typeof mobileQuery.addEventListener === "function") {
-        mobileQuery.addEventListener("change", updateStickyCta);
-      } else if (typeof mobileQuery.addListener === "function") {
-        mobileQuery.addListener(updateStickyCta);
-      }
-
-      updateStickyCta();
-    }
   </script>
 </body>
 </html>
