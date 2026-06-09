@@ -1,0 +1,1430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZX55VB4F1P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-ZX55VB4F1P");
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#F2EDE1" />
+  <title>Panic Loop Reset Workshop | Anxiety, DP/DR &amp; Nervous System Regulation</title>
+  <meta
+    name="description"
+    content="A live 90-minute workshop on understanding panic attacks, depersonalization/derealization, agoraphobia, adrenaline, anxious thoughts, and nervous-system regulation."
+  />
+  <meta property="og:title" content="Panic Loop Reset Workshop" />
+  <meta property="og:description" content="A live 90-minute workshop on panic attacks, DP/DR, agoraphobia, adrenaline, anxious thoughts, and nervous-system regulation." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="../about-photo.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23F2EDE1'/%3E%3Ccircle cx='16' cy='16' r='6' fill='none' stroke='%235F7463' stroke-width='1.5'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --paper: #F2EDE1;
+      --paper-2: #EBE5D6;
+      --surface: #F8F4EA;
+      --mist: #DEE8E3;
+      --ink: #1E211D;
+      --ink-2: #3F443D;
+      --muted: #6B7069;
+      --line: #D3CCBD;
+      --line-soft: #E0DAC9;
+      --accent: #5F7463;
+      --accent-ink: #3E4F44;
+      --blue-ink: #4E6871;
+      --warm-ink: #735D44;
+      --measure: 42rem;
+      --wide: 72rem;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+      font-weight: 400;
+      font-size: clamp(1.05rem, 0.98rem + 0.35vw, 1.16rem);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    p, li, .lede, .fine, .meta-line, .card p, .agenda-time {
+      color: var(--ink-2);
+    }
+
+    ::selection {
+      background: var(--accent);
+      color: var(--paper);
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    strong { font-weight: 600; color: var(--ink); }
+
+    .wrap {
+      width: min(calc(100% - 2.5rem), var(--measure));
+      margin: 0 auto;
+    }
+
+    .wrap-wide {
+      width: min(calc(100% - 2.5rem), var(--wide));
+      margin: 0 auto;
+    }
+
+    section { padding: 6rem 0; }
+    section + section { padding-top: 0; }
+
+    .rule {
+      width: min(calc(100% - 2.5rem), var(--wide));
+      margin: 0 auto;
+      height: 1px;
+      background: var(--line);
+    }
+
+    .topbar {
+      padding: 1.5rem 0 0;
+    }
+
+    .topbar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      font-family: "Inter", system-ui, sans-serif;
+      font-size: 0.82rem;
+      letter-spacing: 0.02em;
+      color: var(--ink-2);
+    }
+
+    .wordmark {
+      font-weight: 600;
+      font-size: 0.98rem;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.35rem;
+    }
+
+    .nav-links a {
+      color: var(--ink-2);
+      transition: color .2s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      color: var(--ink);
+      outline: none;
+    }
+
+    .nav-reserve::after {
+      content: "\2009\2192";
+      display: inline-block;
+      transition: transform .25s ease;
+    }
+
+    .nav-reserve:hover::after,
+    .nav-reserve:focus-visible::after {
+      transform: translateX(3px);
+    }
+
+    .hero {
+      padding: 5.5rem 0 6.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        linear-gradient(135deg, rgba(222, 232, 227, 0.88) 0%, rgba(242, 237, 225, 0) 42%),
+        linear-gradient(180deg, rgba(248, 244, 234, 0.7), rgba(242, 237, 225, 0));
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(19rem, 0.75fr);
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .eyebrow {
+      font-size: 0.76rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent-ink);
+      margin: 0 0 1.5rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 1.6rem;
+      height: 1px;
+      background: var(--accent);
+    }
+
+    h1, h2, h3 {
+      font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+      color: var(--ink);
+      letter-spacing: -0.025em;
+    }
+
+    h1 {
+      margin: 0;
+      font-weight: 600;
+      font-size: clamp(2.35rem, 5.7vw, 4.55rem);
+      line-height: 1.08;
+      max-width: 17ch;
+    }
+
+    h1 em,
+    h2 em {
+      font-style: normal;
+      color: var(--accent-ink);
+    }
+
+    h2 {
+      margin: 0 0 1.5rem;
+      font-weight: 600;
+      font-size: clamp(1.8rem, 3.2vw, 2.65rem);
+      line-height: 1.18;
+      max-width: 22ch;
+    }
+
+    h3 {
+      margin: 0;
+      font-weight: 600;
+      font-size: clamp(1.04rem, 1.3vw, 1.16rem);
+      line-height: 1.35;
+    }
+
+    p { margin: 0; }
+    p + p { margin-top: 1.15rem; }
+
+    .lede {
+      margin: 1.65rem 0 0;
+      max-width: 38rem;
+      font-size: clamp(1.12rem, 1.5vw, 1.35rem);
+      line-height: 1.55;
+    }
+
+    .supporting {
+      margin-top: 1.2rem;
+      max-width: 37rem;
+      color: var(--ink-2);
+    }
+
+    .date-chip {
+      margin-top: 2rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.7rem 0.9rem;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(248, 244, 234, 0.72);
+      color: var(--ink);
+      font-size: 0.9rem;
+      line-height: 1.35;
+    }
+
+    .date-chip::before {
+      content: "";
+      width: 0.45rem;
+      height: 0.45rem;
+      border-radius: 999px;
+      background: var(--accent);
+      flex: 0 0 auto;
+    }
+
+    .hero-cta,
+    .section-cta {
+      margin-top: 2.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.55rem;
+      min-height: 3.15rem;
+      padding: 0.95rem 1.35rem;
+      background: var(--ink);
+      color: var(--paper);
+      font-size: 0.92rem;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      line-height: 1.2;
+      border: 1px solid var(--ink);
+      border-radius: 999px;
+      transition: background-color .2s ease, border-color .2s ease, transform .2s ease;
+      cursor: pointer;
+    }
+
+    .btn:hover,
+    .btn:focus-visible {
+      background: var(--accent-ink);
+      border-color: var(--accent-ink);
+      outline: none;
+    }
+
+    .btn::after {
+      content: "\2192";
+      transition: transform .25s ease;
+    }
+
+    .btn:hover::after,
+    .btn:focus-visible::after {
+      transform: translateX(3px);
+    }
+
+    .btn-ghost {
+      background: rgba(248, 244, 234, 0.62);
+      color: var(--ink-2);
+      border-color: var(--line);
+    }
+
+    .btn-ghost:hover,
+    .btn-ghost:focus-visible {
+      background: var(--paper-2);
+      color: var(--ink);
+      border-color: var(--line);
+    }
+
+    .trust-note {
+      margin-top: 1.25rem;
+      font-size: 0.84rem;
+      color: var(--muted);
+      letter-spacing: 0.01em;
+    }
+
+    .hero-bullets,
+    .clean-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .hero-bullets {
+      margin-top: 2rem;
+      display: grid;
+      gap: 0.85rem;
+      max-width: 35rem;
+    }
+
+    .hero-bullets li,
+    .clean-list li {
+      position: relative;
+      padding-left: 1.45rem;
+    }
+
+    .hero-bullets li::before,
+    .clean-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.68em;
+      width: 0.42rem;
+      height: 0.42rem;
+      border-radius: 999px;
+      background: var(--accent);
+    }
+
+    .offer-panel {
+      border: 1px solid var(--line);
+      background: rgba(248, 244, 234, 0.8);
+      border-radius: 8px;
+      padding: clamp(1.35rem, 3vw, 2rem);
+      box-shadow: 0 24px 70px rgba(62, 79, 68, 0.08);
+    }
+
+    .offer-kicker {
+      margin: 0 0 1rem;
+      font-size: 0.76rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--blue-ink);
+    }
+
+    .price-line {
+      display: flex;
+      align-items: baseline;
+      gap: 0.65rem;
+      margin: 0 0 1.4rem;
+      color: var(--ink);
+    }
+
+    .price-line strong {
+      font-size: clamp(2.4rem, 5vw, 3.5rem);
+      letter-spacing: -0.04em;
+      line-height: 1;
+    }
+
+    .price-line span {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .mini-list {
+      margin: 1.5rem 0 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 0.85rem;
+      font-size: 0.95rem;
+    }
+
+    .mini-list li {
+      padding-top: 0.85rem;
+      border-top: 1px solid var(--line-soft);
+    }
+
+    .sec-label {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 0 0 1.75rem;
+    }
+
+    .intro-copy {
+      max-width: 39rem;
+    }
+
+    .soft-band {
+      background: var(--paper-2);
+    }
+
+    .surface-band {
+      background:
+        linear-gradient(180deg, rgba(248, 244, 234, 0.78), rgba(242, 237, 225, 0));
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 2.5rem;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(248, 244, 234, 0.62);
+      padding: 1.35rem;
+    }
+
+    .card p {
+      margin-top: 0.6rem;
+      font-size: 0.96rem;
+      line-height: 1.55;
+    }
+
+    .loop-visual {
+      margin-top: 2.5rem;
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 0.55rem;
+    }
+
+    .loop-node {
+      min-height: 8.3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1rem;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(248, 244, 234, 0.72);
+      color: var(--ink);
+      position: relative;
+    }
+
+    .loop-node:not(:last-child)::after {
+      content: "\2192";
+      position: absolute;
+      right: -0.52rem;
+      top: 50%;
+      transform: translate(50%, -50%);
+      z-index: 2;
+      width: 1.25rem;
+      height: 1.25rem;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--paper);
+      color: var(--accent-ink);
+      font-size: 0.75rem;
+    }
+
+    .loop-node span {
+      font-size: 0.72rem;
+      color: var(--muted);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .loop-node strong {
+      line-height: 1.25;
+    }
+
+    .practical-list {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 1px;
+      margin-top: 2.5rem;
+      border: 1px solid var(--line);
+      background: var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .practice-item {
+      background: var(--surface);
+      padding: 1.25rem;
+      min-height: 9rem;
+    }
+
+    .practice-item span {
+      display: block;
+      margin-bottom: 0.8rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--accent-ink);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .practice-item p {
+      color: var(--ink);
+      font-size: 1rem;
+      line-height: 1.45;
+    }
+
+    .split-lists {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 3rem;
+      margin-top: 2.25rem;
+    }
+
+    .boundary-note {
+      margin-top: 1.75rem;
+      padding: 1.25rem 1.35rem;
+      border-left: 2px solid var(--accent);
+      background: rgba(248, 244, 234, 0.68);
+      color: var(--ink-2);
+      font-size: 0.98rem;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 2.75rem;
+      align-items: stretch;
+    }
+
+    .pricing-card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+      padding: clamp(1.35rem, 3vw, 2rem);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .pricing-card.vip {
+      background:
+        linear-gradient(180deg, rgba(222, 232, 227, 0.76), rgba(248, 244, 234, 0.9));
+      border-color: #B9C8BD;
+    }
+
+    .pricing-label {
+      display: inline-flex;
+      align-self: flex-start;
+      margin-bottom: 1.1rem;
+      padding: 0.42rem 0.7rem;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--accent-ink);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+
+    .pricing-card h3 {
+      font-size: clamp(1.3rem, 2vw, 1.6rem);
+    }
+
+    .pricing-card .price-line {
+      margin-top: 1rem;
+    }
+
+    .pricing-card .clean-list {
+      margin-top: 1rem;
+      display: grid;
+      gap: 0.75rem;
+      font-size: 0.98rem;
+    }
+
+    .pricing-card .section-cta {
+      margin-top: auto;
+      padding-top: 2.25rem;
+    }
+
+    .pricing-card .btn {
+      width: 100%;
+    }
+
+    .session-panel {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      gap: 3rem;
+      align-items: center;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+      padding: clamp(1.35rem, 3vw, 2.2rem);
+    }
+
+    .session-photo {
+      border-radius: 6px;
+      overflow: hidden;
+      background: var(--paper-2);
+    }
+
+    .session-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(0.92);
+    }
+
+    .agenda {
+      margin: 2.5rem 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .agenda li {
+      display: grid;
+      grid-template-columns: 8.5rem 1fr;
+      gap: 1.5rem;
+      padding: 1.2rem 0;
+      border-top: 1px solid var(--line-soft);
+      align-items: baseline;
+    }
+
+    .agenda li:last-child {
+      border-bottom: 1px solid var(--line-soft);
+    }
+
+    .agenda-time {
+      font-size: 0.84rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.78fr 1.22fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .about-photo {
+      margin: 0;
+    }
+
+    .about-photo img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      filter: saturate(0.92);
+    }
+
+    .faq {
+      margin-top: 2rem;
+    }
+
+    .faq details {
+      border-top: 1px solid var(--line-soft);
+      padding: 1.45rem 0;
+    }
+
+    .faq details:last-of-type {
+      border-bottom: 1px solid var(--line-soft);
+    }
+
+    .faq summary {
+      list-style: none;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 2rem;
+      font-size: clamp(1.04rem, 1.5vw, 1.18rem);
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      transition: color .2s ease;
+    }
+
+    .faq summary::-webkit-details-marker { display: none; }
+
+    .faq summary:hover,
+    .faq summary:focus-visible {
+      color: var(--accent-ink);
+      outline: none;
+    }
+
+    .faq summary::after {
+      content: "+";
+      font-size: 1.25rem;
+      color: var(--muted);
+      transition: transform .25s ease;
+      flex-shrink: 0;
+    }
+
+    .faq details[open] summary::after {
+      content: "\2013";
+    }
+
+    .faq details p {
+      margin-top: 1rem;
+      max-width: 36rem;
+    }
+
+    .final-cta {
+      text-align: center;
+      padding: 6rem 0;
+      background:
+        linear-gradient(180deg, rgba(222, 232, 227, 0.58), rgba(242, 237, 225, 0));
+    }
+
+    .final-cta h2 {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 24ch;
+    }
+
+    .final-cta p {
+      max-width: 38rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .final-cta .section-cta {
+      justify-content: center;
+    }
+
+    footer {
+      padding: 4rem 0 5rem;
+      text-align: center;
+    }
+
+    footer .fine {
+      max-width: 48rem;
+      margin: 0 auto;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    footer .copyright {
+      margin-top: 1.5rem;
+      font-size: 0.78rem;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+    }
+
+    .mobile-sticky-cta {
+      display: none;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity 0.9s cubic-bezier(0.22, 0.61, 0.36, 1),
+                  transform 0.9s cubic-bezier(0.22, 0.61, 0.36, 1);
+      will-change: opacity, transform;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    @media (max-width: 1040px) {
+      .hero-grid,
+      .two-col,
+      .session-panel,
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 2.75rem;
+      }
+
+      .offer-panel {
+        max-width: 34rem;
+      }
+
+      .loop-visual {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .loop-node:nth-child(3)::after {
+        display: none;
+      }
+
+      .practical-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 760px) {
+      body {
+        padding-bottom: 5.7rem;
+      }
+
+      section { padding: 4.75rem 0; }
+      .hero { padding: 3.5rem 0 5rem; }
+
+      .topbar-inner {
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        gap: 0.95rem;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+
+      .nav-links a:not(.nav-reserve) {
+        display: none;
+      }
+
+      .date-chip {
+        align-items: flex-start;
+        border-radius: 8px;
+      }
+
+      .hero-cta .btn,
+      .section-cta .btn {
+        width: 100%;
+      }
+
+      .card-grid,
+      .pricing-grid,
+      .split-lists {
+        grid-template-columns: 1fr;
+      }
+
+      .loop-visual {
+        grid-template-columns: 1fr;
+      }
+
+      .loop-node {
+        min-height: auto;
+      }
+
+      .loop-node:not(:last-child)::after {
+        content: "\2193";
+        right: auto;
+        left: 50%;
+        top: auto;
+        bottom: -0.52rem;
+        transform: translate(-50%, 50%);
+      }
+
+      .loop-node:nth-child(3)::after {
+        display: grid;
+      }
+
+      .practical-list {
+        grid-template-columns: 1fr;
+      }
+
+      .practice-item {
+        min-height: auto;
+      }
+
+      .agenda li {
+        grid-template-columns: 1fr;
+        gap: 0.35rem;
+      }
+
+      .mobile-sticky-cta {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 20;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 0.65rem;
+        padding: 0.75rem;
+        background: rgba(242, 237, 225, 0.96);
+        border-top: 1px solid var(--line);
+        box-shadow: 0 -12px 36px rgba(30, 33, 29, 0.08);
+        backdrop-filter: blur(10px);
+      }
+
+      .mobile-sticky-cta .btn {
+        min-height: 2.8rem;
+        padding: 0.72rem 0.9rem;
+        font-size: 0.82rem;
+        white-space: nowrap;
+      }
+
+      .mobile-sticky-cta .btn-ghost {
+        width: 3.2rem;
+        padding-inline: 0;
+      }
+
+      .mobile-sticky-cta .btn-ghost span {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+    }
+
+    @media (max-width: 460px) {
+      .wrap,
+      .wrap-wide {
+        width: min(calc(100% - 1.5rem), var(--wide));
+      }
+
+      .rule {
+        width: calc(100% - 1.5rem);
+      }
+
+      h1 {
+        font-size: clamp(2.15rem, 13vw, 3.1rem);
+      }
+
+      .offer-panel,
+      .card,
+      .pricing-card,
+      .session-panel {
+        border-radius: 6px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal,
+      .reveal.is-visible {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+      * {
+        animation-duration: 0.001ms !important;
+        transition-duration: 0.001ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="wrap-wide topbar-inner">
+      <a href="../" class="wordmark">Enis&nbsp;Cirak</a>
+      <nav class="nav-links" aria-label="Workshop navigation">
+        <a href="#learn">What you&rsquo;ll learn</a>
+        <a href="#pricing">Tickets</a>
+        <a href="#faq">FAQ</a>
+        <a href="#pricing" class="nav-reserve">Reserve</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <section class="hero">
+      <div class="wrap-wide hero-grid">
+        <div>
+          <p class="eyebrow">Live online workshop</p>
+          <h1>Understand the Panic Loop &mdash; and Learn How to Stop Feeding It</h1>
+          <p class="lede">
+            A live 90-minute workshop on panic attacks, depersonalization/derealization, agoraphobia,
+            adrenaline, anxious thoughts, and nervous-system regulation.
+          </p>
+          <p class="supporting">
+            You&rsquo;ll learn why panic symptoms can feel so intense, how the fear-adrenaline feedback
+            loop keeps itself alive, and how to begin building a calmer, more grounded response.
+          </p>
+          <!-- TODO: Confirm this recurring workshop time before publishing. -->
+          <p class="date-chip"><strong>Next live workshop:</strong> This Saturday at 11am Central Time / 12 PM Eastern Time.</p>
+          <div class="hero-cta" aria-label="Workshop ticket options">
+            <!-- TODO: Replace with checkout provider URL or route. Standard ticket product/price ID goes here when available. -->
+            <a class="btn" href="/checkout/panic-loop-workshop">Reserve My Spot &mdash; $49</a>
+            <!-- TODO: Replace with checkout provider URL or route. VIP ticket product/price ID goes here when available. -->
+            <a class="btn btn-ghost" href="/checkout/panic-loop-workshop-vip">VIP: Workshop + Private Session &mdash; $150</a>
+          </div>
+          <p class="trust-note">Live online workshop &middot; Replay included &middot; Worksheet included &middot; Educational coaching, not therapy</p>
+          <ul class="hero-bullets" aria-label="Workshop highlights">
+            <li>Understand the panic feedback loop</li>
+            <li>Learn how adrenaline creates scary sensations</li>
+            <li>Build a 7-day nervous-system practice plan</li>
+            <li>Includes replay + worksheet</li>
+          </ul>
+        </div>
+
+        <aside class="offer-panel" aria-labelledby="hero-offer-title">
+          <p class="offer-kicker">Standard ticket</p>
+          <p class="price-line"><strong>$49</strong><span>live workshop</span></p>
+          <h2 id="hero-offer-title">The Panic Loop Reset Workshop</h2>
+          <p>
+            A grounded, practical map for understanding panic sensations without turning them
+            into another emergency inside your body.
+          </p>
+          <ul class="mini-list">
+            <li>90 minutes live on Zoom</li>
+            <li>Panic Loop Mapping worksheet</li>
+            <li>Guided regulation practice</li>
+            <li>Replay access included</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <div class="rule"></div>
+
+    <section class="reveal">
+      <div class="wrap-wide">
+        <div class="two-col">
+          <div>
+            <p class="sec-label">The pattern</p>
+            <h2>If panic feels random, your nervous system may be caught in a loop.</h2>
+          </div>
+          <div class="intro-copy">
+            <p>
+              Panic can feel like it comes out of nowhere. A strange sensation appears. Your mind
+              tries to solve it quickly. The worry itself can bring more adrenaline, and adrenaline
+              can create more sensations.
+            </p>
+            <p>
+              Over time, many people start monitoring, resisting, checking, avoiding, and bracing.
+              That understandable protection strategy can make the whole system more sensitive,
+              sometimes showing up as more anxiety, depersonalization/derealization, and avoidance.
+            </p>
+          </div>
+        </div>
+
+        <div class="loop-visual" aria-label="Panic feedback loop">
+          <div class="loop-node"><span>01</span><strong>Adrenaline</strong></div>
+          <div class="loop-node"><span>02</span><strong>Strange body sensations</strong></div>
+          <div class="loop-node"><span>03</span><strong>Fearful thoughts</strong></div>
+          <div class="loop-node"><span>04</span><strong>More adrenaline</strong></div>
+          <div class="loop-node"><span>05</span><strong>Avoidance and checking</strong></div>
+          <div class="loop-node"><span>06</span><strong>More sensitivity</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="reveal" id="learn">
+      <div class="wrap-wide">
+        <p class="sec-label">What you&rsquo;ll learn</p>
+        <h2>What you&rsquo;ll learn in 90 minutes</h2>
+        <div class="card-grid">
+          <article class="card">
+            <h3>Why panic attacks happen</h3>
+            <p>Why panic can feel so convincing even when you are not in immediate danger.</p>
+          </article>
+          <article class="card">
+            <h3>What adrenaline does</h3>
+            <p>How adrenaline can create racing heart, dizziness, tingling, unreality, tightness, heat, shaking, and fear surges.</p>
+          </article>
+          <article class="card">
+            <h3>How DP/DR fits in</h3>
+            <p>Why depersonalization/derealization can show up when the nervous system feels highly activated or overloaded.</p>
+          </article>
+          <article class="card">
+            <h3>How thoughts and sensations amplify</h3>
+            <p>How anxious interpretation and body sensations can keep escalating each other.</p>
+          </article>
+          <article class="card">
+            <h3>Where emotion may play a role</h3>
+            <p>How unprocessed emotions, internal pressure, and the felt sense of &ldquo;stuck energy&rdquo; can contribute to activation for some people.</p>
+          </article>
+          <article class="card">
+            <h3>Why avoidance grows</h3>
+            <p>How avoidance and agoraphobia patterns can grow, even when avoidance feels protective in the short term.</p>
+          </article>
+          <article class="card">
+            <h3>How to approach exposure gently</h3>
+            <p>Why exposure is not about forcing yourself through terror, but about retraining the nervous system with steadiness and care.</p>
+          </article>
+          <article class="card">
+            <h3>Your 7-day practice plan</h3>
+            <p>A simple way to practice regulation, mapping, and small, sustainable changes after the workshop.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="reveal surface-band">
+      <div class="wrap-wide">
+        <p class="sec-label">Practice, not just theory</p>
+        <h2>This is not just information.</h2>
+        <p class="intro-copy">
+          Understanding the loop matters, but the body usually needs practice. The workshop includes
+          simple, repeatable tools you can use when sensations, anxious thoughts, avoidance, or
+          unreality feelings start to pull you back into the same pattern.
+        </p>
+        <div class="practical-list" aria-label="Practical workshop components">
+          <div class="practice-item">
+            <span>Ground</span>
+            <p>A guided grounding and regulation practice.</p>
+          </div>
+          <div class="practice-item">
+            <span>Map</span>
+            <p>A panic-loop mapping worksheet.</p>
+          </div>
+          <div class="practice-item">
+            <span>Practice</span>
+            <p>A 7-day plan for nervous-system support.</p>
+          </div>
+          <div class="practice-item">
+            <span>Ask</span>
+            <p>Time for live Q&amp;A.</p>
+          </div>
+          <div class="practice-item">
+            <span>Replay</span>
+            <p>Replay access included if you want to revisit it.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <div class="wrap-wide">
+        <div class="split-lists">
+          <div>
+            <p class="sec-label">Good fit</p>
+            <h2>This workshop is for you if...</h2>
+            <ul class="clean-list">
+              <li>You want to better understand panic attacks and anxiety spirals.</li>
+              <li>You experience intense body sensations and want a calmer way to respond.</li>
+              <li>You deal with depersonalization/derealization or unreality feelings.</li>
+              <li>You notice avoidance patterns or agoraphobia beginning to shape your life.</li>
+              <li>You have tried to &ldquo;think your way out&rdquo; of anxiety but still feel stuck in your body.</li>
+              <li>You are interested in meditation-based, somatic, and cognitive tools.</li>
+              <li>You want a grounded practice plan, not just more theory.</li>
+            </ul>
+          </div>
+          <div>
+            <p class="sec-label">Clear boundary</p>
+            <h2>This workshop is not a replacement for therapy or emergency care.</h2>
+            <p>
+              This workshop is educational and coaching-based. It is not medical advice, diagnosis,
+              therapy, crisis support, or a substitute for working with a licensed mental-health
+              professional.
+            </p>
+            <p>
+              If you are in crisis, at risk of harm, or need clinical care, contact emergency
+              services, a crisis line, or a licensed provider.
+            </p>
+            <p class="boundary-note">
+              This workshop may complement therapy or personal growth work, but it does not replace
+              professional mental-health treatment.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="reveal soft-band">
+      <div class="wrap">
+        <p class="sec-label">Takeaways</p>
+        <h2>By the end, you&rsquo;ll have...</h2>
+        <ul class="clean-list">
+          <li>A clearer map of your personal panic/anxiety loop.</li>
+          <li>A better understanding of adrenaline and body sensations.</li>
+          <li>A way to relate to DP/DR symptoms with less fear and resistance.</li>
+          <li>A gentler framework for exposure and avoidance patterns.</li>
+          <li>A simple regulation practice you can repeat.</li>
+          <li>A 7-day practice plan.</li>
+          <li>A clearer sense of whether private coaching or community support is the right next step.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="reveal" id="pricing">
+      <div class="wrap-wide">
+        <p class="sec-label">Tickets</p>
+        <h2>Choose the level of support that fits.</h2>
+        <div class="pricing-grid">
+          <article class="pricing-card">
+            <h3>Standard Workshop</h3>
+            <p class="price-line"><strong>$49</strong><span>standard ticket</span></p>
+            <ul class="clean-list">
+              <li>Live 90-minute workshop.</li>
+              <li>Panic Loop Mapping worksheet.</li>
+              <li>Guided practice.</li>
+              <li>7-day practice plan.</li>
+              <li>Replay access.</li>
+            </ul>
+            <div class="section-cta">
+              <!-- TODO: Replace with checkout provider URL or route. Standard ticket product/price ID goes here when available. -->
+              <a class="btn" href="/checkout/panic-loop-workshop">Reserve My Spot &mdash; $49</a>
+            </div>
+          </article>
+
+          <article class="pricing-card vip">
+            <span class="pricing-label">Best for personalized support</span>
+            <h3>VIP Workshop + Private Session</h3>
+            <p class="price-line"><strong>$150</strong><span>VIP ticket</span></p>
+            <ul class="clean-list">
+              <li>Everything in Standard.</li>
+              <li>One 60-minute private Anxiety Pattern Session.</li>
+              <li>Personalized support applying the workshop to your situation.</li>
+              <li>Limited VIP spots.</li>
+            </ul>
+            <div class="section-cta">
+              <!-- TODO: Replace with checkout provider URL or route. VIP ticket product/price ID goes here when available. -->
+              <a class="btn" href="/checkout/panic-loop-workshop-vip">Get VIP + Private Session &mdash; $150</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <div class="wrap-wide session-panel">
+        <figure class="session-photo">
+          <img src="../about-photo.jpg" alt="Enis Cirak" loading="lazy" />
+        </figure>
+        <div>
+          <p class="sec-label">VIP private session</p>
+          <h2>Want help applying this to your exact pattern?</h2>
+          <p>
+            In the 1-on-1 session, we&rsquo;ll map what tends to trigger the loop for you, identify
+            the places where fear, sensations, thoughts, avoidance, and emotion reinforce each
+            other, and create a starting practice plan.
+          </p>
+          <p>
+            VIP spots are limited because they include private time.
+          </p>
+          <div class="section-cta">
+            <!-- TODO: Replace with checkout provider URL or route. VIP ticket product/price ID goes here when available. -->
+            <a class="btn btn-ghost" href="/checkout/panic-loop-workshop-vip">Get VIP + Private Session &mdash; $150</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <div class="wrap">
+        <p class="sec-label">Agenda</p>
+        <h2>Workshop agenda</h2>
+        <ol class="agenda">
+          <li><span class="agenda-time">0-10 min</span><span>Orientation and what the panic loop is.</span></li>
+          <li><span class="agenda-time">10-25 min</span><span>Adrenaline, sensations, and why panic feels dangerous.</span></li>
+          <li><span class="agenda-time">25-40 min</span><span>Thoughts, fear, checking, resistance, and the feedback loop.</span></li>
+          <li><span class="agenda-time">40-55 min</span><span>DP/DR, emotional overload, and nervous-system dysregulation.</span></li>
+          <li><span class="agenda-time">55-70 min</span><span>Avoidance, agoraphobia, and gentle exposure principles.</span></li>
+          <li><span class="agenda-time">70-80 min</span><span>Guided practice and 7-day plan.</span></li>
+          <li><span class="agenda-time">80-90 min</span><span>Q&amp;A and next steps.</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <div class="wrap-wide about-grid">
+        <figure class="about-photo">
+          <img src="../about-photo.jpg" alt="Workshop instructor" loading="lazy" />
+        </figure>
+        <div>
+          <p class="sec-label">About the instructor</p>
+          <h2>About Enis Cirak</h2>
+          <!-- TODO: Update bio details before publishing. Do not add licensed credentials unless accurate. -->
+          <p>
+            Enis Cirak is an anxiety coach who helps people understand panic,
+            depersonalization/derealization, avoidance, and nervous-system dysregulation through a
+            grounded blend of meditation, somatic awareness, cognitive tools, and compassionate
+            inner work.
+          </p>
+          <p>
+            The work draws inspiration from meditation, nondual awareness, Internal Family Systems,
+            somatic therapy, CBT, acceptance-based approaches, and compassionate self-inquiry,
+            without implying endorsement, certification, or affiliation with any teacher or method.
+          </p>
+          <!-- TODO: Add testimonials or participant reflections here if you have permission and want social proof. Keep claims specific and non-medical. -->
+        </div>
+      </div>
+    </section>
+
+    <section class="reveal" id="faq">
+      <div class="wrap">
+        <p class="sec-label">FAQ</p>
+        <h2>Questions people often ask</h2>
+        <div class="faq">
+          <details>
+            <summary>Is this therapy?</summary>
+            <p>No. This is an educational coaching workshop. It is not therapy, diagnosis, treatment, crisis support, or medical advice.</p>
+          </details>
+          <details>
+            <summary>Will this stop my panic attacks?</summary>
+            <p>No one can ethically guarantee that. The goal is to help you understand the loop, reduce fear around symptoms, and build practices that may help you respond differently over time.</p>
+          </details>
+          <details>
+            <summary>Is this good for depersonalization/derealization?</summary>
+            <p>The workshop includes discussion of DP/DR as a common experience when the nervous system feels highly activated or overwhelmed. The focus is on understanding it, reducing fear around it, and building grounding/regulation practices.</p>
+          </details>
+          <details>
+            <summary>What if I can&rsquo;t attend live?</summary>
+            <p>A replay is included.</p>
+          </details>
+          <details>
+            <summary>What is included with the VIP ticket?</summary>
+            <p>The live workshop, worksheet, replay, 7-day plan, and one 60-minute private Anxiety Pattern Session.</p>
+          </details>
+          <details>
+            <summary>Is this for agoraphobia?</summary>
+            <p>The workshop touches on avoidance and agoraphobia patterns, including how to approach exposure more gently and without reinforcing fear. It is not a substitute for clinical care.</p>
+          </details>
+          <details>
+            <summary>Do I need meditation experience?</summary>
+            <p>No. The practices will be simple and beginner-friendly.</p>
+          </details>
+          <details>
+            <summary>What happens after the workshop?</summary>
+            <p>Participants can continue with a private session, ongoing coaching, or community practice if they want more support.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta reveal">
+      <div class="wrap-wide">
+        <h2>Learn the loop. Stop fighting the symptoms. Start practicing differently.</h2>
+        <p>
+          A clear, calm place to understand what has been happening in your body and begin meeting
+          the pattern with more steadiness.
+        </p>
+        <div class="section-cta" aria-label="Final workshop ticket options">
+          <!-- TODO: Replace with checkout provider URL or route. Standard ticket product/price ID goes here when available. -->
+          <a class="btn" href="/checkout/panic-loop-workshop">Reserve My Spot &mdash; $49</a>
+          <!-- TODO: Replace with checkout provider URL or route. VIP ticket product/price ID goes here when available. -->
+          <a class="btn btn-ghost" href="/checkout/panic-loop-workshop-vip">Get VIP + Private Session &mdash; $150</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap-wide">
+      <p class="fine">
+        This workshop is for educational and coaching purposes only. It is not medical advice,
+        therapy, diagnosis, treatment, or crisis support. If you are in crisis or need immediate
+        help, contact emergency services, a crisis hotline, or a licensed mental-health professional.
+      </p>
+      <p class="copyright">&copy; Enis Cirak</p>
+    </div>
+  </footer>
+
+  <div class="mobile-sticky-cta" aria-label="Sticky ticket actions">
+    <!-- TODO: Replace with checkout provider URL or route. Standard ticket product/price ID goes here when available. -->
+    <a class="btn" href="/checkout/panic-loop-workshop">Reserve &mdash; $49</a>
+    <!-- TODO: Replace with checkout provider URL or route. VIP ticket product/price ID goes here when available. -->
+    <a class="btn btn-ghost" href="/checkout/panic-loop-workshop-vip" aria-label="Get VIP plus private session for $150"><span>VIP</span>$150</a>
+  </div>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+      link.addEventListener("click", function (event) {
+        var id = link.getAttribute("href").slice(1);
+        var target = document.getElementById(id);
+        if (!target) return;
+
+        event.preventDefault();
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    });
+
+    document.querySelectorAll('a[href^="/checkout/"]').forEach(function (link) {
+      link.addEventListener("click", function () {
+        if (typeof gtag === "function") {
+          gtag("event", "workshop_checkout_click", {
+            event_category: "engagement",
+            event_label: link.textContent.trim()
+          });
+        }
+      });
+    });
+
+    var revealEls = document.querySelectorAll(".reveal");
+    if ("IntersectionObserver" in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            io.unobserve(entry.target);
+          }
+        });
+      }, { rootMargin: "0px 0px -10% 0px", threshold: 0.05 });
+      revealEls.forEach(function (el) { io.observe(el); });
+    } else {
+      revealEls.forEach(function (el) { el.classList.add("is-visible"); });
+    }
+  </script>
+</body>
+</html>
