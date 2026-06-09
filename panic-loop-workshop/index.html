@@ -812,16 +812,14 @@
       margin-top: 2.5rem;
     }
 
-    .outcome-card,
-    .proof-card {
+    .outcome-card {
       border: 1px solid var(--line);
       border-radius: 8px;
       background: rgba(248, 244, 234, 0.66);
       padding: 1.35rem;
     }
 
-    .outcome-card span,
-    .proof-card span {
+    .outcome-card span {
       display: block;
       margin-bottom: 0.85rem;
       font-size: 0.74rem;
@@ -831,41 +829,64 @@
       color: var(--accent-ink);
     }
 
-    .outcome-card p,
-    .proof-card p {
+    .outcome-card p {
       font-size: 0.98rem;
       line-height: 1.55;
     }
 
+    .proof-section {
+      padding: 4.5rem 0;
+      background: #F2F7FD;
+    }
+
+    .proof-section .proof-grid {
+      grid-template-columns: minmax(0, 23.25rem);
+      justify-content: center;
+    }
+
     .proof-card {
-      background: var(--surface);
+      display: flex;
+      flex-direction: column;
+      min-height: 21.5rem;
+      padding: clamp(1.75rem, 3vw, 2.45rem);
+      border: 1px solid #D5DDE5;
+      border-radius: 8px;
+      background: #FFFFFF;
+      box-shadow: 0 1.25rem 2.5rem rgba(43, 61, 78, 0.06);
     }
 
     .proof-card .stars {
-      margin-bottom: 1rem;
-      color: var(--accent);
-      font-size: 0.86rem;
-      letter-spacing: 0.08em;
+      display: block;
+      margin-bottom: 1.55rem;
+      color: #F5B42F;
+      font-size: 0.95rem;
+      letter-spacing: 0.06em;
+      line-height: 1;
     }
 
     .proof-card blockquote {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
       margin: 0;
     }
 
     .proof-card blockquote p {
-      color: var(--ink);
-      font-size: 1.04rem;
-      font-weight: 500;
-      line-height: 1.48;
+      color: #274056;
+      font-size: 0.98rem;
+      font-weight: 400;
+      line-height: 1.8;
     }
 
     .proof-card cite {
       display: block;
-      margin-top: 1rem;
-      color: var(--muted);
-      font-size: 0.84rem;
+      margin-top: auto;
+      padding-top: 2.35rem;
+      color: #005C5F;
+      font-size: 1.05rem;
+      font-weight: 700;
       font-style: normal;
-      line-height: 1.4;
+      line-height: 1.35;
     }
 
     .pricing-grid {
@@ -1668,31 +1689,15 @@
       </div>
     </section>
 
-    <section class="reveal">
+    <section class="reveal proof-section">
       <div class="wrap-wide">
-        <p class="sec-label">Clients love their transformation</p>
-        <h2>Real stories from Inner Solutions coaching clients.</h2>
-        <!-- TODO: Replace these related Inner Solutions stories with workshop-specific testimonials when available. -->
-        <div class="proof-grid" aria-label="Short excerpts from Inner Solutions client stories">
+        <!-- TODO: Replace this testimonial with a workshop-specific testimonial when available. -->
+        <div class="proof-grid" aria-label="Client testimonial">
           <article class="proof-card">
             <span class="stars" aria-label="Five-star review">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
             <blockquote>
-              <p>&ldquo;They really understand what you are going through.&rdquo;</p>
-              <cite>Stephine Stoltz</cite>
-            </blockquote>
-          </article>
-          <article class="proof-card">
-            <span class="stars" aria-label="Five-star review">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-            <blockquote>
-              <p>&ldquo;Super nice, made me feel comfortable.&rdquo;</p>
-              <cite>Michelle Berry</cite>
-            </blockquote>
-          </article>
-          <article class="proof-card">
-            <span class="stars" aria-label="Five-star review">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-            <blockquote>
-              <p>&ldquo;He gave me advice and some things to try.&rdquo;</p>
-              <cite>Daniel P.</cite>
+              <p>&ldquo;To anyone looking for a review to see if this actually helps. I am here to tell you it does. Enis has literally been a life changer for me. He really understands what you are going through because he has been right where you are.&rdquo;</p>
+              <cite>Stephanie Stoltz</cite>
             </blockquote>
           </article>
         </div>
