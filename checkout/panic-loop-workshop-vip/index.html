@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <title>VIP Workshop Checkout | Enis Cirak</title>
+  <style>
+    :root {
+      --paper: #F4EFE6;
+      --surface: #FFFCF5;
+      --ink: #20231F;
+      --ink-2: #444940;
+      --muted: #73786F;
+      --line: #D7CCBA;
+      --accent: #5F7463;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      min-height: 100svh;
+      display: grid;
+      place-items: center;
+      padding: 2rem;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+      line-height: 1.6;
+    }
+
+    main {
+      width: min(100%, 38rem);
+      padding: clamp(1.5rem, 4vw, 2.5rem);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 3rem);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+    }
+
+    p {
+      margin: 1rem 0 0;
+      color: var(--ink-2);
+    }
+
+    a {
+      display: inline-flex;
+      min-height: 3rem;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1.5rem;
+      padding: 0.85rem 1.15rem;
+      border: 1px solid var(--ink);
+      border-radius: 999px;
+      background: var(--ink);
+      color: var(--paper);
+      font-weight: 650;
+      text-decoration: none;
+    }
+
+    .note {
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>VIP Workshop Checkout</h1>
+    <p>VIP ticket: <strong>$150</strong></p>
+    <p>This checkout route is ready to connect to a live payment link.</p>
+    <!-- TODO: Replace this page with a Stripe Checkout redirect or hosted payment URL for the $150 VIP workshop ticket. -->
+    <p class="note">Payment integration has not been added to this static site yet.</p>
+    <a href="/panic-loop-workshop/">Back to workshop page</a>
+  </main>
+</body>
+</html>
