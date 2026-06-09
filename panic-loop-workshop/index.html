@@ -615,6 +615,74 @@
       background: var(--surface);
     }
 
+    .proof-summary {
+      margin-top: 2.25rem;
+      padding: 1.35rem;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 1.25rem;
+      align-items: center;
+    }
+
+    .proof-score {
+      display: grid;
+      place-items: center;
+      width: 6.5rem;
+      min-height: 6.5rem;
+      border-radius: 8px;
+      background: var(--mist);
+      color: var(--accent-ink);
+      font-weight: 600;
+      line-height: 1;
+      letter-spacing: -0.03em;
+      font-size: 2rem;
+    }
+
+    .proof-summary p {
+      font-size: 0.98rem;
+      line-height: 1.55;
+    }
+
+    .proof-link {
+      display: inline-flex;
+      margin-top: 0.75rem;
+      color: var(--accent-ink);
+      font-size: 0.9rem;
+      font-weight: 500;
+      border-bottom: 1px solid rgba(95, 116, 99, 0.45);
+      transition: color .2s ease, border-color .2s ease;
+    }
+
+    .proof-link:hover,
+    .proof-link:focus-visible {
+      color: var(--ink);
+      border-color: var(--ink);
+      outline: none;
+    }
+
+    .proof-card blockquote {
+      margin: 0;
+    }
+
+    .proof-card blockquote p {
+      color: var(--ink);
+      font-size: 1.04rem;
+      font-weight: 500;
+      line-height: 1.48;
+    }
+
+    .proof-card cite {
+      display: block;
+      margin-top: 1rem;
+      color: var(--muted);
+      font-size: 0.84rem;
+      font-style: normal;
+      line-height: 1.4;
+    }
+
     .split-lists {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -905,6 +973,15 @@
       .proof-grid {
         grid-template-columns: 1fr;
       }
+
+      .proof-summary {
+        grid-template-columns: 1fr;
+      }
+
+      .proof-score {
+        width: 5.5rem;
+        min-height: 5.5rem;
+      }
     }
 
     @media (max-width: 760px) {
@@ -993,6 +1070,16 @@
         border-top: 1px solid var(--line);
         box-shadow: 0 -12px 36px rgba(30, 33, 29, 0.08);
         backdrop-filter: blur(10px);
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(110%);
+        transition: opacity .22s ease, transform .22s ease;
+      }
+
+      .mobile-sticky-cta.is-visible {
+        opacity: 1;
+        pointer-events: auto;
+        transform: none;
       }
 
       .mobile-sticky-cta .btn {
@@ -1340,25 +1427,45 @@
 
     <section class="reveal">
       <div class="wrap-wide">
-        <p class="sec-label">What people usually need</p>
-        <h2>When anxiety feels isolating, a clear map can be a relief.</h2>
+        <p class="sec-label">Related coaching reviews</p>
+        <h2>Inner Solutions clients often mention feeling understood and leaving with practical tools.</h2>
         <p class="intro-copy">
-          In anxiety coaching conversations, people often describe wanting the same few things:
-          to feel understood, to know why their body is reacting this way, and to leave with a
-          practical next step instead of another theory to think about.
+          This workshop is taught separately, but it comes from the same grounded coaching approach:
+          lived experience, direct conversation, nervous-system education, and practical steps you
+          can actually use.
         </p>
-        <div class="proof-grid" aria-label="Common support needs this workshop is built around">
+        <div class="proof-summary">
+          <div class="proof-score" aria-label="Trustpilot TrustScore 4.3 out of 5">4.3</div>
+          <div>
+            <p>
+              Inner Solutions has a public Trustpilot profile with a 4.3 TrustScore from 9 reviews.
+              Reviews reflect individual coaching experiences and are not guarantees of workshop
+              results.
+            </p>
+            <a class="proof-link" href="https://www.trustpilot.com/review/innersolutionsacademy.com" target="_blank" rel="noopener">Read the Trustpilot reviews</a>
+          </div>
+        </div>
+        <div class="proof-grid" aria-label="Short excerpts from related Inner Solutions coaching reviews">
           <article class="proof-card">
-            <span>Feeling understood</span>
-            <p>This workshop is taught by someone who knows the fear from the inside, not just as an idea.</p>
+            <span>Comfortable to talk to</span>
+            <blockquote>
+              <p>&ldquo;easy to talk to&rdquo;</p>
+              <cite>Caleb Grant, Trustpilot review</cite>
+            </blockquote>
           </article>
           <article class="proof-card">
-            <span>A useful map</span>
-            <p>You will see how sensations, thoughts, avoidance, and emotional pressure can reinforce each other.</p>
+            <span>Practical tools</span>
+            <blockquote>
+              <p>&ldquo;gave me tools to use constantly&rdquo;</p>
+              <cite>Kiara Zielinski, Trustpilot review</cite>
+            </blockquote>
           </article>
           <article class="proof-card">
-            <span>A place to begin</span>
-            <p>The goal is to leave with a grounded practice you can repeat after the workshop ends.</p>
+            <span>Human understanding</span>
+            <blockquote>
+              <p>&ldquo;empathy and understanding&rdquo;</p>
+              <cite>Ricardo Cunningham, Trustpilot review</cite>
+            </blockquote>
           </article>
         </div>
       </div>
@@ -1572,6 +1679,41 @@
       revealEls.forEach(function (el) { io.observe(el); });
     } else {
       revealEls.forEach(function (el) { el.classList.add("is-visible"); });
+    }
+
+    var stickyCta = document.querySelector(".mobile-sticky-cta");
+    var heroSection = document.querySelector(".hero");
+    var mobileQuery = window.matchMedia("(max-width: 760px)");
+
+    function setStickyCtaVisible(visible) {
+      if (!stickyCta) return;
+      stickyCta.classList.toggle("is-visible", Boolean(visible && mobileQuery.matches));
+    }
+
+    function updateStickyCta() {
+      if (!stickyCta || !heroSection) return;
+      setStickyCtaVisible(heroSection.getBoundingClientRect().bottom <= 0);
+    }
+
+    if (stickyCta && heroSection) {
+      if ("IntersectionObserver" in window) {
+        var stickyIo = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            setStickyCtaVisible(!entry.isIntersecting && window.scrollY > 0);
+          });
+        }, { threshold: 0 });
+        stickyIo.observe(heroSection);
+      } else {
+        window.addEventListener("scroll", updateStickyCta, { passive: true });
+      }
+
+      if (typeof mobileQuery.addEventListener === "function") {
+        mobileQuery.addEventListener("change", updateStickyCta);
+      } else if (typeof mobileQuery.addListener === "function") {
+        mobileQuery.addListener(updateStickyCta);
+      }
+
+      updateStickyCta();
     }
   </script>
 </body>
