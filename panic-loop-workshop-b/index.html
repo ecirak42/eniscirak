@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZX55VB4F1P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-ZX55VB4F1P");
+  </script>
+
+  <script>
+    window.WORKSHOP_EVENT = Object.freeze({
+      time: "11 AM Central / 12 PM Eastern",
+      standardCheckoutUrl: "https://square.link/u/NtyClaJI?src=embed",
+      vipCheckoutUrl: "https://square.link/u/lRtE2CXp?src=embed"
+    });
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#1B1C18" />
+  <meta name="robots" content="noindex" />
+  <title>Panic Loop Workshop | A Letter About the Way Out</title>
+  <meta
+    name="description"
+    content="A live 90-minute workshop on the loop that keeps panic going. From someone who lived it. $49, replay included."
+  />
+  <meta property="og:title" content="You've gotten good at hiding it" />
+  <meta property="og:description" content="A letter about panic, the loop that keeps it going, and a live 90-minute workshop on the way out." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://eniscirak.com/assets/enis-tree.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%231B1C18'/%3E%3Ccircle cx='16' cy='16' r='7' fill='none' stroke='%23C9794A' stroke-width='1.6'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <script src="/assets/workshop-schedule.js?v=20260610" defer></script>
+
+  <style>
+    :root {
+      --bg: #1B1C18;
+      --bg-soft: #232420;
+      --surface: #282923;
+      --text: #EDE7DA;
+      --text-2: #C9C3B4;
+      --muted: #918C7D;
+      --line: #3B3C33;
+      --line-soft: #32332B;
+      --sage: #9DB5A2;
+      --amber: #C9794A;
+      --amber-bright: #D98D5F;
+      --star: #00B67A;
+      --serif: "Source Serif 4", Georgia, serif;
+      --sans: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+      --measure: 36rem;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--serif);
+      font-size: clamp(1.08rem, 1rem + 0.35vw, 1.2rem);
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    p { margin: 0; color: var(--text-2); }
+    p + p { margin-top: 1.25rem; }
+
+    strong { color: var(--text); font-weight: 600; }
+
+    ::selection { background: var(--amber); color: var(--bg); }
+
+    .wrap {
+      width: min(calc(100% - 2.6rem), var(--measure));
+      margin: 0 auto;
+    }
+
+    /* ------- Top label ------- */
+    .top-label {
+      padding: 1.2rem 0 0;
+      text-align: center;
+    }
+
+    .top-label span {
+      color: var(--muted);
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    /* ------- Letter ------- */
+    .letter-open {
+      padding: clamp(3.2rem, 8vw, 5.5rem) 0 0;
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--text);
+      font-family: var(--serif);
+      font-size: clamp(2.5rem, 7.5vw, 3.6rem);
+      font-weight: 600;
+      letter-spacing: -0.015em;
+      line-height: 1.08;
+    }
+
+    .open-list {
+      margin: 2rem 0 0;
+      color: var(--text-2);
+      font-size: clamp(1.15rem, 1.6vw, 1.3rem);
+      line-height: 1.65;
+    }
+
+    .letter-body {
+      padding: 0 0 4rem;
+    }
+
+    .letter-body h2 {
+      margin: 3.2rem 0 1.1rem;
+      color: var(--text);
+      font-family: var(--serif);
+      font-size: clamp(1.45rem, 2.2vw, 1.7rem);
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      line-height: 1.25;
+    }
+
+    .divider {
+      width: 3rem;
+      height: 1px;
+      margin: 3rem auto;
+      background: var(--line);
+    }
+
+    /* ------- CTA ------- */
+    .cta-block {
+      margin: 2.4rem 0 0;
+      padding: 1.4rem;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--bg-soft);
+      text-align: center;
+    }
+
+    .cta-date {
+      margin: 0 0 1rem;
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .cta-date span { color: var(--text-2); font-weight: 400; }
+
+    .button {
+      display: inline-flex;
+      width: 100%;
+      min-height: 3.3rem;
+      align-items: center;
+      justify-content: center;
+      gap: 0.55rem;
+      padding: 1rem 1.5rem;
+      border: 1px solid var(--amber);
+      border-radius: 999px;
+      background: var(--amber);
+      color: #1C120A;
+      font-family: var(--sans);
+      font-size: 0.98rem;
+      font-weight: 700;
+      line-height: 1.2;
+      transition: background-color .2s ease, border-color .2s ease;
+      cursor: pointer;
+    }
+
+    .button::after {
+      content: "\2192";
+      transition: transform .2s ease;
+    }
+
+    .button:hover,
+    .button:focus-visible {
+      background: var(--amber-bright);
+      border-color: var(--amber-bright);
+      outline: none;
+    }
+
+    .button:focus-visible {
+      outline: 2px solid var(--sage);
+      outline-offset: 3px;
+    }
+
+    .button:hover::after,
+    .button:focus-visible::after {
+      transform: translateX(3px);
+    }
+
+    .cta-micro {
+      margin-top: 0.9rem;
+      color: var(--muted);
+      font-family: var(--sans);
+      font-size: 0.82rem;
+      line-height: 1.5;
+    }
+
+    .vip-line {
+      margin-top: 0.8rem;
+      color: var(--muted);
+      font-family: var(--sans);
+      font-size: 0.82rem;
+    }
+
+    .vip-line a {
+      color: var(--sage);
+      border-bottom: 1px solid rgba(157, 181, 162, 0.35);
+      transition: border-color .2s ease;
+    }
+
+    .vip-line a:hover { border-color: var(--sage); }
+
+    /* ------- Video ------- */
+    .video-wrap {
+      margin: 2rem 0 0.75rem;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #000;
+    }
+
+    .video-wrap video {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #000;
+    }
+
+    .video-caption {
+      color: var(--muted);
+      font-family: var(--sans);
+      font-size: 0.82rem;
+    }
+
+    /* ------- Quote ------- */
+    .quote-card {
+      margin: 2rem 0 0;
+      padding: 1.5rem 1.5rem 1.4rem;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--bg-soft);
+    }
+
+    .stars {
+      display: block;
+      margin-bottom: 0.8rem;
+      color: var(--star);
+      font-size: 0.85rem;
+      letter-spacing: 0.18em;
+    }
+
+    .quote-card blockquote {
+      margin: 0;
+    }
+
+    .quote-card blockquote p {
+      color: var(--text);
+      font-size: 1.05rem;
+      line-height: 1.65;
+    }
+
+    .quote-card cite {
+      display: block;
+      margin-top: 1rem;
+      color: var(--muted);
+      font-family: var(--sans);
+      font-size: 0.84rem;
+      font-style: normal;
+    }
+
+    /* ------- FAQ ------- */
+    .faq {
+      margin-top: 1.6rem;
+      border-top: 1px solid var(--line);
+    }
+
+    .faq details {
+      padding: 1.15rem 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .faq summary {
+      display: flex;
+      gap: 1.5rem;
+      align-items: baseline;
+      justify-content: space-between;
+      color: var(--text);
+      cursor: pointer;
+      font-family: var(--sans);
+      font-size: 1rem;
+      font-weight: 600;
+      list-style: none;
+    }
+
+    .faq summary::-webkit-details-marker { display: none; }
+
+    .faq summary::after {
+      content: "+";
+      flex: 0 0 auto;
+      color: var(--sage);
+      font-size: 1.2rem;
+      line-height: 1;
+    }
+
+    .faq details[open] summary::after { content: "\2212"; }
+
+    .faq details p {
+      margin-top: 0.8rem;
+      font-family: var(--sans);
+      font-size: 0.94rem;
+      line-height: 1.6;
+    }
+
+    /* ------- Signature ------- */
+    .signature {
+      display: flex;
+      align-items: center;
+      gap: 1.1rem;
+      margin-top: 2.8rem;
+    }
+
+    .signature img {
+      width: 4.2rem;
+      height: 4.2rem;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      object-fit: cover;
+      object-position: 50% 30%;
+      filter: saturate(0.92);
+    }
+
+    .signature .sig-name {
+      color: var(--text);
+      font-family: var(--serif);
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
+    .signature .sig-sub {
+      margin-top: 0.15rem;
+      color: var(--muted);
+      font-family: var(--sans);
+      font-size: 0.84rem;
+    }
+
+    /* ------- Footer ------- */
+    footer {
+      padding: 2.5rem 0 5.5rem;
+      border-top: 1px solid var(--line-soft);
+      text-align: center;
+    }
+
+    .fine {
+      max-width: 44rem;
+      margin: 0 auto;
+      color: var(--muted);
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      line-height: 1.55;
+    }
+
+    .copyright {
+      margin-top: 1.1rem;
+      color: var(--muted);
+      font-family: var(--sans);
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+    }
+
+    /* ------- Sticky CTA ------- */
+    .sticky-cta {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.85rem;
+      padding: 0.7rem 1.1rem calc(0.7rem + env(safe-area-inset-bottom, 0));
+      border-top: 1px solid var(--line);
+      background: rgba(35, 36, 32, 0.97);
+      backdrop-filter: blur(8px);
+      transform: translateY(100%);
+      transition: transform .35s ease;
+    }
+
+    .sticky-cta.is-visible { transform: translateY(0); }
+
+    .sticky-text {
+      margin: 0;
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 0.85rem;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    .sticky-text span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.76rem;
+      font-weight: 500;
+    }
+
+    .sticky-cta .button {
+      width: auto;
+      min-height: 2.7rem;
+      padding: 0.6rem 1.2rem;
+      font-size: 0.86rem;
+      white-space: nowrap;
+    }
+
+    /* ------- Reveal ------- */
+    .reveal {
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    @media (min-width: 720px) {
+      .button { width: auto; }
+      .cta-block .button { width: 100%; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+
+      .reveal,
+      .reveal.is-visible {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+
+      * {
+        animation-duration: 0.001ms !important;
+        transition-duration: 0.001ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-label">
+    <span>A live 90-minute workshop &middot; <span data-workshop-short-date>this Saturday</span> &middot; $49</span>
+  </div>
+
+  <main id="top">
+    <section class="letter-open">
+      <div class="wrap">
+        <h1>You&rsquo;ve gotten good at hiding it.</h1>
+        <p class="open-list">
+          The pulse checks. The exit seats. The early goodbyes. The plans you cancel an hour
+          before. From the outside you look fine. Inside, you&rsquo;re managing a fear that never
+          fully switches off.
+        </p>
+        <p style="margin-top: 1.25rem;">
+          I did this for almost five years. This page is a letter about what I found out.
+        </p>
+
+        <div class="cta-block">
+          <p class="cta-date"><span data-workshop-date>Saturday</span> <span>&middot;</span> <span data-workshop-time>11 AM Central / 12 PM Eastern</span></p>
+          <a class="button" href="/checkout/panic-loop-workshop/" data-standard-checkout>Save my seat &middot; $49</a>
+          <p class="cta-micro">Live online &middot; Replay included &middot; Cameras off is fine &middot; Refund within 7 days if it wasn&rsquo;t useful</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="letter-body">
+      <div class="wrap">
+        <div class="reveal">
+          <h2>The part nobody explained to me</h2>
+          <p>
+            Every test came back normal. Everyone kept telling me I was fine. Nobody explained why
+            my body kept doing it anyway.
+          </p>
+          <p>
+            Here&rsquo;s what I eventually learned. Panic runs on a loop. A sensation shows up. Fear
+            spikes and floods you with adrenaline, which makes the sensation louder. You escape,
+            and the relief teaches your brain it was a real danger. So your brain starts watching
+            for the next one.
+          </p>
+          <p>
+            And watching finds things. A skipped beat. A light head. A moment where the room feels
+            unreal. That&rsquo;s why attacks seem to come from nowhere. The watching finds them first.
+          </p>
+          <p>
+            Once I understood that, everything I&rsquo;d been doing to protect myself looked
+            different. The checking, the escaping, the avoiding. All of it was feeding the loop.
+          </p>
+        </div>
+
+        <div class="reveal">
+          <div class="video-wrap">
+            <video
+              controls
+              preload="metadata"
+              poster="../assets/panic-loop-feedback-loop-poster.jpg"
+              aria-label="Enis explaining the panic feedback loop"
+            >
+              <source src="../assets/panic-loop-feedback-loop.mp4" type="video/mp4" />
+              Your browser does not support embedded video.
+            </video>
+          </div>
+          <p class="video-caption">Here I am explaining it out loud, if you&rsquo;d rather listen than read. Ninety seconds.</p>
+        </div>
+
+        <div class="reveal">
+          <h2>What I&rsquo;m inviting you to</h2>
+          <p>
+            On <span data-workshop-display-date>Saturday</span> I&rsquo;m teaching a live 90-minute
+            workshop on this loop.
+          </p>
+          <p>
+            I&rsquo;ll walk you through how it works, slowly and in plain language, including why
+            DP/DR and strange body sensations feel so convincing. You&rsquo;ll map your own version
+            of the loop on paper. I&rsquo;ll teach you a way to meet a wave without feeding it, and
+            we&rsquo;ll practice it together. Then you can ask me anything.
+          </p>
+          <p>
+            You don&rsquo;t have to talk. You don&rsquo;t have to turn your camera on. If you panic
+            halfway through, you can step away and come back, and nobody will think anything of it.
+          </p>
+          <p>
+            It costs $49. A private session with me is $125, so this is the most affordable way to
+            get this explanation from someone who has actually lived it.
+          </p>
+        </div>
+
+        <div class="reveal">
+          <h2>What a client said</h2>
+          <div class="quote-card">
+            <span class="stars" aria-label="Five-star review">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            <blockquote>
+              <p>
+                &ldquo;To anyone looking for a review to see if this actually helps. I am here to
+                tell you it does. Enis has literally been a life changer for me. He really
+                understands what you are going through because he has been right where you are.&rdquo;
+              </p>
+              <cite>Stephanie S., from the public Trustpilot reviews of my coaching practice</cite>
+            </blockquote>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <h2>The deal</h2>
+          <p>
+            If you attend live or watch the replay and it wasn&rsquo;t useful, email me within 7
+            days and I&rsquo;ll refund you. You&rsquo;ve been disappointed enough times. I&rsquo;m
+            not interested in being another one.
+          </p>
+        </div>
+
+        <div class="reveal">
+          <h2>Questions</h2>
+          <div class="faq">
+            <details>
+              <summary>Is this therapy?</summary>
+              <p>No. This is an educational coaching workshop. It is not therapy, diagnosis, treatment, or emergency care.</p>
+            </details>
+            <details>
+              <summary>Will this stop my panic attacks?</summary>
+              <p>Ninety minutes won&rsquo;t erase panic, and I won&rsquo;t pretend it will. What it does is show you the loop clearly and give you something concrete to practice. Everything you do after the first sensation either feeds the loop or weakens it. That part is learnable, and that part fits in 90 minutes.</p>
+            </details>
+            <details>
+              <summary>Do I have to talk or be on camera?</summary>
+              <p>No. Cameras can stay off and you can stay quiet the whole time.</p>
+            </details>
+            <details>
+              <summary>What if I can&rsquo;t make it live?</summary>
+              <p>The replay is included. Watch it whenever you want.</p>
+            </details>
+            <details>
+              <summary>What happens after I pay?</summary>
+              <p>You get a confirmation email with your workshop link. The replay arrives by email after the live call. Checkout is handled by Square.</p>
+            </details>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <p style="margin-top: 2.8rem;">
+            I know how much energy it takes to live the way you&rsquo;re living. Ninety minutes
+            won&rsquo;t change everything. It will change what you understand, and that&rsquo;s
+            where it started for me.
+          </p>
+          <p>See you Saturday.</p>
+
+          <div class="signature">
+            <img src="../assets/enis-tree.jpg" alt="Enis Cirak" loading="lazy" />
+            <div>
+              <p class="sig-name">Enis Cirak</p>
+              <p class="sig-sub">Panic &amp; anxiety coach. Had it, got out, teaches the map.</p>
+            </div>
+          </div>
+
+          <div class="cta-block" id="tickets">
+            <p class="cta-date"><span data-workshop-date>Saturday</span> <span>&middot;</span> <span data-workshop-time>11 AM Central / 12 PM Eastern</span></p>
+            <a class="button" href="/checkout/panic-loop-workshop/" data-standard-checkout>Save my seat &middot; $49</a>
+            <p class="cta-micro">Live online &middot; Replay included &middot; Cameras off is fine &middot; Refund within 7 days if it wasn&rsquo;t useful</p>
+            <p class="vip-line">Want a private 60-minute session with me too? <a href="/checkout/panic-loop-workshop-vip/" data-vip-checkout>VIP ticket &middot; $150</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p class="fine">
+        This workshop is for educational and coaching purposes only. It is not medical advice,
+        therapy, diagnosis, treatment, or crisis support. If you are in crisis or need immediate
+        help, contact emergency services, a crisis hotline, or a licensed mental-health professional.
+      </p>
+      <p class="copyright">&copy; Enis Cirak &middot; <a href="https://eniscirak.com">eniscirak.com</a></p>
+    </div>
+  </footer>
+
+  <div class="sticky-cta" id="stickyCta" aria-hidden="true">
+    <p class="sticky-text">
+      <span data-workshop-short-date>This Saturday</span>
+      Live workshop &middot; $49
+    </p>
+    <a class="button" href="/checkout/panic-loop-workshop/" data-standard-checkout>Save my seat</a>
+  </div>
+
+  <script>
+    (function () {
+      var config = window.WORKSHOP_EVENT || {};
+
+      document.querySelectorAll("[data-workshop-time]").forEach(function (el) {
+        el.textContent = config.time || el.textContent;
+      });
+
+      document.querySelectorAll("[data-standard-checkout]").forEach(function (link) {
+        link.href = config.standardCheckoutUrl || link.href;
+      });
+
+      document.querySelectorAll("[data-vip-checkout]").forEach(function (link) {
+        link.href = config.vipCheckoutUrl || link.href;
+      });
+    })();
+
+    document.querySelectorAll("[data-standard-checkout], [data-vip-checkout]").forEach(function (link) {
+      link.addEventListener("click", function () {
+        if (typeof gtag === "function") {
+          gtag("event", "workshop_checkout_click", {
+            event_category: "engagement",
+            event_label: "variant-b: " + link.textContent.trim()
+          });
+        }
+      });
+    });
+
+    var revealEls = document.querySelectorAll(".reveal");
+    if ("IntersectionObserver" in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08 });
+
+      revealEls.forEach(function (el) { io.observe(el); });
+    } else {
+      revealEls.forEach(function (el) { el.classList.add("is-visible"); });
+    }
+
+    (function () {
+      var bar = document.getElementById("stickyCta");
+      var hero = document.querySelector(".letter-open");
+      var tickets = document.getElementById("tickets");
+      if (!bar || !hero || !("IntersectionObserver" in window)) { return; }
+
+      var pastHero = false;
+      var onTickets = false;
+
+      function update() {
+        var show = pastHero && !onTickets;
+        bar.classList.toggle("is-visible", show);
+        bar.setAttribute("aria-hidden", show ? "false" : "true");
+      }
+
+      new IntersectionObserver(function (entries) {
+        pastHero = !entries[0].isIntersecting;
+        update();
+      }, { threshold: 0 }).observe(hero);
+
+      if (tickets) {
+        new IntersectionObserver(function (entries) {
+          onTickets = entries[0].isIntersecting;
+          update();
+        }, { threshold: 0.15 }).observe(tickets);
+      }
+    })();
+  </script>
+</body>
+</html>
