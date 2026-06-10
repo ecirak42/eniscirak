@@ -12,41 +12,50 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#F2EDE1" />
-  <title>Enis Cirak — Panic and agoraphobia coaching</title>
+  <meta name="theme-color" content="#F5F1E8" />
+  <title>Enis Cirak | Coaching for Panic Attacks, Anxiety &amp; Agoraphobia</title>
   <meta
     name="description"
-    content="1-on-1 coaching for panic attacks and agoraphobia. Online. Book a free call."
+    content="One-on-one coaching for panic attacks, agoraphobia, and the fear of fear. Online sessions. The first call is free."
   />
-  <meta property="og:title" content="Enis Cirak — Panic and agoraphobia coaching" />
-  <meta property="og:description" content="1-on-1 coaching for panic attacks and agoraphobia. Online." />
+  <meta property="og:title" content="Enis Cirak | Coaching for Panic Attacks, Anxiety &amp; Agoraphobia" />
+  <meta property="og:description" content="One-on-one coaching for panic attacks, agoraphobia, and the fear of fear. Online. The first call is free." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="about-photo.jpg" />
+  <meta property="og:image" content="https://eniscirak.com/about-photo.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23F2EDE1'/%3E%3Ccircle cx='16' cy='16' r='6' fill='none' stroke='%235F7463' stroke-width='1.5'/%3E%3C/svg%3E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%23F5F1E8'/%3E%3Ccircle cx='16' cy='16' r='7' fill='none' stroke='%235F7463' stroke-width='1.6'/%3E%3C/svg%3E" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..700&family=Inter:wght@400;500;600;700&display=swap"
     rel="stylesheet"
   />
   <script src="/assets/workshop-schedule.js?v=20260610" defer></script>
+  <link rel="preload" as="image" href="about-photo.jpg" />
 
   <style>
     :root {
-      --paper: #F2EDE1;
-      --paper-2: #EBE5D6;
-      --ink: #1E211D;
-      --ink-2: #3F443D;
-      --muted: #6B7069;
-      --line: #D3CCBD;
-      --line-soft: #E0DAC9;
-      --accent: #5F7463;
-      --accent-ink: #3E4F44;
-      --measure: 38rem;
-      --wide: 62rem;
+      --paper: #F5F1E8;
+      --paper-deep: #EDE7D8;
+      --surface: #FFFDF6;
+      --surface-soft: #F9F5EC;
+      --ink: #22251F;
+      --ink-2: #45493F;
+      --muted: #757A6D;
+      --line: #DAD0BC;
+      --line-soft: #E7DFCC;
+      --sage: #5F7463;
+      --sage-ink: #3D4F43;
+      --sage-wash: #E8EEE7;
+      --clay: #9E5230;
+      --clay-deep: #82431F;
+      --star: #00B67A;
+      --serif: "Source Serif 4", Georgia, serif;
+      --sans: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+      --measure: 42rem;
+      --wide: 72rem;
     }
 
     * { box-sizing: border-box; }
@@ -61,33 +70,24 @@
       min-width: 320px;
       background: var(--paper);
       color: var(--ink);
-      font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
-      font-weight: 400;
-      font-size: clamp(1.125rem, 1rem + 0.45vw, 1.22rem);
-      line-height: 1.65;
+      font-family: var(--sans);
+      font-size: clamp(1.02rem, 0.97rem + 0.25vw, 1.12rem);
+      line-height: 1.68;
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
-    }
-
-    p, li, .lede, .step-body, .meta-line, .fine {
-      color: var(--ink-2);
-    }
-
-    p strong { font-weight: 500; color: var(--ink); }
-
-    ::selection {
-      background: var(--accent);
-      color: var(--paper);
     }
 
     a { color: inherit; text-decoration: none; }
     img { display: block; max-width: 100%; }
 
-    .ui {
-      font-family: "Inter", "Segoe UI", system-ui, sans-serif;
-    }
+    p, li { color: var(--ink-2); }
+    p { margin: 0; }
+    p + p { margin-top: 1rem; }
 
-    /* ------- Layout ------- */
+    strong { color: var(--ink); font-weight: 600; }
+
+    ::selection { background: var(--sage); color: var(--surface); }
+
     .wrap {
       width: min(calc(100% - 2.5rem), var(--measure));
       margin: 0 auto;
@@ -98,24 +98,151 @@
       margin: 0 auto;
     }
 
-    section { padding: 6rem 0; }
-    section + section { padding-top: 0; }
+    section { padding: clamp(4.2rem, 7vw, 6.5rem) 0; }
 
-    .rule {
+    .section-rule {
       width: min(calc(100% - 2.5rem), var(--wide));
-      margin: 0 auto;
       height: 1px;
+      margin: 0 auto;
       background: var(--line);
+    }
+
+    h1, h2 {
+      margin: 0;
+      color: var(--ink);
+      font-family: var(--serif);
+      font-weight: 600;
+      letter-spacing: -0.015em;
+    }
+
+    h1 {
+      max-width: 17ch;
+      font-size: clamp(2.55rem, 5.4vw, 4.3rem);
+      line-height: 1.06;
+    }
+
+    h2 {
+      max-width: 22ch;
+      font-size: clamp(1.9rem, 3.2vw, 3rem);
+      line-height: 1.12;
+    }
+
+    h3 {
+      margin: 0;
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: clamp(1.05rem, 1.2vw, 1.18rem);
+      font-weight: 650;
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      margin: 0 0 1.3rem;
+      color: var(--sage-ink);
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 1.55rem;
+      height: 1px;
+      background: currentColor;
+    }
+
+    .lede {
+      max-width: 38rem;
+      margin-top: 1.3rem;
+      color: var(--ink-2);
+      font-size: clamp(1.1rem, 1.4vw, 1.28rem);
+      line-height: 1.55;
+    }
+
+    .small-note {
+      margin-top: 1rem;
+      color: var(--muted);
+      font-size: 0.86rem;
+      line-height: 1.55;
+    }
+
+    /* ------- Buttons ------- */
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      margin-top: 1.5rem;
+    }
+
+    .button {
+      display: inline-flex;
+      min-height: 3.2rem;
+      align-items: center;
+      justify-content: center;
+      gap: 0.55rem;
+      padding: 0.95rem 1.4rem;
+      border: 1px solid var(--clay);
+      border-radius: 999px;
+      background: var(--clay);
+      color: #FFFDF6;
+      font-size: 0.94rem;
+      font-weight: 650;
+      line-height: 1.2;
+      box-shadow: 0 10px 26px rgba(158, 82, 48, 0.22);
+      transition: background-color .2s ease, border-color .2s ease, box-shadow .2s ease;
+      cursor: pointer;
+    }
+
+    .button::after {
+      content: "\2192";
+      transition: transform .2s ease;
+    }
+
+    .button:hover,
+    .button:focus-visible {
+      background: var(--clay-deep);
+      border-color: var(--clay-deep);
+      box-shadow: 0 12px 30px rgba(130, 67, 31, 0.28);
+      outline: none;
+    }
+
+    .button:focus-visible {
+      outline: 2px solid var(--sage-ink);
+      outline-offset: 3px;
+    }
+
+    .button:hover::after,
+    .button:focus-visible::after {
+      transform: translateX(3px);
+    }
+
+    .button-secondary {
+      background: transparent;
+      color: var(--ink);
+      border-color: var(--line);
+      box-shadow: none;
+    }
+
+    .button-secondary:hover,
+    .button-secondary:focus-visible {
+      background: var(--surface);
+      color: var(--ink);
+      border-color: var(--sage);
+      box-shadow: none;
     }
 
     /* ------- Workshop band ------- */
     .promo-band {
       display: block;
       padding: 0.72rem 1.25rem;
-      background: #E4EBE3;
+      background: var(--sage-wash);
       border-bottom: 1px solid var(--line);
-      color: var(--accent-ink);
-      font-family: "Inter", system-ui, sans-serif;
+      color: var(--sage-ink);
       font-size: 0.85rem;
       font-weight: 600;
       letter-spacing: 0.01em;
@@ -123,7 +250,7 @@
       transition: background-color .2s ease;
     }
 
-    .promo-band:hover { background: #DCE5DB; }
+    .promo-band:hover { background: #DEE7DC; }
 
     .promo-band::after {
       content: "\2009\2192";
@@ -135,501 +262,398 @@
 
     /* ------- Top bar ------- */
     .topbar {
-      padding: 1.5rem 0 0;
+      padding: 1.4rem 0;
     }
 
     .topbar-inner {
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       gap: 1rem;
-      font-family: "Inter", system-ui, sans-serif;
-      font-size: 0.82rem;
-      letter-spacing: 0.02em;
-      color: var(--ink-2);
     }
 
     .wordmark {
-      font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+      font-family: var(--serif);
+      font-size: 1.12rem;
       font-weight: 600;
-      font-size: 0.98rem;
       letter-spacing: -0.01em;
-      color: var(--ink);
     }
 
-    .topbar a.nav-book {
-      color: var(--ink-2);
+    .topbar-right {
+      display: flex;
+      align-items: center;
+      gap: 1.1rem;
+    }
+
+    .topbar-link {
+      color: var(--muted);
+      font-size: 0.86rem;
+      font-weight: 500;
       transition: color .2s ease;
     }
 
-    .topbar a.nav-book:hover { color: var(--ink); }
+    .topbar-link:hover { color: var(--ink); }
 
-    .topbar a.nav-book::after {
-      content: "\2009\2192";
-      display: inline-block;
-      transition: transform .25s ease;
-    }
-
-    .topbar a.nav-book:hover::after { transform: translateX(3px); }
-
-    /* ------- Hero ------- */
-    .hero {
-      padding: 6rem 0 7rem;
-    }
-
-    .eyebrow {
-      font-family: "Inter", system-ui, sans-serif;
-      font-size: 0.76rem;
-      font-weight: 500;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--accent-ink);
-      margin: 0 0 1.75rem;
+    .button-mini {
       display: inline-flex;
       align-items: center;
-      gap: 0.7rem;
-    }
-
-    .eyebrow::before {
-      content: "";
-      width: 1.6rem;
-      height: 1px;
-      background: var(--accent);
-    }
-
-    h1 {
-      margin: 0;
-      font-family: "Inter", "Segoe UI", system-ui, sans-serif;
-      font-weight: 600;
-      font-size: clamp(2.2rem, 5.6vw, 4rem);
-      line-height: 1.1;
-      letter-spacing: -0.03em;
-      color: var(--ink);
-      max-width: 18ch;
-    }
-
-    h1 em {
-      font-style: normal;
-      font-weight: 600;
-      color: var(--accent-ink);
-    }
-
-    .lede {
-      margin: 1.75rem 0 0;
-      max-width: 34rem;
-      font-size: clamp(1.15rem, 1.6vw, 1.35rem);
-      line-height: 1.55;
-      color: var(--ink-2);
-    }
-
-    .hero-cta {
-      margin-top: 2.5rem;
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      font-family: "Inter", system-ui, sans-serif;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.55rem;
-      padding: 0.95rem 1.35rem;
-      background: var(--ink);
-      color: var(--paper);
-      font-size: 0.92rem;
-      font-weight: 500;
-      letter-spacing: 0.01em;
-      border: 1px solid var(--ink);
+      padding: 0.5rem 1rem;
+      border: 1px solid var(--line);
       border-radius: 999px;
-      transition: background-color .2s ease, transform .2s ease;
-      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 650;
+      transition: border-color .2s ease, background-color .2s ease;
     }
 
-    .btn:hover,
-    .btn:focus-visible {
-      background: var(--accent-ink);
-      border-color: var(--accent-ink);
+    .button-mini:hover,
+    .button-mini:focus-visible {
+      border-color: var(--sage);
+      background: var(--surface);
       outline: none;
     }
 
-    .btn::after {
-      content: "\2192";
-      transition: transform .25s ease;
+    /* ------- Hero ------- */
+    .hero {
+      padding: clamp(2rem, 4.5vw, 4rem) 0 clamp(4.5rem, 7vw, 6.5rem);
+      background:
+        linear-gradient(150deg, rgba(232, 238, 231, 0.9) 0%, rgba(245, 241, 232, 0) 46%),
+        radial-gradient(circle at 90% 12%, rgba(95, 116, 99, 0.16), rgba(95, 116, 99, 0) 30rem);
     }
 
-    .btn:hover::after { transform: translateX(3px); }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.04fr) minmax(20rem, 0.78fr);
+      gap: clamp(2.5rem, 6vw, 5.5rem);
+      align-items: center;
+    }
 
-    .btn-ghost {
-      background: transparent;
-      color: var(--ink-2);
+    .hero-photo-col { position: relative; }
+
+    .hero-photo {
+      position: relative;
+      margin: 0;
+      overflow: hidden;
       border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--surface);
+      box-shadow: 0 24px 70px rgba(34, 37, 31, 0.14);
     }
 
-    .btn-ghost:hover {
-      background: var(--paper-2);
+    .hero-photo::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      border-radius: inherit;
+      box-shadow: inset 0 0 0 1px rgba(255, 253, 246, 0.25);
+      pointer-events: none;
+    }
+
+    .hero-photo img {
+      width: 100%;
+      height: clamp(26rem, 58vh, 36rem);
+      object-fit: cover;
+      object-position: 50% 20%;
+      filter: saturate(0.92);
+    }
+
+    .photo-frame { position: relative; }
+
+    .photo-frame::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      transform: translate(1rem, 1rem);
+      border: 1px solid rgba(95, 116, 99, 0.55);
+      border-radius: 12px;
+    }
+
+    .hero-proof {
+      position: absolute;
+      bottom: 1.4rem;
+      left: -2.2rem;
+      z-index: 2;
+      max-width: 18.5rem;
+      margin: 0;
+      padding: 1rem 1.15rem;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--surface);
+      box-shadow: 0 16px 44px rgba(34, 37, 31, 0.16);
+    }
+
+    .stars {
+      display: block;
+      color: var(--star);
+      font-size: 0.85rem;
+      letter-spacing: 0.18em;
+    }
+
+    .hero-proof .stars { margin-bottom: 0.45rem; }
+
+    .hero-proof p {
       color: var(--ink);
-      border-color: var(--line);
-    }
-
-    .meta-line {
-      font-family: "Inter", system-ui, sans-serif;
-      font-size: 0.82rem;
-      color: var(--muted);
-      letter-spacing: 0.01em;
-    }
-
-    /* ------- Typographic sections ------- */
-    .sec-label {
-      font-family: "Inter", system-ui, sans-serif;
-      font-size: 0.72rem;
+      font-size: 0.92rem;
       font-weight: 500;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin: 0 0 2rem;
-    }
-
-    h2 {
-      margin: 0 0 1.75rem;
-      font-family: "Inter", "Segoe UI", system-ui, sans-serif;
-      font-weight: 600;
-      font-size: clamp(1.85rem, 3.4vw, 2.6rem);
-      line-height: 1.18;
-      letter-spacing: -0.025em;
-      color: var(--ink);
-      max-width: 22ch;
-    }
-
-    h2 em {
-      font-style: normal;
-      color: var(--accent-ink);
-    }
-
-    p { margin: 0; color: var(--ink-2); }
-    p + p { margin-top: 1.15rem; }
-
-    .pullquote {
-      margin: 3rem 0;
-      font-family: "Inter", "Segoe UI", system-ui, sans-serif;
-      font-style: normal;
-      font-weight: 500;
-      font-size: clamp(1.4rem, 2.2vw, 1.75rem);
-      line-height: 1.4;
-      letter-spacing: -0.015em;
-      color: var(--ink);
-      border-left: 2px solid var(--accent);
-      padding-left: 1.5rem;
-      max-width: 32rem;
-    }
-
-    /* ------- The loop (numbered steps) ------- */
-    .loop {
-      margin-top: 2.5rem;
-      display: grid;
-      gap: 0;
-    }
-
-    .step {
-      display: grid;
-      grid-template-columns: 4rem 1fr;
-      gap: 1.5rem;
-      padding: 1.5rem 0;
-      border-top: 1px solid var(--line-soft);
-      align-items: baseline;
-    }
-
-    .step:last-child { border-bottom: 1px solid var(--line-soft); }
-
-    .step-num {
-      font-family: "Inter", system-ui, sans-serif;
-      font-size: 0.78rem;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      color: var(--muted);
-    }
-
-    .step-body {
-      font-size: clamp(1.08rem, 1.5vw, 1.2rem);
-      color: var(--ink);
       line-height: 1.5;
     }
 
-    .step-body strong {
-      font-weight: 500;
-      color: var(--ink);
+    .hero-proof cite {
+      display: block;
+      margin-top: 0.5rem;
+      color: var(--muted);
+      font-size: 0.8rem;
+      font-style: normal;
     }
 
-    .step-body em {
-      font-style: italic;
-      color: var(--accent-ink);
-    }
-
-    /* ------- Learnings (numbered editorial list) ------- */
-    .learn {
-      margin-top: 3rem;
-      counter-reset: learn;
-    }
-
-    .learn li {
-      list-style: none;
-      counter-increment: learn;
+    /* ------- Section head ------- */
+    .section-head {
       display: grid;
-      grid-template-columns: 4rem 1fr;
-      gap: 1.5rem;
-      padding: 1.75rem 0;
-      border-top: 1px solid var(--line-soft);
-      align-items: baseline;
-    }
-
-    .learn li:last-child { border-bottom: 1px solid var(--line-soft); }
-
-    .learn li::before {
-      content: "0" counter(learn);
-      font-family: "Inter", system-ui, sans-serif;
-      font-size: 0.78rem;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      color: var(--accent-ink);
-    }
-
-    .learn li span {
-      font-family: "Inter", system-ui, sans-serif;
-      font-size: clamp(1.08rem, 1.55vw, 1.22rem);
-      font-weight: 400;
-      line-height: 1.5;
-      color: var(--ink);
-      letter-spacing: -0.005em;
-    }
-
-    .learn {
-      padding: 0;
-      margin: 3rem 0 0;
-    }
-
-    /* ------- About ------- */
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2.5rem;
+      grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+      gap: clamp(2rem, 5vw, 4.5rem);
       align-items: start;
     }
 
-    @media (min-width: 800px) {
-      .about-grid {
-        grid-template-columns: 1fr 1.3fr;
-        gap: 4rem;
-      }
-    }
-
-    .about-photo {
+    /* ------- Familiar list ------- */
+    .familiar-list {
+      display: grid;
+      gap: 0;
       margin: 0;
+      padding: 0;
+      list-style: none;
+      border-top: 1px solid var(--line);
     }
 
-    .about-photo img {
+    .familiar-list li {
+      position: relative;
+      padding: 1.05rem 0 1.05rem 1.85rem;
+      border-bottom: 1px solid var(--line-soft);
+    }
+
+    .familiar-list li::before {
+      content: "";
+      position: absolute;
+      top: 1.78em;
+      left: 0.15rem;
+      width: 0.45rem;
+      height: 0.45rem;
+      border-radius: 999px;
+      background: var(--sage);
+    }
+
+    /* ------- Sessions section ------- */
+    .sessions-section {
+      background: linear-gradient(180deg, var(--sage-wash), #EFF3EC);
+    }
+
+    /* ------- Agenda rows ------- */
+    .agenda-section {
+      background: linear-gradient(180deg, var(--paper-deep), var(--paper));
+    }
+
+    .agenda-list {
+      display: grid;
+      gap: 0;
+      margin-top: 0.5rem;
+    }
+
+    .agenda-row {
+      display: grid;
+      grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+      gap: 1.75rem;
+      align-items: baseline;
+      padding: 1.2rem 0;
+      border-top: 1px solid var(--line-soft);
+    }
+
+    .agenda-row:last-child { border-bottom: 1px solid var(--line-soft); }
+
+    .agenda-row p {
+      font-size: 0.96rem;
+      line-height: 1.55;
+    }
+
+    /* ------- Story ------- */
+    .story-card {
+      display: grid;
+      grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
+      gap: clamp(1.75rem, 4vw, 3.5rem);
+      align-items: center;
+      padding: clamp(1.3rem, 3vw, 2.25rem);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--surface-soft);
+    }
+
+    .story-photo {
+      margin: 0;
+      overflow: hidden;
+      border-radius: 8px;
+      background: var(--paper-deep);
+    }
+
+    .story-photo img {
       width: 100%;
-      height: auto;
+      height: 100%;
+      min-height: 27rem;
+      object-fit: cover;
       filter: saturate(0.92);
-      border-radius: 2px;
     }
 
-    .about-copy h2 { max-width: 18ch; }
+    .influence-note {
+      margin-top: 1.4rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid var(--line-soft);
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    /* ------- Testimonials ------- */
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .testimonial-card {
+      margin: 0;
+      padding: clamp(1.2rem, 2.4vw, 1.55rem);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--surface);
+    }
+
+    .testimonial-card p {
+      color: var(--ink);
+      font-size: clamp(0.98rem, 1.15vw, 1.08rem);
+      font-weight: 500;
+      line-height: 1.6;
+    }
+
+    .testimonial-card cite {
+      display: block;
+      margin-top: 1rem;
+      color: var(--muted);
+      font-size: 0.84rem;
+      font-style: normal;
+      line-height: 1.45;
+    }
+
+    .source-note {
+      margin-top: 1rem;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    .source-note a { border-bottom: 1px solid var(--line); }
+
+    /* ------- Workshop cross-promo ------- */
+    .workshop-band {
+      text-align: center;
+      background: linear-gradient(180deg, var(--paper), var(--sage-wash));
+    }
+
+    .workshop-band h2,
+    .workshop-band .lede {
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    .workshop-band .button-row { justify-content: center; }
 
     /* ------- FAQ ------- */
-    .faq details {
-      border-top: 1px solid var(--line-soft);
-      padding: 1.5rem 0;
+    .faq {
+      margin-top: 2rem;
+      border-top: 1px solid var(--line);
     }
 
-    .faq details:last-of-type { border-bottom: 1px solid var(--line-soft); }
+    .faq details {
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--line);
+    }
 
     .faq summary {
-      list-style: none;
-      cursor: pointer;
       display: flex;
-      justify-content: space-between;
+      gap: 1.5rem;
       align-items: baseline;
-      gap: 2rem;
-      font-family: "Inter", "Segoe UI", system-ui, sans-serif;
-      font-size: clamp(1.08rem, 1.5vw, 1.2rem);
-      font-weight: 500;
-      letter-spacing: -0.01em;
+      justify-content: space-between;
       color: var(--ink);
-      transition: color .2s ease;
+      cursor: pointer;
+      font-weight: 650;
+      list-style: none;
     }
 
     .faq summary::-webkit-details-marker { display: none; }
 
-    .faq summary:hover { color: var(--accent-ink); }
-
     .faq summary::after {
       content: "+";
-      font-family: "Inter", system-ui, sans-serif;
+      flex: 0 0 auto;
+      color: var(--sage);
       font-size: 1.25rem;
-      color: var(--muted);
-      transition: transform .25s ease;
-      flex-shrink: 0;
+      line-height: 1;
     }
 
-    .faq details[open] summary::after {
-      content: "\2013";
-      transform: none;
-    }
+    .faq details[open] summary::after { content: "\2212"; }
 
     .faq details p {
-      margin-top: 1rem;
-      max-width: 34rem;
+      max-width: 38rem;
+      margin-top: 0.85rem;
+      font-size: 0.97rem;
     }
 
     /* ------- Booking ------- */
-    .booking-band {
-      background: var(--paper-2);
+    .booking-section {
+      background: linear-gradient(180deg, rgba(232, 238, 231, 0.95), rgba(245, 241, 232, 0.35));
     }
 
-    .booking-band .wrap { padding: 6rem 0; }
-
     .booking-wrap {
-      margin-top: 2.5rem;
-      background: var(--paper);
-      border: 1px solid var(--line);
-      border-radius: 2px;
+      margin-top: 2.4rem;
       overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--surface);
     }
 
     .booking-placeholder {
-      min-height: 700px;
       display: flex;
+      min-height: 700px;
       align-items: center;
       justify-content: center;
       color: var(--muted);
-      font-family: "Inter", system-ui, sans-serif;
       font-size: 0.9rem;
     }
 
     /* ------- Footer ------- */
     footer {
-      padding: 4rem 0 5rem;
+      padding: 3rem 0 4.5rem;
       text-align: center;
     }
 
-    footer .closing {
-      font-family: "Inter", "Segoe UI", system-ui, sans-serif;
-      font-style: normal;
-      font-weight: 500;
-      font-size: clamp(1.08rem, 1.5vw, 1.2rem);
-      letter-spacing: -0.01em;
-      color: var(--ink-2);
-      max-width: 28rem;
+    .fine {
+      max-width: 48rem;
       margin: 0 auto;
+      color: var(--muted);
+      font-size: 0.82rem;
+      line-height: 1.55;
     }
 
-    footer .fine {
-      margin-top: 2rem;
-      font-family: "Inter", system-ui, sans-serif;
+    .copyright {
+      margin-top: 1.25rem;
+      color: var(--muted);
       font-size: 0.78rem;
       letter-spacing: 0.05em;
-      color: var(--muted);
     }
 
-    /* ------- New content blocks ------- */
-    .crisis-note {
-      margin-top: 1.5rem;
-      padding: 1rem 1.25rem;
-      border-left: 2px solid var(--accent);
-      background: var(--paper-2);
-      font-size: 0.98rem;
-      color: var(--ink-2);
-    }
+    .copyright a { border-bottom: 1px solid var(--line); }
 
-    .declaration {
-      margin: 2.5rem 0 2rem;
-      font-weight: 600;
-      font-size: clamp(2rem, 4.2vw, 3rem);
-      letter-spacing: -0.025em;
-      line-height: 1.1;
-      color: var(--ink);
-    }
-
-    .sessions {
-      margin: 2.5rem 0 0;
-      padding: 0;
-      display: grid;
-      gap: 0;
-    }
-
-    .sessions > div {
-      display: grid;
-      grid-template-columns: 8rem 1fr;
-      gap: 1.5rem;
-      padding: 1.25rem 0;
-      border-top: 1px solid var(--line-soft);
-      align-items: baseline;
-    }
-
-    .sessions > div:last-child { border-bottom: 1px solid var(--line-soft); }
-
-    .sessions dt {
-      font-weight: 500;
-      color: var(--ink);
-      font-size: 0.92rem;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-    }
-
-    .sessions dd {
-      margin: 0;
-      color: var(--ink-2);
-    }
-
-    .placeholder {
-      display: inline-block;
-      padding: 0.55rem 0.85rem;
-      background: #fbedb8;
-      color: #6b4f10;
-      font-size: 0.92rem;
-      font-style: italic;
-      border-radius: 3px;
-      line-height: 1.45;
-    }
-
-    .sequence {
-      margin: 2rem 0 0;
-      padding: 0;
-      list-style: none;
-    }
-
-    .sequence li {
-      padding: 1.1rem 0;
-      border-top: 1px solid var(--line-soft);
-      color: var(--ink);
-      font-size: clamp(1.05rem, 1.4vw, 1.15rem);
-      line-height: 1.5;
-    }
-
-    .sequence li:last-child { border-bottom: 1px solid var(--line-soft); }
-
-    .influences {
-      margin-top: 2rem;
-      font-size: 0.92rem;
-      color: var(--muted);
-    }
-
-    @media (max-width: 640px) {
-      .sessions > div {
-        grid-template-columns: 1fr;
-        gap: 0.3rem;
-        padding: 1rem 0;
-      }
-    }
-
-    /* ------- Reveal animation ------- */
+    /* ------- Reveal ------- */
     .reveal {
       opacity: 0;
       transform: translateY(12px);
-      transition: opacity 0.9s cubic-bezier(0.22, 0.61, 0.36, 1),
-                  transform 0.9s cubic-bezier(0.22, 0.61, 0.36, 1);
+      transition: opacity 0.85s cubic-bezier(0.22, 0.61, 0.36, 1),
+                  transform 0.85s cubic-bezier(0.22, 0.61, 0.36, 1);
       will-change: opacity, transform;
     }
 
@@ -638,29 +662,67 @@
       transform: none;
     }
 
+    /* ------- Responsive ------- */
+    @media (max-width: 1080px) {
+      .hero-proof { left: 1rem; }
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .section-head,
+      .agenda-row,
+      .story-card {
+        grid-template-columns: 1fr;
+      }
+
+      .testimonial-grid { grid-template-columns: 1fr; }
+
+      .hero-photo img {
+        height: clamp(20rem, 52vw, 28rem);
+        object-position: 50% 18%;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .wrap,
+      .wrap-wide {
+        width: min(calc(100% - 1.6rem), var(--wide));
+      }
+
+      section { padding: 4rem 0; }
+
+      h1 { font-size: clamp(2.3rem, 11vw, 3.4rem); }
+
+      .button-row .button { width: 100%; }
+
+      .hero-proof {
+        position: static;
+        max-width: none;
+        margin-top: 1rem;
+        box-shadow: 0 10px 30px rgba(34, 37, 31, 0.1);
+      }
+
+      .photo-frame::after { display: none; }
+
+      .story-photo img { min-height: 22rem; }
+
+      .booking-placeholder { min-height: 600px; }
+    }
+
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
+
       .reveal,
       .reveal.is-visible {
         opacity: 1;
         transform: none;
         transition: none;
       }
+
       * {
         animation-duration: 0.001ms !important;
         transition-duration: 0.001ms !important;
       }
-    }
-
-    /* ------- Mobile refinements ------- */
-    @media (max-width: 640px) {
-      section { padding: 4.5rem 0; }
-      .hero { padding: 3rem 0 4.5rem; }
-      .pullquote { padding-left: 1.1rem; margin: 2.25rem 0; }
-      .step, .learn li { grid-template-columns: 3rem 1fr; gap: 1rem; }
-      .hero-cta .btn { width: 100%; }
-      .booking-band .wrap { padding: 4.5rem 0; }
-      footer { padding: 3rem 0 4rem; }
     }
   </style>
 </head>
@@ -670,139 +732,196 @@
 
   <header class="topbar">
     <div class="wrap-wide topbar-inner">
-      <a href="#top" class="wordmark">Enis&nbsp;Cirak</a>
-      <a href="#book" class="nav-book ui" data-scroll-target="book">Book a free call</a>
+      <a href="#top" class="wordmark">Enis Cirak</a>
+      <div class="topbar-right">
+        <a class="topbar-link" href="/panic-loop-workshop/">Workshop</a>
+        <a class="button-mini" href="#book" data-scroll-target="book">Book a free call</a>
+      </div>
     </div>
   </header>
 
   <main id="top">
 
-    <!-- ===== Hero ===== -->
     <section class="hero">
-      <div class="wrap-wide">
-        <h1>You do not have to keep organizing your life around panic.</h1>
-        <p class="lede">
-          If panic attacks, agoraphobia, or constant fear have made your world smaller, this work
-          is for you. We meet online, one-on-one. We look at what is really driving the fear.
-          That is how your life starts to open back up.
-        </p>
-        <div class="hero-cta">
-          <a class="btn" href="#book" data-scroll-target="book">Book a free call</a>
-        </div>
-      </div>
-    </section>
-
-    <div class="rule"></div>
-
-    <!-- ===== Who this is for ===== -->
-    <section class="reveal">
-      <div class="wrap">
-        <h2>Who this is for</h2>
-        <ul class="sequence">
-          <li>People who feel trapped by panic.</li>
-          <li>People who avoid driving, stores, restaurants, planes, highways, being alone, being far from home, or certain sensations in their own body.</li>
-          <li>People who are tired of watching their own body and mind all day.</li>
-          <li>People who look okay on the outside but feel stuck on the inside.</li>
-          <li>People who are tired of handling their fear instead of actually living.</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- ===== What sessions are like ===== -->
-    <section class="reveal">
-      <div class="wrap">
-        <h2>What sessions are like</h2>
-        <p>Sessions are calm and personal. We talk directly.</p>
-        <p>
-          There is no need to perform. No pressure to say the right thing.
-        </p>
-        <p>
-          We work with whatever is going on for you right now. Sometimes that means slowing
-          down and understanding exactly how panic shows up for you. Sometimes it means sitting
-          with the fear in your body instead of fighting it. Sometimes it means finding the
-          deeper emotion that has been driving the fear.
-        </p>
-        <p>
-          The goal is not just to cope better. The goal is for panic to stop running your life.
-        </p>
-      </div>
-    </section>
-
-    <!-- ===== The free call ===== -->
-    <section class="reveal">
-      <div class="wrap">
-        <h2>The free call</h2>
-        <p>The first call is free. It is just a conversation.</p>
-        <p>
-          You can tell me what has been happening, ask questions, and get a feel for how I work.
-          I will help you understand the pattern you are stuck in, and whether this work feels
-          right for you.
-        </p>
-        <p>No pressure. No sales script. Just a real conversation.</p>
-        <div class="hero-cta" style="margin-top: 1.75rem;">
-          <a class="btn" href="#book" data-scroll-target="book">Book a free call</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== Sessions ===== -->
-    <section class="reveal">
-      <div class="wrap">
-        <h2>Sessions</h2>
-        <p>60 minutes, online over Zoom.</p>
-        <p>Most people meet weekly or every other week.</p>
-        <p>Ongoing sessions are $125.</p>
-      </div>
-    </section>
-
-    <!-- ===== About me ===== -->
-    <section class="reveal">
-      <div class="wrap-wide">
-        <div class="about-grid">
-          <figure class="about-photo">
-            <img src="about-photo.jpg" alt="Enis Cirak" loading="lazy" />
-          </figure>
-          <div class="about-copy">
-            <h2>About me</h2>
-            <p>My name is Enis Cirak.</p>
-            <p>I had panic attacks, depersonalization, and bad anxiety for about four or five years.</p>
-            <p>
-              It changed how I lived. I started avoiding social situations and meetings. I got
-              paranoid about trying new foods. I was overstimulated most of the time and
-              didn&rsquo;t feel like myself. The calm, confident version of me felt far away.
-            </p>
-            <p>
-              I know what it&rsquo;s like to plan your day around whether your body is going to
-              cooperate. I know what it&rsquo;s like to sit in a room full of people and feel like
-              you&rsquo;re the only one who can&rsquo;t just be there.
-            </p>
-            <p>
-              What got me out wasn&rsquo;t numbing it, fighting it, or outrunning it. It was
-              turning toward it. When you actually turn toward what you&rsquo;re feeling, instead
-              of bracing against it, it starts to move on its own.
-            </p>
-            <p>
-              That&rsquo;s the work I do with people now. I remember how painful it is to watch
-              your world get smaller, and I want to help other people move through it with more
-              clarity and steadiness.
-            </p>
-            <p>
-              We go at your pace. No rushing, no pushing. Just honest conversation and real work.
-            </p>
-            <p class="influences">
-              Influences: Internal Family Systems, Michael Singer, Eckhart Tolle, Adyashanti,
-              David Burns.
-            </p>
+      <div class="wrap-wide hero-grid">
+        <div>
+          <p class="eyebrow">One-on-one coaching, online</p>
+          <h1>You do not have to keep organizing your life around panic</h1>
+          <p class="lede">
+            If panic attacks, agoraphobia, or constant fear have made your world smaller, this is
+            the work I do. We meet online, one-on-one, and work on what is actually driving the fear.
+          </p>
+          <div class="button-row">
+            <a class="button" href="#book" data-scroll-target="book">Book a free call</a>
           </div>
+          <p class="small-note">
+            Free 30-minute call &middot; Online &middot; No pressure
+          </p>
+        </div>
+
+        <div class="hero-photo-col">
+          <figure class="hero-photo photo-frame">
+            <img src="about-photo.jpg" alt="Enis Cirak" />
+          </figure>
+          <blockquote class="hero-proof">
+            <span class="stars" aria-label="Five-star review">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            <p>&ldquo;Enis has literally been a life changer for me.&rdquo;</p>
+            <cite>Stephanie S., coaching client</cite>
+          </blockquote>
         </div>
       </div>
     </section>
 
-    <!-- ===== FAQ ===== -->
+    <div class="section-rule"></div>
+
     <section class="reveal">
+      <div class="wrap-wide section-head">
+        <div>
+          <p class="eyebrow">01 &middot; Who this is for</p>
+          <h2>Does this sound like you?</h2>
+        </div>
+        <div>
+          <ul class="familiar-list">
+            <li>You feel trapped by panic.</li>
+            <li>You avoid driving, stores, restaurants, planes, or being far from home.</li>
+            <li>You spend the day watching your own body and mind.</li>
+            <li>You look okay on the outside and feel stuck on the inside.</li>
+            <li>You are tired of managing fear instead of actually living.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="sessions-section reveal">
       <div class="wrap">
-        <h2>FAQ</h2>
-        <div class="faq" style="margin-top: 2rem;">
+        <p class="eyebrow">02 &middot; The work</p>
+        <h2>What sessions are like</h2>
+        <p class="lede">
+          Sessions are calm and personal. We talk directly. There is no need to perform or to say
+          the right thing.
+        </p>
+        <p>
+          We work with whatever is going on for you right now. Some sessions are about
+          understanding exactly how your panic works. Others are about sitting with the fear in
+          your body instead of fighting it, or finding the deeper emotion underneath it.
+        </p>
+        <p>
+          The goal is for panic to stop running your life.
+        </p>
+      </div>
+    </section>
+
+    <section class="agenda-section reveal">
+      <div class="wrap-wide section-head">
+        <div>
+          <p class="eyebrow">03 &middot; How it works</p>
+          <h2>Start with a conversation</h2>
+        </div>
+        <div class="agenda-list">
+          <article class="agenda-row">
+            <h3>First, a free call</h3>
+            <p>Thirty minutes, online. You tell me what has been happening and ask whatever you want. I will help you see the pattern you are stuck in, and you can decide if this feels right. No sales script.</p>
+          </article>
+          <article class="agenda-row">
+            <h3>Then, sessions</h3>
+            <p>Sixty minutes, online over Zoom. Most people meet weekly or every other week. We go at your pace.</p>
+          </article>
+          <article class="agenda-row">
+            <h3>Pricing</h3>
+            <p>Ongoing sessions are $125. The first call costs nothing.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <div class="wrap-wide story-card">
+        <figure class="story-photo">
+          <img src="assets/enis-garden.jpg" alt="Enis Cirak outdoors in a garden" loading="lazy" />
+        </figure>
+        <div>
+          <p class="eyebrow">04 &middot; About Enis</p>
+          <h2>I went through this myself</h2>
+          <p>
+            My name is Enis Cirak. I had panic attacks, depersonalization, and bad anxiety for
+            about four or five years.
+          </p>
+          <p>
+            It changed how I lived. I avoided social situations and meetings. I got paranoid about
+            trying new foods. I was overstimulated most of the time and did not feel like myself.
+          </p>
+          <p>
+            I know what it is like to plan a day around whether your body will cooperate. I know
+            what it is like to sit in a room full of people and feel like the only one who cannot
+            just be there.
+          </p>
+          <p>
+            Turning toward the feelings is what finally worked. The sensations still came at first,
+            but I stopped treating every sensation like a problem I had to solve immediately.
+          </p>
+          <p>
+            Getting out took years. I studied everything I could find on panic and the nervous
+            system, and I tried it all on myself first. Now I coach people through panic, DP/DR,
+            and avoidance one-on-one.
+          </p>
+          <p>
+            We go at your pace. No rushing and no pushing.
+          </p>
+          <p class="influence-note">
+            Influences: Internal Family Systems, Michael Singer, Eckhart Tolle, Adyashanti, David Burns.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <div class="wrap-wide">
+        <p class="eyebrow">05 &middot; Client notes</p>
+        <h2>A few notes from people I have worked with</h2>
+        <p class="lede">
+          These are public excerpts from Inner Solutions Trustpilot reviews. They are not promises
+          or medical outcomes, just people describing their own experience.
+        </p>
+        <div class="testimonial-grid">
+          <blockquote class="testimonial-card">
+            <p>&ldquo;The very first call, he gave me advice and some things to try so I can sleep better that night. He literally called to check on me the next morning and I had slept 9 hours straight!&rdquo;</p>
+            <cite>Stephanie S., Trustpilot review</cite>
+          </blockquote>
+          <blockquote class="testimonial-card">
+            <p>&ldquo;Enis, had made such a difference in my life. After a miscarriage and going through a really bad anxiety phase and struggling with dark intrusive thoughts and panic attacks. He did not just give me something to make me feel calm for a hour and then spiral, he gave me tools to use constantly.&rdquo;</p>
+            <cite>Kiara Z., Trustpilot review</cite>
+          </blockquote>
+          <blockquote class="testimonial-card">
+            <p>&ldquo;The progress I&rsquo;ve made since starting with Enis has been remarkable. I&rsquo;ve not only learned how to manage my anxiety but also to understand its triggers and preemptively work on them.&rdquo;</p>
+            <cite>Ricardo C., Trustpilot review</cite>
+          </blockquote>
+        </div>
+        <p class="source-note">
+          Source: public reviews for Inner Solutions on
+          <a href="https://www.trustpilot.com/review/innersolutionsacademy.com" target="_blank" rel="noopener">Trustpilot</a>.
+        </p>
+      </div>
+    </section>
+
+    <section class="workshop-band reveal">
+      <div class="wrap-wide">
+        <p class="eyebrow">06 &middot; Another way to start</p>
+        <h2>Want to start smaller?</h2>
+        <p class="lede">
+          I also teach a live 90-minute workshop on the loop that keeps panic going. It is $49,
+          the replay is included, and the next one is <span data-workshop-display-date>this Saturday</span>.
+        </p>
+        <div class="button-row">
+          <a class="button button-secondary" href="/panic-loop-workshop/">See the workshop</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="reveal" id="faq">
+      <div class="wrap">
+        <p class="eyebrow">07 &middot; FAQ</p>
+        <h2>Common questions</h2>
+        <div class="faq">
           <details>
             <summary>Is this therapy?</summary>
             <p>No. This is coaching. It is not therapy, and it is not a medical service.</p>
@@ -831,21 +950,34 @@
       </div>
     </section>
 
+    <section class="booking-section reveal" id="book">
+      <div class="wrap">
+        <p class="eyebrow">08 &middot; Book</p>
+        <h2>Start with a free call</h2>
+        <p class="lede">
+          You do not have to figure this out alone. Pick a time that works and we will talk.
+        </p>
+        <p class="small-note">
+          Free &middot; 30 minutes &middot; Online
+        </p>
+        <div class="booking-wrap">
+          <div id="calendly-mount" class="booking-placeholder">Loading calendar&hellip;</div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <!-- ===== Booking band ===== -->
-  <section class="booking-band" id="book">
-    <div class="wrap">
-      <h2>If your world has gotten smaller</h2>
-      <p>You do not have to keep handling this alone. You can start with a conversation.</p>
-      <div class="booking-wrap">
-        <div id="calendly-mount" class="booking-placeholder">Loading calendar&hellip;</div>
-      </div>
-    </div>
-  </section>
-
   <footer>
-    <p class="fine">&copy; Enis Cirak</p>
+    <div class="wrap-wide">
+      <p class="fine">
+        Coaching is for educational and personal-development purposes only. It is not medical
+        advice, therapy, diagnosis, treatment, or crisis support. If you are in crisis or need
+        immediate help, contact emergency services, a crisis hotline, or a licensed mental-health
+        professional.
+      </p>
+      <p class="copyright">&copy; Enis Cirak &middot; <a href="/panic-loop-workshop/">Panic Loop Workshop</a></p>
+    </div>
   </footer>
 
   <script>
