@@ -283,54 +283,6 @@
       box-shadow: none;
     }
 
-    /* ------- Top bar ------- */
-    .topbar {
-      padding: 1.4rem 0;
-    }
-
-    .topbar-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-    }
-
-    .wordmark {
-      font-family: var(--serif);
-      font-size: 1.12rem;
-      font-weight: 600;
-      letter-spacing: -0.01em;
-    }
-
-    .topbar-right {
-      display: flex;
-      align-items: center;
-      gap: 1.1rem;
-    }
-
-    .topbar-date {
-      color: var(--muted);
-      font-size: 0.86rem;
-    }
-
-    .button-mini {
-      display: inline-flex;
-      align-items: center;
-      padding: 0.5rem 1rem;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      font-size: 0.85rem;
-      font-weight: 650;
-      transition: border-color .2s ease, background-color .2s ease;
-    }
-
-    .button-mini:hover,
-    .button-mini:focus-visible {
-      border-color: var(--sage);
-      background: var(--surface);
-      outline: none;
-    }
-
     /* ------- Hero ------- */
     .hero {
       padding: clamp(2rem, 4.5vw, 4rem) 0 clamp(4.5rem, 7vw, 6.5rem);
@@ -588,6 +540,204 @@
       font-weight: 600;
     }
 
+    .mid-cta,
+    .assurance-grid,
+    .testimonial-grid {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .mid-cta {
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: center;
+      margin-top: 2.4rem;
+      padding: clamp(1.15rem, 3vw, 1.55rem);
+      border: 1px solid rgba(95, 116, 99, 0.34);
+      border-radius: 12px;
+      background: rgba(255, 253, 246, 0.72);
+    }
+
+    .mid-cta h3 {
+      font-family: var(--serif);
+      font-size: clamp(1.25rem, 2vw, 1.65rem);
+      font-weight: 600;
+    }
+
+    .mid-cta p {
+      margin-top: 0.35rem;
+      font-size: 0.95rem;
+      line-height: 1.55;
+    }
+
+    .checkout-note {
+      margin-top: 0.85rem;
+      color: var(--muted);
+      font-size: 0.84rem;
+      line-height: 1.45;
+    }
+
+    .checkout-note strong {
+      color: var(--sage-ink);
+      font-weight: 700;
+    }
+
+    /* ------- Video ------- */
+    .video-section {
+      background: var(--paper);
+    }
+
+    .video-card {
+      display: grid;
+      grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr);
+      gap: clamp(1.4rem, 4vw, 3rem);
+      align-items: center;
+      padding: clamp(1rem, 2.5vw, 1.4rem);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--surface);
+      box-shadow: 0 24px 60px rgba(34, 37, 31, 0.08);
+    }
+
+    .video-copy {
+      padding: clamp(0.4rem, 2vw, 1rem);
+    }
+
+    .video-copy h2 {
+      max-width: 12ch;
+    }
+
+    .video-wrap {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #10130f;
+    }
+
+    .video-wrap video {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #10130f;
+    }
+
+    /* ------- Worksheet ------- */
+    .worksheet-section {
+      background: linear-gradient(180deg, var(--paper), var(--paper-deep));
+    }
+
+    .worksheet-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+      gap: clamp(2rem, 5vw, 4rem);
+      align-items: center;
+    }
+
+    .worksheet-preview {
+      margin: 0;
+      padding: clamp(1.2rem, 3vw, 1.7rem);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--surface);
+      box-shadow: 0 26px 70px rgba(34, 37, 31, 0.1);
+    }
+
+    .worksheet-preview h3 {
+      font-family: var(--serif);
+      font-size: clamp(1.45rem, 2.4vw, 2rem);
+      font-weight: 600;
+    }
+
+    .worksheet-preview p {
+      margin-top: 0.45rem;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .worksheet-fields {
+      display: grid;
+      gap: 0.8rem;
+      margin-top: 1.4rem;
+    }
+
+    .worksheet-field {
+      padding: 0.9rem;
+      border: 1px solid var(--line-soft);
+      border-radius: 9px;
+      background: rgba(245, 241, 232, 0.55);
+    }
+
+    .worksheet-field span {
+      display: block;
+      color: var(--sage-ink);
+      font-size: 0.72rem;
+      font-weight: 750;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .worksheet-field strong {
+      display: block;
+      margin-top: 0.35rem;
+      font-size: 0.98rem;
+      font-weight: 650;
+    }
+
+    .worksheet-lines {
+      display: grid;
+      gap: 0.38rem;
+      margin-top: 0.65rem;
+    }
+
+    .worksheet-lines i {
+      display: block;
+      height: 1px;
+      background: var(--line);
+    }
+
+    /* ------- Testimonials ------- */
+    .testimonial-section {
+      background: var(--paper);
+    }
+
+    .testimonial-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      margin-top: 2rem;
+    }
+
+    .testimonial-card {
+      padding: clamp(1.2rem, 2.4vw, 1.55rem);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--surface);
+    }
+
+    .testimonial-card p {
+      color: var(--ink);
+      font-family: var(--serif);
+      font-size: clamp(1.18rem, 1.6vw, 1.38rem);
+      font-weight: 600;
+      line-height: 1.35;
+    }
+
+    .testimonial-card cite {
+      display: block;
+      margin-top: 1rem;
+      color: var(--muted);
+      font-size: 0.84rem;
+      font-style: normal;
+      line-height: 1.45;
+    }
+
+    .source-note {
+      margin-top: 1rem;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    .source-note a {
+      border-bottom: 1px solid var(--line);
+    }
+
     /* ------- Agenda ------- */
     .agenda-section {
       background: linear-gradient(180deg, var(--paper-deep), var(--paper));
@@ -731,6 +881,13 @@
 
     .pricing-card h3 { font-size: 1.15rem; }
 
+    .card-note {
+      margin-top: 0.75rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
     .price {
       display: flex;
       gap: 0.65rem;
@@ -768,6 +925,29 @@
       color: var(--muted);
       font-size: 0.88rem;
       text-align: center;
+    }
+
+    .assurance-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      margin-top: 1.25rem;
+    }
+
+    .assurance-card {
+      padding: 1rem 1.1rem;
+      border: 1px solid rgba(95, 116, 99, 0.32);
+      border-radius: 10px;
+      background: rgba(255, 253, 246, 0.7);
+    }
+
+    .assurance-card h3 {
+      font-size: 0.98rem;
+    }
+
+    .assurance-card p {
+      margin-top: 0.45rem;
+      color: var(--muted);
+      font-size: 0.88rem;
+      line-height: 1.5;
     }
 
     /* ------- FAQ ------- */
@@ -870,7 +1050,18 @@
       .agenda-row,
       .leave-panel,
       .story-card,
+      .video-card,
+      .worksheet-layout,
       .loop-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .testimonial-grid,
+      .assurance-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .mid-cta {
         grid-template-columns: 1fr;
       }
 
@@ -892,8 +1083,6 @@
       }
 
       section { padding: 4rem 0; }
-
-      .topbar-date { display: none; }
 
       h1 { font-size: clamp(2.3rem, 11vw, 3.4rem); }
 
@@ -937,16 +1126,6 @@
   </style>
 </head>
 <body>
-  <header class="topbar">
-    <div class="wrap-wide topbar-inner">
-      <a class="wordmark" href="https://eniscirak.com">Enis Cirak</a>
-      <div class="topbar-right">
-        <span class="topbar-date"><span data-workshop-short-date>Every Saturday</span> &middot; Live online</span>
-        <a class="button-mini" href="#tickets">Tickets</a>
-      </div>
-    </div>
-  </header>
-
   <main id="top">
     <section class="hero">
       <div class="wrap-wide hero-grid">
@@ -980,10 +1159,10 @@
           </p>
 
           <div class="button-row" aria-label="Workshop ticket options">
-            <!-- TODO: Replace checkout route targets with live payment/product URLs when available. -->
             <a class="button" href="/checkout/panic-loop-workshop/" data-standard-checkout>Reserve my spot &middot; $49</a>
             <a class="button button-secondary" href="/checkout/panic-loop-workshop-vip/" data-vip-checkout>VIP + private session &middot; $150</a>
           </div>
+          <p class="checkout-note"><strong>Secure checkout powered by Square.</strong> Workshop details are sent by email after purchase.</p>
 
           <p class="small-note">
             Live online &middot; Replay included &middot; Worksheet included &middot; Cameras can stay off
@@ -1116,13 +1295,51 @@
             </p>
           </div>
         </div>
+        <div class="mid-cta">
+          <div>
+            <h3>If this is the pattern you recognize, come map your version live.</h3>
+            <p>
+              You do not need to have it all figured out before the workshop. The point is to see
+              the loop clearly enough that you know where to begin.
+            </p>
+            <p class="checkout-note"><strong>Secure checkout powered by Square.</strong> Workshop details are sent by email after purchase.</p>
+          </div>
+          <a class="button" href="/checkout/panic-loop-workshop/" data-standard-checkout>Reserve my spot &middot; $49</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="video-section reveal">
+      <div class="wrap-wide video-card">
+        <div class="video-copy">
+          <p class="eyebrow">03 &middot; Watch Enis explain it</p>
+          <h2>The loop is simple. Living inside it does not feel simple.</h2>
+          <p class="lede">
+            This short clip explains how a body sensation can turn into fear, adrenaline, more
+            symptoms, and more checking. That is the core pattern we work with in the workshop.
+          </p>
+          <p class="small-note">
+            The clip is trimmed from a longer talk so it stays focused on the panic feedback loop.
+          </p>
+        </div>
+        <div class="video-wrap">
+          <video
+            controls
+            preload="metadata"
+            poster="../assets/panic-loop-feedback-loop-poster.jpg"
+            aria-label="Enis explaining the panic feedback loop"
+          >
+            <source src="../assets/panic-loop-feedback-loop.mp4" type="video/mp4" />
+            Your browser does not support embedded video.
+          </video>
+        </div>
       </div>
     </section>
 
     <section class="agenda-section reveal">
       <div class="wrap-wide section-head">
         <div>
-          <p class="eyebrow">03 &middot; The workshop</p>
+          <p class="eyebrow">04 &middot; The workshop</p>
           <h2>How the 90 minutes work</h2>
           <p class="lede">
             Plain language and a worksheet. Nothing you have to push yourself through before you
@@ -1170,13 +1387,56 @@
       </div>
     </section>
 
+    <section class="worksheet-section reveal">
+      <div class="wrap-wide worksheet-layout">
+        <div>
+          <p class="eyebrow">05 &middot; The worksheet</p>
+          <h2>You will leave with your loop on paper.</h2>
+          <p class="lede">
+            The Panic Pattern worksheet turns the vague fear cloud into something you can actually
+            look at: what you feel, what you think, what you do to get safe, and where the loop can
+            start to soften.
+          </p>
+          <p class="small-note">
+            You do not have to share your answers. The worksheet is for you.
+          </p>
+        </div>
+        <figure class="worksheet-preview" aria-label="Preview of the Panic Pattern worksheet">
+          <h3>Panic Pattern worksheet</h3>
+          <p>A simple map you fill in during the workshop.</p>
+          <div class="worksheet-fields">
+            <div class="worksheet-field">
+              <span>Sensations</span>
+              <strong>What does your body do first?</strong>
+              <div class="worksheet-lines" aria-hidden="true"><i></i><i></i></div>
+            </div>
+            <div class="worksheet-field">
+              <span>Fear thoughts</span>
+              <strong>What does your mind predict?</strong>
+              <div class="worksheet-lines" aria-hidden="true"><i></i><i></i></div>
+            </div>
+            <div class="worksheet-field">
+              <span>Safety moves</span>
+              <strong>What do you check, avoid, or force?</strong>
+              <div class="worksheet-lines" aria-hidden="true"><i></i><i></i></div>
+            </div>
+            <div class="worksheet-field">
+              <span>New response</span>
+              <strong>Where can you stop feeding the loop?</strong>
+              <div class="worksheet-lines" aria-hidden="true"><i></i><i></i></div>
+            </div>
+          </div>
+        </figure>
+      </div>
+    </section>
+
     <section class="reveal">
       <div class="wrap-wide story-card">
         <figure class="story-photo">
           <img src="../assets/enis-garden.jpg" alt="Enis Cirak outdoors in a garden" loading="lazy" />
         </figure>
         <div>
-          <p class="eyebrow">04 &middot; About Enis</p>
+          <p class="eyebrow">06 &middot; About Enis</p>
           <h2>I teach this because I lived it</h2>
           <p>
             My name is Enis Cirak. I had panic attacks, depersonalization, and bad anxiety for
@@ -1205,16 +1465,47 @@
       </div>
     </section>
 
+    <section class="testimonial-section reveal">
+      <div class="wrap-wide">
+        <p class="eyebrow">07 &middot; Client notes</p>
+        <h2>A few short notes from people Enis has worked with</h2>
+        <p class="lede">
+          These are short public excerpts from Inner Solutions Trustpilot reviews. They are not
+          promises or medical outcomes, just people describing what felt helpful.
+        </p>
+        <div class="testimonial-grid">
+          <blockquote class="testimonial-card">
+            <p>&ldquo;He gave me tools to use constantly.&rdquo;</p>
+            <cite>Kiara Z., Trustpilot review</cite>
+          </blockquote>
+          <blockquote class="testimonial-card">
+            <p>&ldquo;Super helpful and really gave me peace of mind.&rdquo;</p>
+            <cite>Caleb G., Trustpilot review</cite>
+          </blockquote>
+          <blockquote class="testimonial-card">
+            <p>&ldquo;It was easy to connect with him.&rdquo;</p>
+            <cite>Teresa C., Trustpilot review</cite>
+          </blockquote>
+        </div>
+        <p class="source-note">
+          Source: public reviews for Inner Solutions on
+          <a href="https://www.trustpilot.com/review/innersolutionsacademy.com" target="_blank" rel="noopener">Trustpilot</a>.
+        </p>
+      </div>
+    </section>
+
     <section class="pricing-section reveal" id="tickets">
       <div class="wrap-wide">
-        <p class="eyebrow">05 &middot; Tickets</p>
+        <p class="eyebrow">08 &middot; Tickets</p>
         <h2>Join the next workshop</h2>
         <p class="lede">
-          Both tickets include the full live workshop and the replay.
+          Standard is enough if you want the workshop, worksheet, guided practice, Q&amp;A, and replay.
+          Choose VIP if you want private time applying the ideas to your exact pattern.
         </p>
         <div class="pricing-grid">
           <article class="pricing-card">
             <h3>Standard</h3>
+            <p class="card-note">Best if you want to understand the loop and start mapping your own pattern.</p>
             <p class="price"><strong>$49</strong><span>one-time</span></p>
             <ul class="plain-list">
               <li>The live 90-minute workshop.</li>
@@ -1226,11 +1517,13 @@
             <div class="button-row">
               <a class="button" href="/checkout/panic-loop-workshop/" data-standard-checkout>Reserve my spot &middot; $49</a>
             </div>
+            <p class="checkout-note"><strong>Secure checkout powered by Square.</strong></p>
           </article>
 
           <article class="pricing-card vip">
-            <span class="pricing-label">Most support</span>
+            <span class="pricing-label">Best for personalized support</span>
             <h3>VIP + Private Session</h3>
+            <p class="card-note">Best if your pattern feels tangled and you want help choosing a realistic first step.</p>
             <p class="price"><strong>$150</strong><span>one-time</span></p>
             <ul class="plain-list">
               <li>Everything in Standard.</li>
@@ -1241,7 +1534,18 @@
             <div class="button-row">
               <a class="button" href="/checkout/panic-loop-workshop-vip/" data-vip-checkout>Get VIP + private session &middot; $150</a>
             </div>
+            <p class="checkout-note"><strong>Secure checkout powered by Square.</strong></p>
           </article>
+        </div>
+        <div class="assurance-grid" aria-label="Checkout and refund details">
+          <div class="assurance-card">
+            <h3>Secure checkout</h3>
+            <p>Payments are processed through Square. Workshop details are sent to the email you use at checkout.</p>
+          </div>
+          <div class="assurance-card">
+            <h3>7-day usefulness policy</h3>
+            <p>If you attend live or watch the replay and feel it was not useful, email within 7 days and I will refund you.</p>
+          </div>
         </div>
         <p class="pricing-note">
           After checkout, your workshop link arrives by email. The replay comes after the live call.
@@ -1251,7 +1555,7 @@
 
     <section class="reveal" id="faq">
       <div class="wrap">
-        <p class="eyebrow">06 &middot; FAQ</p>
+        <p class="eyebrow">09 &middot; FAQ</p>
         <h2>Common questions</h2>
         <div class="faq">
           <details>
@@ -1277,6 +1581,10 @@
           <details>
             <summary>What happens after I sign up?</summary>
             <p>You get a confirmation email with your workshop link. The worksheet and the replay arrive by email as well.</p>
+          </details>
+          <details>
+            <summary>What if I attend and it does not feel useful?</summary>
+            <p>Email me within 7 days after attending live or watching the replay. If it was not useful for you, I will refund you.</p>
           </details>
           <details>
             <summary>What if I can&rsquo;t attend live?</summary>
@@ -1312,6 +1620,7 @@
           <a class="button" href="/checkout/panic-loop-workshop/" data-standard-checkout>Reserve my spot &middot; $49</a>
           <a class="button button-secondary" href="/checkout/panic-loop-workshop-vip/" data-vip-checkout>VIP + private session &middot; $150</a>
         </div>
+        <p class="checkout-note"><strong>Secure checkout powered by Square.</strong> 7-day usefulness policy included.</p>
         <p class="small-note">
           Live online &middot; Replay included &middot; Worksheet included &middot; Cameras can stay off
         </p>
