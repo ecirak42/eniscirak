@@ -24,10 +24,10 @@
   <title>Panic Loop Workshop | Live 90-Minute Workshop for Panic Attacks, DP/DR &amp; Avoidance</title>
   <meta
     name="description"
-    content="A calm, live 90-minute workshop. See the loop that keeps panic attacks, DP/DR, and avoidance going. Learn how to stop feeding it. Worksheet and replay included. $49."
+    content="A calm, live 90-minute workshop. See the loop that keeps panic attacks, DP/DR, and avoidance going. Learn how to stop feeding it. Guided practice and replay included. $49."
   />
   <meta property="og:title" content="Panic Loop Workshop | Stop planning your life around the next panic attack" />
-  <meta property="og:description" content="A calm, live 90-minute workshop on the loop that keeps panic going. Worksheet and replay included." />
+  <meta property="og:description" content="A calm, live 90-minute workshop on the loop that keeps panic going. Guided practice and replay included." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://eniscirak.com/assets/enis-tree.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -43,7 +43,7 @@
     "eventStatus": "https://schema.org/EventScheduled",
     "location": { "@type": "VirtualLocation", "url": "https://eniscirak.com/panic-loop-workshop/" },
     "image": "https://eniscirak.com/assets/enis-tree.jpg",
-    "description": "A calm, live 90-minute workshop on the loop that keeps panic attacks, DP/DR, and avoidance going. Worksheet, guided practice, live Q&A, and replay included.",
+    "description": "A calm, live 90-minute workshop on the loop that keeps panic attacks, DP/DR, and avoidance going. Nervous-system education, guided practice, live Q&A, and replay included.",
     "eventSchedule": {
       "@type": "Schedule",
       "repeatFrequency": "P1W",
@@ -540,33 +540,12 @@
       font-weight: 600;
     }
 
-    .mid-cta,
     .assurance-grid,
-    .testimonial-grid {
+    .testimonial-grid,
+    .technical-grid,
+    .shift-grid {
       display: grid;
       gap: 1rem;
-    }
-
-    .mid-cta {
-      grid-template-columns: minmax(0, 1fr) auto;
-      align-items: center;
-      margin-top: 2.4rem;
-      padding: clamp(1.15rem, 3vw, 1.55rem);
-      border: 1px solid rgba(95, 116, 99, 0.34);
-      border-radius: 12px;
-      background: rgba(255, 253, 246, 0.72);
-    }
-
-    .mid-cta h3 {
-      font-family: var(--serif);
-      font-size: clamp(1.25rem, 2vw, 1.65rem);
-      font-weight: 600;
-    }
-
-    .mid-cta p {
-      margin-top: 0.35rem;
-      font-size: 0.95rem;
-      line-height: 1.55;
     }
 
     .checkout-note {
@@ -579,6 +558,30 @@
     .checkout-note strong {
       color: var(--sage-ink);
       font-weight: 700;
+    }
+
+    .technical-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      margin-top: 2rem;
+    }
+
+    .technical-card {
+      padding: 1.05rem;
+      border: 1px solid rgba(95, 116, 99, 0.28);
+      border-radius: 10px;
+      background: rgba(255, 253, 246, 0.7);
+    }
+
+    .technical-card h3 {
+      font-size: 0.95rem;
+      line-height: 1.3;
+    }
+
+    .technical-card p {
+      margin-top: 0.45rem;
+      color: var(--ink-2);
+      font-size: 0.88rem;
+      line-height: 1.5;
     }
 
     /* ------- Video ------- */
@@ -620,78 +623,52 @@
       background: #10130f;
     }
 
-    /* ------- Worksheet ------- */
-    .worksheet-section {
+    /* ------- Shift ------- */
+    .shift-section {
       background: linear-gradient(180deg, var(--paper), var(--paper-deep));
     }
 
-    .worksheet-layout {
+    .shift-layout {
       display: grid;
       grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
       gap: clamp(2rem, 5vw, 4rem);
-      align-items: center;
+      align-items: start;
     }
 
-    .worksheet-preview {
-      margin: 0;
-      padding: clamp(1.2rem, 3vw, 1.7rem);
+    .shift-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .shift-card {
+      padding: clamp(1.15rem, 2.5vw, 1.55rem);
       border: 1px solid var(--line);
-      border-radius: 14px;
+      border-radius: 12px;
       background: var(--surface);
-      box-shadow: 0 26px 70px rgba(34, 37, 31, 0.1);
     }
 
-    .worksheet-preview h3 {
+    .shift-card.new {
+      border-color: rgba(95, 116, 99, 0.5);
+      background: linear-gradient(180deg, #FFFDF6, #EEF4ED);
+    }
+
+    .shift-card h3 {
       font-family: var(--serif);
-      font-size: clamp(1.45rem, 2.4vw, 2rem);
+      font-size: clamp(1.35rem, 2vw, 1.75rem);
       font-weight: 600;
     }
 
-    .worksheet-preview p {
-      margin-top: 0.45rem;
-      color: var(--muted);
-      font-size: 0.88rem;
-    }
-
-    .worksheet-fields {
+    .shift-list {
       display: grid;
-      gap: 0.8rem;
-      margin-top: 1.4rem;
+      gap: 0.72rem;
+      margin: 1rem 0 0;
+      padding: 0;
+      list-style: none;
     }
 
-    .worksheet-field {
-      padding: 0.9rem;
-      border: 1px solid var(--line-soft);
-      border-radius: 9px;
-      background: rgba(245, 241, 232, 0.55);
-    }
-
-    .worksheet-field span {
-      display: block;
-      color: var(--sage-ink);
-      font-size: 0.72rem;
-      font-weight: 750;
-      letter-spacing: 0.13em;
-      text-transform: uppercase;
-    }
-
-    .worksheet-field strong {
-      display: block;
-      margin-top: 0.35rem;
-      font-size: 0.98rem;
-      font-weight: 650;
-    }
-
-    .worksheet-lines {
-      display: grid;
-      gap: 0.38rem;
-      margin-top: 0.65rem;
-    }
-
-    .worksheet-lines i {
-      display: block;
-      height: 1px;
-      background: var(--line);
+    .shift-list li {
+      color: var(--ink-2);
+      font-size: 0.94rem;
+      line-height: 1.52;
     }
 
     /* ------- Testimonials ------- */
@@ -990,22 +967,6 @@
       font-size: 0.97rem;
     }
 
-    /* ------- Final CTA ------- */
-    .final-cta {
-      text-align: center;
-      background:
-        linear-gradient(180deg, rgba(245, 241, 232, 0), rgba(95, 116, 99, 0.13)),
-        var(--paper);
-    }
-
-    .final-cta h2,
-    .final-cta .lede {
-      margin-right: auto;
-      margin-left: auto;
-    }
-
-    .final-cta .button-row { justify-content: center; }
-
     /* ------- Footer ------- */
     footer {
       padding: 3rem 0 4.5rem;
@@ -1051,19 +1012,18 @@
       .leave-panel,
       .story-card,
       .video-card,
-      .worksheet-layout,
+      .shift-layout,
       .loop-layout {
         grid-template-columns: 1fr;
       }
 
       .testimonial-grid,
-      .assurance-grid {
+      .assurance-grid,
+      .shift-grid {
         grid-template-columns: 1fr;
       }
 
-      .mid-cta {
-        grid-template-columns: 1fr;
-      }
+      .technical-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
       .loop-figure {
         max-width: 30rem;
@@ -1092,6 +1052,8 @@
       .photo-frame::after { display: none; }
 
       .pricing-grid { grid-template-columns: 1fr; }
+
+      .technical-grid { grid-template-columns: 1fr; }
 
       .loop-num { display: none; }
 
@@ -1133,8 +1095,8 @@
           <p class="eyebrow">A live 90-minute workshop</p>
           <h1>Stop planning your life around the next panic attack</h1>
           <p class="lede">
-            There is a loop that keeps panic going. This workshop shows you how it works and how
-            to stop feeding it.
+            Learn the fear-adrenaline loop that keeps panic going, why fighting symptoms can keep
+            the alarm turned up, and how to begin responding in a new way.
           </p>
           <div class="topic-row" aria-label="What this workshop covers">
             <span class="topic-chip">Panic attacks</span>
@@ -1165,7 +1127,7 @@
           <p class="checkout-note"><strong>Secure checkout powered by Square.</strong> Workshop details are sent by email after purchase.</p>
 
           <p class="small-note">
-            Live online &middot; Replay included &middot; Worksheet included &middot; Cameras can stay off
+            Live online &middot; Replay included &middot; Guided practice &middot; Cameras can stay off
           </p>
         </div>
 
@@ -1208,7 +1170,8 @@
         <p class="eyebrow">02 &middot; The loop</p>
         <h2>Why it keeps happening</h2>
         <p class="lede">
-          Panic sticks around because of a loop. Here is one trip around it.
+          Panic often sticks around because the body learns to treat normal sensations as threat
+          signals. Here is one trip around the loop.
         </p>
         <div class="loop-layout">
           <figure class="loop-figure" aria-hidden="true">
@@ -1261,13 +1224,13 @@
               <li>
                 <div>
                   <h3>A sensation shows up</h3>
-                  <p>A racing heart, a dizzy spell, a tight chest, a wave of unreality. Sometimes out of nowhere.</p>
+                  <p>A racing heart, a dizzy spell, a tight chest, a wave of unreality. Sometimes it seems to come from nowhere.</p>
                 </div>
               </li>
               <li>
                 <div>
                   <h3>Fear spikes</h3>
-                  <p>&ldquo;What if something is wrong?&rdquo; The fear releases adrenaline, and adrenaline makes every symptom stronger. The more scared you get, the worse it feels.</p>
+                  <p>&ldquo;What if something is wrong?&rdquo; The brain predicts danger, the body adds adrenaline, and every symptom gets louder.</p>
                 </div>
               </li>
               <li>
@@ -1279,7 +1242,7 @@
               <li>
                 <div>
                   <h3>Relief comes</h3>
-                  <p>The fear drops. Underneath, your brain files the episode as a real danger you escaped. The alarm becomes more sensitive.</p>
+                  <p>The fear drops. Underneath, the brain can file the moment as a danger you escaped. The alarm becomes more sensitive next time.</p>
                 </div>
               </li>
               <li>
@@ -1290,21 +1253,29 @@
               </li>
             </ol>
             <p class="quiet-panel">
-              Most people spend years fighting step one, the sensations. That is the hardest place
-              to break the loop. The workshop focuses on the steps where you actually have a say.
+              Most people spend years trying to force the first sensation to stop. That is usually
+              the hardest place to break the loop. The work is learning how to stop turning the
+              sensation into a bigger alarm.
             </p>
           </div>
         </div>
-        <div class="mid-cta">
-          <div>
-            <h3>If this is the pattern you recognize, come map your version live.</h3>
-            <p>
-              You do not need to have it all figured out before the workshop. The point is to see
-              the loop clearly enough that you know where to begin.
-            </p>
-            <p class="checkout-note"><strong>Secure checkout powered by Square.</strong> Workshop details are sent by email after purchase.</p>
-          </div>
-          <a class="button" href="/checkout/panic-loop-workshop/" data-standard-checkout>Reserve my spot &middot; $49</a>
+        <div class="technical-grid" aria-label="Why the panic loop gets sticky">
+          <article class="technical-card">
+            <h3>Your baseline can get elevated</h3>
+            <p>After months or years of stress, pain, fear, or avoidance, the nervous system can sit closer to alarm. Smaller sensations feel bigger.</p>
+          </article>
+          <article class="technical-card">
+            <h3>Attention becomes a scanner</h3>
+            <p>When you keep checking your heart, breath, vision, or sense of reality, the brain gets more data to worry about.</p>
+          </article>
+          <article class="technical-card">
+            <h3>Relief can train the fear</h3>
+            <p>Leaving, checking, or forcing the feeling away can help for a moment, but it can also teach the brain that escape kept you safe.</p>
+          </article>
+          <article class="technical-card">
+            <h3>New learning breaks the loop</h3>
+            <p>The system needs repeated evidence that the wave can rise, peak, and pass without a fight. That is different from positive thinking.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -1342,8 +1313,8 @@
           <p class="eyebrow">04 &middot; The workshop</p>
           <h2>How the 90 minutes work</h2>
           <p class="lede">
-            Plain language and a worksheet. Nothing you have to push yourself through before you
-            are ready.
+            Plain-language nervous-system education, live practice, and a new way to understand
+            what your body is doing. Nothing you have to push yourself through before you are ready.
           </p>
         </div>
         <div class="agenda-list">
@@ -1352,16 +1323,16 @@
             <p>What adrenaline actually does to your heart, your breathing, and your vision. Why DP/DR shows up with high anxiety. Why the symptoms feel so much more dangerous than they are.</p>
           </article>
           <article class="agenda-row">
-            <h3>Then, your loop</h3>
-            <p>You fill in the Panic Pattern worksheet: your sensations, your thoughts, your escapes. Most people have never seen their pattern written down in one place.</p>
+            <h3>Then, your pattern</h3>
+            <p>We look at the places where fear, body scanning, reassurance, escape, and avoidance keep teaching the nervous system that symptoms are dangerous.</p>
           </article>
           <article class="agenda-row">
             <h3>Then, the practice</h3>
-            <p>A guided way to sit with a wave without feeding it. We do it together, live. No meditation experience needed.</p>
+            <p>A guided way to meet a wave without bracing, analyzing, or trying to force it away. We do it together, live. No meditation experience needed.</p>
           </article>
           <article class="agenda-row">
             <h3>Then, what to do differently</h3>
-            <p>How to respond when a wave starts so you stop feeding the loop. Then open Q&amp;A. Ask anything, or just listen.</p>
+            <p>How to begin shifting from control and resistance into steadier attention, allowing, and gradual new learning. Then Q&amp;A. Ask anything, or just listen.</p>
           </article>
         </div>
       </div>
@@ -1372,61 +1343,54 @@
           </div>
           <div>
             <ul class="plain-list">
-              <li>A map of your own panic loop.</li>
+              <li>A clearer picture of your own panic loop.</li>
               <li>A clearer read on DP/DR and strange body sensations.</li>
-              <li>A practice to use when symptoms start.</li>
-              <li>A clear sense of what to do differently.</li>
+              <li>A practice for meeting symptoms without feeding the alarm.</li>
+              <li>A clear sense of the old way and the new way.</li>
             </ul>
             <p class="small-note">
               One workshop will not erase panic, and no honest person promises that. The goal is to
-              understand what your body is doing and to stop adding fear on top of it. That is the
-              starting point.
+              understand what your body is doing, stop adding so much fear on top of it, and have a
+              new place to begin.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="worksheet-section reveal">
-      <div class="wrap-wide worksheet-layout">
+    <section class="shift-section reveal">
+      <div class="wrap-wide shift-layout">
         <div>
-          <p class="eyebrow">05 &middot; The worksheet</p>
-          <h2>You will leave with your loop on paper.</h2>
+          <p class="eyebrow">05 &middot; The shift</p>
+          <h2>The old way is resistance. The new way is relationship.</h2>
           <p class="lede">
-            The Panic Pattern worksheet turns the vague fear cloud into something you can actually
-            look at: what you feel, what you think, what you do to get safe, and where the loop can
-            start to soften.
-          </p>
-          <p class="small-note">
-            You do not have to share your answers. The worksheet is for you.
+            Most people are not stuck because they are weak or because they have not found the
+            perfect thought to think. They are stuck because the whole system has been practicing
+            one strategy: resist, monitor, control, escape.
           </p>
         </div>
-        <figure class="worksheet-preview" aria-label="Preview of the Panic Pattern worksheet">
-          <h3>Panic Pattern worksheet</h3>
-          <p>A simple map you fill in during the workshop.</p>
-          <div class="worksheet-fields">
-            <div class="worksheet-field">
-              <span>Sensations</span>
-              <strong>What does your body do first?</strong>
-              <div class="worksheet-lines" aria-hidden="true"><i></i><i></i></div>
-            </div>
-            <div class="worksheet-field">
-              <span>Fear thoughts</span>
-              <strong>What does your mind predict?</strong>
-              <div class="worksheet-lines" aria-hidden="true"><i></i><i></i></div>
-            </div>
-            <div class="worksheet-field">
-              <span>Safety moves</span>
-              <strong>What do you check, avoid, or force?</strong>
-              <div class="worksheet-lines" aria-hidden="true"><i></i><i></i></div>
-            </div>
-            <div class="worksheet-field">
-              <span>New response</span>
-              <strong>Where can you stop feeding the loop?</strong>
-              <div class="worksheet-lines" aria-hidden="true"><i></i><i></i></div>
-            </div>
-          </div>
-        </figure>
+        <div class="shift-grid" aria-label="Old way and new way">
+          <article class="shift-card">
+            <h3>The old way</h3>
+            <ul class="shift-list">
+              <li>Try to make the symptom stop before you feel safe.</li>
+              <li>Check your body to make sure nothing is wrong.</li>
+              <li>Argue with every scary thought until you feel certain.</li>
+              <li>Escape, avoid, or brace so the wave does not get worse.</li>
+              <li>Feel relief, then become more afraid of the next wave.</li>
+            </ul>
+          </article>
+          <article class="shift-card new">
+            <h3>The new way</h3>
+            <ul class="shift-list">
+              <li>See symptoms as alarm signals, not commands.</li>
+              <li>Let the body have a wave without turning it into an emergency.</li>
+              <li>Notice fear thoughts without making them the boss.</li>
+              <li>Reduce checking and safety moves gently, not by forcing yourself.</li>
+              <li>Give the nervous system new evidence: this can move through me.</li>
+            </ul>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -1454,6 +1418,11 @@
           <p>
             Turning toward the feelings is what finally worked. When you stop bracing against a
             feeling and actually let yourself feel it, it starts to move on its own.
+          </p>
+          <p>
+            That is different from trying to think your way out of panic. It is learning how to
+            relate to the sensations, fear, and emotion in a way that lets them move through instead
+            of getting locked in resistance.
           </p>
           <p>
             That is the work I do with people now. We go at your pace. No rushing and no pushing.
@@ -1494,68 +1463,9 @@
       </div>
     </section>
 
-    <section class="pricing-section reveal" id="tickets">
-      <div class="wrap-wide">
-        <p class="eyebrow">08 &middot; Tickets</p>
-        <h2>Join the next workshop</h2>
-        <p class="lede">
-          Standard is enough if you want the workshop, worksheet, guided practice, Q&amp;A, and replay.
-          Choose VIP if you want private time applying the ideas to your exact pattern.
-        </p>
-        <div class="pricing-grid">
-          <article class="pricing-card">
-            <h3>Standard</h3>
-            <p class="card-note">Best if you want to understand the loop and start mapping your own pattern.</p>
-            <p class="price"><strong>$49</strong><span>one-time</span></p>
-            <ul class="plain-list">
-              <li>The live 90-minute workshop.</li>
-              <li>The Panic Pattern worksheet.</li>
-              <li>The guided practice.</li>
-              <li>Live Q&amp;A.</li>
-              <li>Replay access.</li>
-            </ul>
-            <div class="button-row">
-              <a class="button" href="/checkout/panic-loop-workshop/" data-standard-checkout>Reserve my spot &middot; $49</a>
-            </div>
-            <p class="checkout-note"><strong>Secure checkout powered by Square.</strong></p>
-          </article>
-
-          <article class="pricing-card vip">
-            <span class="pricing-label">Best for personalized support</span>
-            <h3>VIP + Private Session</h3>
-            <p class="card-note">Best if your pattern feels tangled and you want help choosing a realistic first step.</p>
-            <p class="price"><strong>$150</strong><span>one-time</span></p>
-            <ul class="plain-list">
-              <li>Everything in Standard.</li>
-              <li>A private 60-minute session with Enis.</li>
-              <li>Your specific loop, mapped together.</li>
-              <li>A plan built around your situation.</li>
-            </ul>
-            <div class="button-row">
-              <a class="button" href="/checkout/panic-loop-workshop-vip/" data-vip-checkout>Get VIP + private session &middot; $150</a>
-            </div>
-            <p class="checkout-note"><strong>Secure checkout powered by Square.</strong></p>
-          </article>
-        </div>
-        <div class="assurance-grid" aria-label="Checkout and refund details">
-          <div class="assurance-card">
-            <h3>Secure checkout</h3>
-            <p>Payments are processed through Square. Workshop details are sent to the email you use at checkout.</p>
-          </div>
-          <div class="assurance-card">
-            <h3>7-day usefulness policy</h3>
-            <p>If you attend live or watch the replay and feel it was not useful, email within 7 days and I will refund you.</p>
-          </div>
-        </div>
-        <p class="pricing-note">
-          After checkout, your workshop link arrives by email. The replay comes after the live call.
-        </p>
-      </div>
-    </section>
-
     <section class="reveal" id="faq">
       <div class="wrap">
-        <p class="eyebrow">09 &middot; FAQ</p>
+        <p class="eyebrow">08 &middot; FAQ</p>
         <h2>Common questions</h2>
         <div class="faq">
           <details>
@@ -1576,11 +1486,11 @@
           </details>
           <details>
             <summary>Can&rsquo;t I learn this from free videos?</summary>
-            <p>Much of the theory is free online. What the workshop adds is the order, the worksheet that maps your specific pattern, and the chance to ask about your situation live. One focused 90 minutes instead of months of scattered videos.</p>
+            <p>Much of the theory is free online. What the workshop adds is the live explanation, the guided practice, the old-way/new-way framework, and the chance to ask about your situation. One focused 90 minutes instead of months of scattered videos.</p>
           </details>
           <details>
             <summary>What happens after I sign up?</summary>
-            <p>You get a confirmation email with your workshop link. The worksheet and the replay arrive by email as well.</p>
+            <p>You get a confirmation email with your workshop link. The replay arrives by email after the live call.</p>
           </details>
           <details>
             <summary>What if I attend and it does not feel useful?</summary>
@@ -1592,7 +1502,7 @@
           </details>
           <details>
             <summary>Do I have to talk or be on camera?</summary>
-            <p>No. You can keep your camera off and stay quiet the whole time. The worksheet is for your eyes only.</p>
+            <p>No. You can keep your camera off and stay quiet the whole time.</p>
           </details>
           <details>
             <summary>What if I panic during the workshop?</summary>
@@ -1606,23 +1516,61 @@
       </div>
     </section>
 
-    <section class="final-cta reveal">
+    <section class="pricing-section reveal" id="tickets">
       <div class="wrap-wide">
-        <h2>See how your panic actually works</h2>
+        <p class="eyebrow">09 &middot; Tickets</p>
+        <h2>Join the next workshop</h2>
         <p class="lede">
-          Ninety minutes, live online. You leave with a map of your own loop and a way to respond
-          when symptoms start.
+          Come for the live explanation, the practice, and a clearer way to understand what has
+          been happening in your body. Choose VIP if you want private help applying it to your exact pattern.
         </p>
-        <p class="event-card">
-          <span><time data-workshop-date data-workshop-datetime>Every Saturday</time> &middot; <span data-workshop-time>11 AM Central / 12 PM Eastern</span></span>
-        </p>
-        <div class="button-row" aria-label="Final workshop ticket options">
-          <a class="button" href="/checkout/panic-loop-workshop/" data-standard-checkout>Reserve my spot &middot; $49</a>
-          <a class="button button-secondary" href="/checkout/panic-loop-workshop-vip/" data-vip-checkout>VIP + private session &middot; $150</a>
+        <div class="pricing-grid">
+          <article class="pricing-card">
+            <h3>Standard</h3>
+            <p class="card-note">Best if you want the live workshop, the core explanation, guided practice, Q&amp;A, and replay.</p>
+            <p class="price"><strong>$49</strong><span>one-time</span></p>
+            <ul class="plain-list">
+              <li>The live 90-minute workshop.</li>
+              <li>A clear explanation of the panic feedback loop.</li>
+              <li>A guided practice for meeting symptoms differently.</li>
+              <li>Live Q&amp;A.</li>
+              <li>Replay access.</li>
+            </ul>
+            <div class="button-row">
+              <a class="button" href="/checkout/panic-loop-workshop/" data-standard-checkout>Reserve my spot &middot; $49</a>
+            </div>
+            <p class="checkout-note"><strong>Secure checkout powered by Square.</strong></p>
+          </article>
+
+          <article class="pricing-card vip">
+            <span class="pricing-label">Best for personalized support</span>
+            <h3>VIP + Private Session</h3>
+            <p class="card-note">Best if your pattern feels tangled and you want help finding a realistic starting point.</p>
+            <p class="price"><strong>$150</strong><span>one-time</span></p>
+            <ul class="plain-list">
+              <li>Everything in Standard.</li>
+              <li>A private 60-minute session with Enis.</li>
+              <li>Help applying the old-way/new-way shift to your life.</li>
+              <li>Support choosing the first places to practice.</li>
+            </ul>
+            <div class="button-row">
+              <a class="button" href="/checkout/panic-loop-workshop-vip/" data-vip-checkout>Get VIP + private session &middot; $150</a>
+            </div>
+            <p class="checkout-note"><strong>Secure checkout powered by Square.</strong></p>
+          </article>
         </div>
-        <p class="checkout-note"><strong>Secure checkout powered by Square.</strong> 7-day usefulness policy included.</p>
-        <p class="small-note">
-          Live online &middot; Replay included &middot; Worksheet included &middot; Cameras can stay off
+        <div class="assurance-grid" aria-label="Checkout and refund details">
+          <div class="assurance-card">
+            <h3>Secure checkout</h3>
+            <p>Payments are processed through Square. Workshop details are sent to the email you use at checkout.</p>
+          </div>
+          <div class="assurance-card">
+            <h3>7-day usefulness policy</h3>
+            <p>If you attend live or watch the replay and feel it was not useful, email within 7 days and I will refund you.</p>
+          </div>
+        </div>
+        <p class="pricing-note">
+          After checkout, your workshop link arrives by email. The replay comes after the live call.
         </p>
       </div>
     </section>
