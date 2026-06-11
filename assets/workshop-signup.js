@@ -1,5 +1,6 @@
 (function () {
   var FORM_ACTION = "https://assets.mailerlite.com/jsonp/2426159/forms/189992583080969954/subscribe";
+  var THANK_YOU_PATH = "/panic-loop-workshop/thank-you/";
   var submitted = false;
 
   function getNextWorkshopDate() {
@@ -34,7 +35,7 @@
 
   function addAttribution(form) {
     var params = new URLSearchParams(window.location.search);
-    var variant = window.location.pathname.indexOf("panic-loop-workshop-b") !== -1 ? "letter" : "primary";
+    var variant = getPageVariant();
 
     setHidden(form, "fields[utm_source]", getParam(params, "utm_source"));
     setHidden(form, "fields[utm_medium]", getParam(params, "utm_medium"));
@@ -44,6 +45,25 @@
     setHidden(form, "fields[landing_page]", window.location.href);
     setHidden(form, "fields[page_variant]", variant);
     setHidden(form, "fields[referrer]", document.referrer);
+  }
+
+  function getPageVariant() {
+    return window.location.pathname.indexOf("panic-loop-workshop-b") !== -1 ? "letter" : "primary";
+  }
+
+  function buildThankYouUrl() {
+    var sourceParams = new URLSearchParams(window.location.search);
+    var thankYouUrl = new URL(THANK_YOU_PATH, window.location.origin);
+
+    ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"].forEach(function (key) {
+      var value = sourceParams.get(key);
+      if (value) thankYouUrl.searchParams.set(key, value);
+    });
+
+    thankYouUrl.searchParams.set("registered", "1");
+    thankYouUrl.searchParams.set("variant", getPageVariant());
+
+    return thankYouUrl.toString();
   }
 
   function setStatus(form, message, isSuccess) {
@@ -74,6 +94,20 @@
     if (form.dataset.metaLeadTracked !== "true" && typeof fbq === "function") {
       fbq("track", "Lead");
       form.dataset.metaLeadTracked = "true";
+    }
+
+    if (typeof gtag === "function") {
+      gtag("event", "workshop_signup_success", {
+        event_category: "lead",
+        event_label: getNextWorkshopDate() || "Panic Workshop"
+      });
+    }
+
+    if (form.dataset.thankYouRedirectStarted !== "true") {
+      form.dataset.thankYouRedirectStarted = "true";
+      window.setTimeout(function () {
+        window.location.assign(buildThankYouUrl());
+      }, 700);
     }
   }
 
