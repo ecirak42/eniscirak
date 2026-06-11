@@ -70,6 +70,11 @@
       "You are registered. Check your email for the workshop details. If you do not see it, check spam or promotions.",
       true
     );
+
+    if (form.dataset.metaLeadTracked !== "true" && typeof fbq === "function") {
+      fbq("track", "Lead");
+      form.dataset.metaLeadTracked = "true";
+    }
   }
 
   function setupForm(form, index) {
