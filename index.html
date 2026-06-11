@@ -13,18 +13,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#F5F1E8" />
-  <title>Enis Cirak | Coaching for Panic Attacks, Anxiety &amp; Agoraphobia</title>
+  <title>Enis Cirak | Anxiety Coaching, Emotional Release &amp; Nervous-System Work</title>
   <meta
     name="description"
-    content="One-on-one coaching for panic attacks, agoraphobia, and the fear of fear. Online sessions. The first call is free."
+    content="One-on-one coaching for panic, anxiety, DP/DR, avoidance, stuck emotions, and pent-up nervous-system energy. Online sessions. The first call is free."
   />
-  <meta property="og:title" content="Enis Cirak | Coaching for Panic Attacks, Anxiety &amp; Agoraphobia" />
-  <meta property="og:description" content="One-on-one coaching for panic attacks, agoraphobia, and the fear of fear. Online. The first call is free." />
+  <meta property="og:title" content="Enis Cirak | Anxiety Coaching & Emotional Release" />
+  <meta property="og:description" content="One-on-one coaching for panic, anxiety, avoidance, stuck emotions, and nervous-system regulation. Online. The first call is free." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://eniscirak.com/about-photo.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%23F5F1E8'/%3E%3Ccircle cx='16' cy='16' r='7' fill='none' stroke='%235F7463' stroke-width='1.6'/%3E%3C/svg%3E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%23F5F1E8'/%3E%3Cpath d='M7 17c4-8 14 8 18-2' fill='none' stroke='%235F7463' stroke-width='1.7' stroke-linecap='round'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='%239E5230' stroke-width='1.1' opacity='.75'/%3E%3C/svg%3E" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -51,11 +51,12 @@
       --sage-wash: #E8EEE7;
       --clay: #9E5230;
       --clay-deep: #82431F;
+      --water: #7FA7A0;
       --star: #00B67A;
       --serif: "Source Serif 4", Georgia, serif;
       --sans: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
-      --measure: 42rem;
-      --wide: 72rem;
+      --measure: 43rem;
+      --wide: 74rem;
     }
 
     * { box-sizing: border-box; }
@@ -79,13 +80,10 @@
 
     a { color: inherit; text-decoration: none; }
     img { display: block; max-width: 100%; }
-
     p, li { color: var(--ink-2); }
     p { margin: 0; }
     p + p { margin-top: 1rem; }
-
-    strong { color: var(--ink); font-weight: 600; }
-
+    strong { color: var(--ink); font-weight: 650; }
     ::selection { background: var(--sage); color: var(--surface); }
 
     .wrap {
@@ -98,7 +96,7 @@
       margin: 0 auto;
     }
 
-    section { padding: clamp(4.2rem, 7vw, 6.5rem) 0; }
+    section { padding: clamp(4.4rem, 7vw, 6.8rem) 0; }
 
     .section-rule {
       width: min(calc(100% - 2.5rem), var(--wide));
@@ -116,21 +114,20 @@
     }
 
     h1 {
-      max-width: 17ch;
-      font-size: clamp(2.55rem, 5.4vw, 4.3rem);
-      line-height: 1.06;
+      max-width: 15ch;
+      font-size: clamp(2.55rem, 5.6vw, 4.75rem);
+      line-height: 1.04;
     }
 
     h2 {
       max-width: 22ch;
-      font-size: clamp(1.9rem, 3.2vw, 3rem);
+      font-size: clamp(2rem, 3.25vw, 3.1rem);
       line-height: 1.12;
     }
 
     h3 {
       margin: 0;
       color: var(--ink);
-      font-family: var(--sans);
       font-size: clamp(1.05rem, 1.2vw, 1.18rem);
       font-weight: 650;
       line-height: 1.35;
@@ -141,7 +138,7 @@
       display: inline-flex;
       align-items: center;
       gap: 0.65rem;
-      margin: 0 0 1.3rem;
+      margin: 0 0 1.25rem;
       color: var(--sage-ink);
       font-size: 0.74rem;
       font-weight: 700;
@@ -157,11 +154,11 @@
     }
 
     .lede {
-      max-width: 38rem;
-      margin-top: 1.3rem;
+      max-width: 39rem;
+      margin-top: 1.25rem;
       color: var(--ink-2);
       font-size: clamp(1.1rem, 1.4vw, 1.28rem);
-      line-height: 1.55;
+      line-height: 1.58;
     }
 
     .small-note {
@@ -171,7 +168,6 @@
       line-height: 1.55;
     }
 
-    /* ------- Buttons ------- */
     .button-row {
       display: flex;
       flex-wrap: wrap;
@@ -236,7 +232,6 @@
       box-shadow: none;
     }
 
-    /* ------- Workshop band ------- */
     .promo-band {
       display: block;
       padding: 0.72rem 1.25rem;
@@ -260,10 +255,7 @@
 
     .promo-band:hover::after { transform: translateX(3px); }
 
-    /* ------- Top bar ------- */
-    .topbar {
-      padding: 1.4rem 0;
-    }
+    .topbar { padding: 1.35rem 0; }
 
     .topbar-inner {
       display: flex;
@@ -273,6 +265,9 @@
     }
 
     .wordmark {
+      display: inline-flex;
+      min-height: 2.75rem;
+      align-items: center;
       font-family: var(--serif);
       font-size: 1.12rem;
       font-weight: 600;
@@ -286,6 +281,9 @@
     }
 
     .topbar-link {
+      display: inline-flex;
+      min-height: 2.75rem;
+      align-items: center;
       color: var(--muted);
       font-size: 0.86rem;
       font-weight: 500;
@@ -296,8 +294,9 @@
 
     .button-mini {
       display: inline-flex;
+      min-height: 2.75rem;
       align-items: center;
-      padding: 0.5rem 1rem;
+      padding: 0.58rem 1rem;
       border: 1px solid var(--line);
       border-radius: 999px;
       font-size: 0.85rem;
@@ -312,19 +311,43 @@
       outline: none;
     }
 
-    /* ------- Hero ------- */
     .hero {
       padding: clamp(2rem, 4.5vw, 4rem) 0 clamp(4.5rem, 7vw, 6.5rem);
       background:
-        linear-gradient(150deg, rgba(232, 238, 231, 0.9) 0%, rgba(245, 241, 232, 0) 46%),
-        radial-gradient(circle at 90% 12%, rgba(95, 116, 99, 0.16), rgba(95, 116, 99, 0) 30rem);
+        linear-gradient(150deg, rgba(232, 238, 231, 0.88) 0%, rgba(245, 241, 232, 0) 47%),
+        linear-gradient(180deg, rgba(255, 253, 246, 0.5), rgba(245, 241, 232, 0));
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.04fr) minmax(20rem, 0.78fr);
+      grid-template-columns: minmax(0, 1.06fr) minmax(20rem, 0.78fr);
       gap: clamp(2.5rem, 6vw, 5.5rem);
       align-items: center;
+    }
+
+    .topic-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      margin-top: 1.25rem;
+    }
+
+    .topic-chip {
+      display: inline-flex;
+      align-items: center;
+      min-height: 2.15rem;
+      padding: 0.42rem 0.72rem;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 253, 246, 0.58);
+      color: var(--ink-2);
+      font-size: 0.84rem;
+      font-weight: 600;
+    }
+
+    .hero-body {
+      max-width: 38rem;
+      margin-top: 1.35rem;
     }
 
     .hero-photo-col { position: relative; }
@@ -339,22 +362,12 @@
       box-shadow: 0 24px 70px rgba(34, 37, 31, 0.14);
     }
 
-    .hero-photo::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      z-index: 1;
-      border-radius: inherit;
-      box-shadow: inset 0 0 0 1px rgba(255, 253, 246, 0.25);
-      pointer-events: none;
-    }
-
     .hero-photo img {
       width: 100%;
       height: clamp(26rem, 58vh, 36rem);
       object-fit: cover;
       object-position: 50% 20%;
-      filter: saturate(0.92);
+      filter: saturate(0.94);
     }
 
     .photo-frame { position: relative; }
@@ -407,7 +420,6 @@
       font-style: normal;
     }
 
-    /* ------- Section head ------- */
     .section-head {
       display: grid;
       grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
@@ -415,8 +427,9 @@
       align-items: start;
     }
 
-    /* ------- Familiar list ------- */
-    .familiar-list {
+    .familiar-list,
+    .plain-list,
+    .shift-list {
       display: grid;
       gap: 0;
       margin: 0;
@@ -425,13 +438,17 @@
       border-top: 1px solid var(--line);
     }
 
-    .familiar-list li {
+    .familiar-list li,
+    .plain-list li,
+    .shift-list li {
       position: relative;
       padding: 1.05rem 0 1.05rem 1.85rem;
       border-bottom: 1px solid var(--line-soft);
     }
 
-    .familiar-list li::before {
+    .familiar-list li::before,
+    .plain-list li::before,
+    .shift-list li::before {
       content: "";
       position: absolute;
       top: 1.78em;
@@ -442,14 +459,182 @@
       background: var(--sage);
     }
 
-    /* ------- Sessions section ------- */
-    .sessions-section {
+    .river-section {
       background: linear-gradient(180deg, var(--sage-wash), #EFF3EC);
     }
 
-    /* ------- Agenda rows ------- */
-    .agenda-section {
+    .river-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+      gap: clamp(2rem, 5vw, 4.5rem);
+      align-items: center;
+    }
+
+    .river-visual {
+      position: relative;
+      min-height: 30rem;
+      overflow: hidden;
+      border: 1px solid rgba(95, 116, 99, 0.3);
+      border-radius: 16px;
+      background:
+        linear-gradient(180deg, rgba(255, 253, 246, 0.72), rgba(255, 253, 246, 0.32)),
+        var(--paper);
+      box-shadow: 0 26px 70px rgba(34, 37, 31, 0.08);
+    }
+
+    .river-path {
+      position: absolute;
+      inset: 10% -8%;
+      transform: rotate(-5deg);
+      border-radius: 44% 56% 48% 52%;
+      background:
+        repeating-linear-gradient(90deg, rgba(255,255,255,0.24) 0 1.8rem, rgba(255,255,255,0) 1.8rem 3.8rem),
+        linear-gradient(90deg, rgba(127, 167, 160, 0.18), rgba(127, 167, 160, 0.82), rgba(127, 167, 160, 0.23));
+      filter: saturate(0.9);
+    }
+
+    .river-path::before,
+    .river-path::after {
+      content: "";
+      position: absolute;
+      left: -4%;
+      right: -4%;
+      height: 26%;
+      border-radius: 50%;
+      background: rgba(255, 253, 246, 0.54);
+    }
+
+    .river-path::before { top: 12%; }
+    .river-path::after { bottom: 15%; }
+
+    .stone {
+      position: absolute;
+      z-index: 2;
+      min-width: 6rem;
+      padding: 0.75rem 0.85rem;
+      border: 1px solid rgba(95, 116, 99, 0.32);
+      border-radius: 999px;
+      background: rgba(255, 253, 246, 0.9);
+      color: var(--sage-ink);
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-align: center;
+      box-shadow: 0 10px 26px rgba(34, 37, 31, 0.08);
+    }
+
+    .stone.one { top: 17%; left: 13%; transform: rotate(-6deg); }
+    .stone.two { top: 35%; right: 14%; transform: rotate(7deg); }
+    .stone.three { bottom: 28%; left: 18%; transform: rotate(5deg); }
+    .stone.four { bottom: 13%; right: 16%; transform: rotate(-4deg); }
+
+    .flow-note {
+      position: absolute;
+      right: 1.15rem;
+      bottom: 1.15rem;
+      z-index: 3;
+      max-width: 18rem;
+      padding: 1rem 1.05rem;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--surface);
+      color: var(--ink-2);
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .principles-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .principle-card,
+    .method-card,
+    .testimonial-card {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--surface);
+    }
+
+    .principle-card {
+      padding: clamp(1.15rem, 2.4vw, 1.55rem);
+    }
+
+    .principle-card span {
+      display: inline-flex;
+      width: 2.1rem;
+      height: 2.1rem;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      border: 1px solid rgba(95, 116, 99, 0.38);
+      border-radius: 999px;
+      color: var(--sage-ink);
+      font-weight: 700;
+    }
+
+    .principle-card p,
+    .method-card p {
+      margin-top: 0.55rem;
+      font-size: 0.94rem;
+      line-height: 1.56;
+    }
+
+    .layers-section {
       background: linear-gradient(180deg, var(--paper-deep), var(--paper));
+    }
+
+    .layers-board {
+      display: grid;
+      gap: 0.85rem;
+      margin-top: 2rem;
+    }
+
+    .layer-row {
+      display: grid;
+      grid-template-columns: minmax(0, 0.35fr) minmax(0, 0.65fr);
+      gap: 1rem;
+      align-items: start;
+      padding: clamp(1rem, 2.2vw, 1.3rem);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: rgba(255, 253, 246, 0.7);
+    }
+
+    .layer-row h3 {
+      display: flex;
+      gap: 0.65rem;
+      align-items: baseline;
+    }
+
+    .layer-row h3 span {
+      color: var(--sage);
+      font-size: 0.78rem;
+      font-weight: 750;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .method-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 2.1rem;
+    }
+
+    .method-card {
+      padding: clamp(1.05rem, 2.2vw, 1.35rem);
+    }
+
+    .method-card h3 {
+      font-family: var(--serif);
+      font-size: clamp(1.3rem, 1.8vw, 1.55rem);
+      font-weight: 600;
+    }
+
+    .sessions-section {
+      background: linear-gradient(180deg, var(--sage-wash), #EFF3EC);
     }
 
     .agenda-list {
@@ -474,7 +659,6 @@
       line-height: 1.55;
     }
 
-    /* ------- Story ------- */
     .story-card {
       display: grid;
       grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
@@ -509,7 +693,6 @@
       font-size: 0.88rem;
     }
 
-    /* ------- Testimonials ------- */
     .testimonial-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -520,9 +703,6 @@
     .testimonial-card {
       margin: 0;
       padding: clamp(1.2rem, 2.4vw, 1.55rem);
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      background: var(--surface);
     }
 
     .testimonial-card p {
@@ -549,7 +729,6 @@
 
     .source-note a { border-bottom: 1px solid var(--line); }
 
-    /* ------- Workshop cross-promo ------- */
     .workshop-band {
       text-align: center;
       background: linear-gradient(180deg, var(--paper), var(--sage-wash));
@@ -563,7 +742,6 @@
 
     .workshop-band .button-row { justify-content: center; }
 
-    /* ------- FAQ ------- */
     .faq {
       margin-top: 2rem;
       border-top: 1px solid var(--line);
@@ -603,7 +781,6 @@
       font-size: 0.97rem;
     }
 
-    /* ------- Booking ------- */
     .booking-section {
       background: linear-gradient(180deg, rgba(232, 238, 231, 0.95), rgba(245, 241, 232, 0.35));
     }
@@ -625,7 +802,6 @@
       font-size: 0.9rem;
     }
 
-    /* ------- Footer ------- */
     footer {
       padding: 3rem 0 4.5rem;
       text-align: center;
@@ -648,7 +824,6 @@
 
     .copyright a { border-bottom: 1px solid var(--line); }
 
-    /* ------- Reveal ------- */
     .reveal {
       opacity: 0;
       transform: translateY(12px);
@@ -662,14 +837,16 @@
       transform: none;
     }
 
-    /* ------- Responsive ------- */
     @media (max-width: 1080px) {
       .hero-proof { left: 1rem; }
+      .principles-grid,
+      .method-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
 
     @media (max-width: 980px) {
       .hero-grid,
       .section-head,
+      .river-layout,
       .agenda-row,
       .story-card {
         grid-template-columns: 1fr;
@@ -691,7 +868,9 @@
 
       section { padding: 4rem 0; }
 
-      h1 { font-size: clamp(2.3rem, 11vw, 3.4rem); }
+      h1 { font-size: clamp(2.35rem, 11vw, 3.4rem); }
+
+      .topbar-right .topbar-link { display: none; }
 
       .button-row .button { width: 100%; }
 
@@ -703,6 +882,20 @@
       }
 
       .photo-frame::after { display: none; }
+
+      .river-visual { min-height: 26rem; }
+
+      .stone {
+        min-width: auto;
+        padding: 0.62rem 0.7rem;
+        font-size: 0.76rem;
+      }
+
+      .principles-grid,
+      .method-grid,
+      .layer-row {
+        grid-template-columns: 1fr;
+      }
 
       .story-photo img { min-height: 22rem; }
 
@@ -734,6 +927,7 @@
     <div class="wrap-wide topbar-inner">
       <a href="#top" class="wordmark">Enis Cirak</a>
       <div class="topbar-right">
+        <a class="topbar-link" href="#work" data-scroll-target="work">The work</a>
         <a class="topbar-link" href="/panic-loop-workshop/">Workshop</a>
         <a class="button-mini" href="#book" data-scroll-target="book">Book a free call</a>
       </div>
@@ -746,13 +940,32 @@
       <div class="wrap-wide hero-grid">
         <div>
           <p class="eyebrow">One-on-one coaching, online</p>
-          <h1>You do not have to keep organizing your life around panic</h1>
+          <h1>Release what your nervous system has been carrying</h1>
           <p class="lede">
-            If panic attacks, agoraphobia, or constant fear have made your world smaller, this is
-            the work I do. We meet online, one-on-one, and work on what is actually driving the fear.
+            I help people work through panic, anxiety, DP/DR, avoidance, and the stuck emotional
+            energy underneath the symptoms.
           </p>
+          <div class="hero-body">
+            <p>
+              The surface issue might be panic attacks, fear of driving, health anxiety, or feeling
+              unreal. Underneath, there is often a body full of resisted fear, grief, anger, shame,
+              pressure, and old protection.
+            </p>
+            <p>
+              Coaching is where we slow down, feel what has been pushed away, and let the system
+              release what it no longer needs to carry.
+            </p>
+          </div>
+          <div class="topic-row" aria-label="What coaching can help with">
+            <span class="topic-chip">Panic attacks</span>
+            <span class="topic-chip">DP/DR</span>
+            <span class="topic-chip">Agoraphobia</span>
+            <span class="topic-chip">Stuck emotions</span>
+            <span class="topic-chip">Pent-up energy</span>
+          </div>
           <div class="button-row">
             <a class="button" href="#book" data-scroll-target="book">Book a free call</a>
+            <a class="button button-secondary" href="#work" data-scroll-target="work">See how this works</a>
           </div>
           <p class="small-note">
             Free 30-minute call &middot; Online &middot; No pressure
@@ -765,8 +978,8 @@
           </figure>
           <blockquote class="hero-proof">
             <span class="stars" aria-label="Five-star review">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-            <p>&ldquo;Enis has literally been a life changer for me.&rdquo;</p>
-            <cite>Stephanie S., coaching client</cite>
+            <p>&ldquo;He did not just give me something to make me feel calm for a hour and then spiral, he gave me tools to use constantly.&rdquo;</p>
+            <cite>Kiara Z., coaching client</cite>
           </blockquote>
         </div>
       </div>
@@ -778,43 +991,157 @@
       <div class="wrap-wide section-head">
         <div>
           <p class="eyebrow">01 &middot; Who this is for</p>
-          <h2>Does this sound like you?</h2>
+          <h2>When your inner world starts running your outer life</h2>
         </div>
         <div>
           <ul class="familiar-list">
-            <li>You feel trapped by panic.</li>
-            <li>You avoid driving, stores, restaurants, planes, or being far from home.</li>
-            <li>You spend the day watching your own body and mind.</li>
-            <li>You look okay on the outside and feel stuck on the inside.</li>
-            <li>You are tired of managing fear instead of actually living.</li>
+            <li>You avoid places, conversations, foods, roads, feelings, or sensations because you are afraid of what might happen.</li>
+            <li>You keep trying to think your way out, but your body still reacts before your logic catches up.</li>
+            <li>You feel pressure inside: grief you never really processed, anger you swallowed, fear you keep managing.</li>
+            <li>You look okay on the outside, but inside you feel tense, watchful, or disconnected.</li>
+            <li>You are tired of coping with symptoms and want to understand what is underneath them.</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <section class="sessions-section reveal">
-      <div class="wrap">
-        <p class="eyebrow">02 &middot; The work</p>
-        <h2>What sessions are like</h2>
-        <p class="lede">
-          Sessions are calm and personal. We talk directly. There is no need to perform or to say
-          the right thing.
-        </p>
-        <p>
-          We work with whatever is going on for you right now. Some sessions are about
-          understanding exactly how your panic works. Others are about sitting with the fear in
-          your body instead of fighting it, or finding the deeper emotion underneath it.
-        </p>
-        <p>
-          The goal is for panic to stop running your life.
-        </p>
+    <section class="river-section reveal" id="work">
+      <div class="wrap-wide river-layout">
+        <div>
+          <p class="eyebrow">02 &middot; The core idea</p>
+          <h2>A nervous system becomes steady when the blockages start to release</h2>
+          <p class="lede">
+            I often think of this work like a river. The water is your life force: emotion, energy,
+            attention, aliveness. The rocks are the places where something got resisted, suppressed,
+            or held too tightly.
+          </p>
+          <p>
+            When the rocks are there, the water gets turbulent. You feel pressure, fear, intrusive
+            thoughts, panic, shutdown, or a constant need to control. The goal is not to shame the
+            turbulence. The goal is to work with the rocks.
+          </p>
+          <p>
+            The more you feel and release what has been held, the more your system can integrate.
+            You feel less fragmented. More of you is available. Life starts to move again.
+          </p>
+        </div>
+        <div class="river-visual" aria-label="River visual showing emotional blockages dissolving">
+          <div class="river-path" aria-hidden="true"></div>
+          <span class="stone one">fear</span>
+          <span class="stone two">grief</span>
+          <span class="stone three">anger</span>
+          <span class="stone four">old protection</span>
+          <p class="flow-note">
+            The work is not forcing the river to be calm. It is letting the stuck places finally
+            be felt, digested, and released.
+          </p>
+        </div>
       </div>
     </section>
 
-    <section class="agenda-section reveal">
+    <section class="reveal">
+      <div class="wrap-wide">
+        <p class="eyebrow">03 &middot; What we work with</p>
+        <h2>Symptoms are usually the doorway, not the whole story</h2>
+        <p class="lede">
+          Panic and anxiety are real. The body is really reacting. But the symptom is often the
+          loudest part of a deeper pattern.
+        </p>
+        <div class="principles-grid">
+          <article class="principle-card">
+            <span>1</span>
+            <h3>The surface</h3>
+            <p>Panic attacks, DP/DR, anxious thoughts, body scanning, avoidance, health fears, overstimulation.</p>
+          </article>
+          <article class="principle-card">
+            <span>2</span>
+            <h3>The strategy</h3>
+            <p>Control, check, brace, escape, seek certainty, stay busy, stay guarded, keep everything inside.</p>
+          </article>
+          <article class="principle-card">
+            <span>3</span>
+            <h3>The charge underneath</h3>
+            <p>Fear, sadness, anger, shame, grief, loneliness, old pain, pressure, and emotion that never got to move.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="layers-section reveal">
       <div class="wrap-wide section-head">
         <div>
-          <p class="eyebrow">03 &middot; How it works</p>
+          <p class="eyebrow">04 &middot; The path</p>
+          <h2>From resistance to integration</h2>
+        </div>
+        <div>
+          <p>
+            Most people try to get better by controlling the symptom: calm the body, stop the
+            thought, avoid the trigger, find reassurance. That can help for a moment, but it often
+            leaves the deeper charge untouched.
+          </p>
+          <p>
+            In sessions, we work in the other direction. We get curious about what is happening
+            inside, make enough room to feel it safely, and let the system complete what it has
+            been holding.
+          </p>
+        </div>
+      </div>
+      <div class="wrap-wide">
+        <div class="layers-board">
+          <article class="layer-row">
+            <h3><span>Step 01</span> See the pattern</h3>
+            <p>We name what happens in real life: the trigger, the sensation, the thought, the safety behavior, and what you do to get relief.</p>
+          </article>
+          <article class="layer-row">
+            <h3><span>Step 02</span> Feel what is here</h3>
+            <p>Instead of immediately fixing or explaining the feeling, we slow down enough to sense it directly in the body.</p>
+          </article>
+          <article class="layer-row">
+            <h3><span>Step 03</span> Let it move</h3>
+            <p>Emotion is not meant to be stored forever. When it is met without resistance, the charge can soften, open, shake, cry, burn, or settle.</p>
+          </article>
+          <article class="layer-row">
+            <h3><span>Step 04</span> Integrate</h3>
+            <p>After the release, we help the mind and nervous system understand what changed, then choose the next practical step in life.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <div class="wrap-wide">
+        <p class="eyebrow">05 &middot; What sessions are like</p>
+        <h2>Calm, direct, and built around what is actually happening in you</h2>
+        <p class="lede">
+          This is not a script. Some sessions are practical and pattern-focused. Some are emotional.
+          Some are quiet. The thread is always the same: we work with the real thing, not the
+          performance of being okay.
+        </p>
+        <div class="method-grid">
+          <article class="method-card">
+            <h3>Talk</h3>
+            <p>We understand the situation clearly: what happened, what you fear, what you do to cope, and where the loop repeats.</p>
+          </article>
+          <article class="method-card">
+            <h3>Feel</h3>
+            <p>We bring attention into the body so you can meet the fear, pressure, or emotion instead of staying above it.</p>
+          </article>
+          <article class="method-card">
+            <h3>Release</h3>
+            <p>We give the stuck energy enough space to move without forcing it, dramatizing it, or turning it into a project.</p>
+          </article>
+          <article class="method-card">
+            <h3>Live</h3>
+            <p>We connect the work back to your life: driving, relationships, decisions, food, meetings, being alone, being seen.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="sessions-section reveal">
+      <div class="wrap-wide section-head">
+        <div>
+          <p class="eyebrow">06 &middot; Practical details</p>
           <h2>Start with a conversation</h2>
         </div>
         <div class="agenda-list">
@@ -834,13 +1161,13 @@
       </div>
     </section>
 
-    <section class="reveal">
+    <section class="reveal" id="about">
       <div class="wrap-wide story-card">
         <figure class="story-photo">
           <img src="assets/enis-garden.jpg" alt="Enis Cirak outdoors in a garden" loading="lazy" />
         </figure>
         <div>
-          <p class="eyebrow">04 &middot; About Enis</p>
+          <p class="eyebrow">07 &middot; About Enis</p>
           <h2>I went through this myself</h2>
           <p>
             My name is Enis Cirak. I had panic attacks, depersonalization, and bad anxiety for
@@ -851,24 +1178,21 @@
             trying new foods. I was overstimulated most of the time and did not feel like myself.
           </p>
           <p>
-            I know what it is like to plan a day around whether your body will cooperate. I know
-            what it is like to sit in a room full of people and feel like the only one who cannot
-            just be there.
-          </p>
-          <p>
             Turning toward the feelings is what finally worked. The sensations still came at first,
             but I stopped treating every sensation like a problem I had to solve immediately.
           </p>
           <p>
-            Getting out took years. I studied everything I could find on panic and the nervous
-            system, and I tried it all on myself first. Now I coach people through panic, DP/DR,
-            and avoidance one-on-one.
+            Getting out took years. I studied everything I could find on panic, emotional release,
+            meditation, and the nervous system, and I tried it all on myself first. Now I coach
+            people through panic, DP/DR, avoidance, and the stuck emotional patterns underneath.
+          </p>
+          <p>
+            My work is influenced by meditation, somatic awareness, Internal Family Systems, Michael
+            Singer, Eckhart Tolle, Adyashanti, David Burns, and David Hawkins. No affiliation or
+            endorsement is implied.
           </p>
           <p>
             We go at your pace. No rushing and no pushing.
-          </p>
-          <p class="influence-note">
-            Influences: Internal Family Systems, Michael Singer, Eckhart Tolle, Adyashanti, David Burns.
           </p>
         </div>
       </div>
@@ -876,7 +1200,7 @@
 
     <section class="reveal">
       <div class="wrap-wide">
-        <p class="eyebrow">05 &middot; Client notes</p>
+        <p class="eyebrow">08 &middot; Client notes</p>
         <h2>A few notes from people I have worked with</h2>
         <p class="lede">
           These are public excerpts from Inner Solutions Trustpilot reviews. They are not promises
@@ -905,7 +1229,7 @@
 
     <section class="workshop-band reveal">
       <div class="wrap-wide">
-        <p class="eyebrow">06 &middot; Another way to start</p>
+        <p class="eyebrow">09 &middot; Another way to start</p>
         <h2>Want to start smaller?</h2>
         <p class="lede">
           I also teach a live 90-minute workshop on the loop that keeps panic going. It is $49,
@@ -919,32 +1243,36 @@
 
     <section class="reveal" id="faq">
       <div class="wrap">
-        <p class="eyebrow">07 &middot; FAQ</p>
+        <p class="eyebrow">10 &middot; FAQ</p>
         <h2>Common questions</h2>
         <div class="faq">
           <details>
             <summary>Is this therapy?</summary>
-            <p>No. This is coaching. It is not therapy, and it is not a medical service.</p>
+            <p>No. This is coaching. It is not therapy, diagnosis, treatment, crisis care, or a substitute for licensed mental-health support.</p>
           </details>
           <details>
-            <summary>Do I need to have agoraphobia for this to help?</summary>
-            <p>No. This work can also help if you have panic attacks, fear of fear, ongoing anxiety, or avoidance that is starting to shape your life.</p>
+            <summary>What do you mean by stuck emotions or stuck energy?</summary>
+            <p>I use those words experientially. Many people can feel pressure, charge, tightness, grief, anger, or fear held in the body. We work with those experiences directly instead of treating them like abstract ideas.</p>
+          </details>
+          <details>
+            <summary>Is this only for panic and agoraphobia?</summary>
+            <p>No. Panic and avoidance are common reasons people find me, but the deeper work applies to anxiety, DP/DR, emotional shutdown, relationship fear, inner pressure, and feeling disconnected from yourself.</p>
           </details>
           <details>
             <summary>Do you use exposure?</summary>
-            <p>Not in a pushy or rigid way. Exposure helps a lot of people. If it is part of what you are doing, this work can go alongside it. What I focus on is understanding the pattern, and changing how you relate to what is happening underneath.</p>
+            <p>Sometimes. Exposure can be useful, but I do not approach it as forcing yourself through terror. I am more interested in helping your system learn safety from the inside while you stop reinforcing fear.</p>
           </details>
           <details>
             <summary>What happens in a session?</summary>
-            <p>We talk about what is happening, but we do not just stop at talking. We slow down to notice what is going on in your body, your mind, and your emotions, as it happens. Then we work with what is actually driving the fear.</p>
+            <p>We talk clearly, then slow down enough to notice what is happening in your body, thoughts, emotions, and protective patterns. The session follows what is real, not a fixed script.</p>
           </details>
           <details>
-            <summary>Can I still work with you if I am in therapy or on medication?</summary>
+            <summary>Can I work with you if I am in therapy or on medication?</summary>
             <p>Yes. Many people are. This work can sit alongside therapy or medication. Medication decisions stay between you and your doctor.</p>
           </details>
           <details>
             <summary>How long does it take?</summary>
-            <p>It depends on the person and the pattern. Some people feel clearer quickly. For others it takes longer. The point is to do real work that actually helps, not to force a timeline.</p>
+            <p>It depends on the person and the pattern. Some people feel clearer quickly. For others it takes longer. The first step is a free call so we can see what is actually going on.</p>
           </details>
         </div>
       </div>
@@ -952,10 +1280,11 @@
 
     <section class="booking-section reveal" id="book">
       <div class="wrap">
-        <p class="eyebrow">08 &middot; Book</p>
+        <p class="eyebrow">11 &middot; Book</p>
         <h2>Start with a free call</h2>
         <p class="lede">
-          You do not have to figure this out alone. Pick a time that works and we will talk.
+          You do not have to figure this out alone. Pick a time that works and we will talk about
+          what has been happening, what you have tried, and whether working together makes sense.
         </p>
         <p class="small-note">
           Free &middot; 30 minutes &middot; Online
@@ -981,7 +1310,6 @@
   </footer>
 
   <script>
-    // Smooth-scroll + analytics on CTA clicks
     document.querySelectorAll("[data-scroll-target]").forEach(function (link) {
       link.addEventListener("click", function (event) {
         var targetId = link.getAttribute("data-scroll-target");
@@ -990,16 +1318,15 @@
 
         event.preventDefault();
         if (typeof gtag === "function") {
-          gtag("event", "book_call_click", {
+          gtag("event", targetId === "book" ? "book_call_click" : "homepage_scroll_click", {
             event_category: "engagement",
-            event_label: "Book a Free Call"
+            event_label: link.textContent.trim()
           });
         }
         target.scrollIntoView({ behavior: "smooth", block: "start" });
       });
     });
 
-    // Reveal on scroll (respects prefers-reduced-motion via CSS)
     var revealEls = document.querySelectorAll(".reveal");
     if ("IntersectionObserver" in window) {
       var io = new IntersectionObserver(function (entries) {
@@ -1015,7 +1342,6 @@
       revealEls.forEach(function (el) { el.classList.add("is-visible"); });
     }
 
-    // Lazy-load Calendly only when the booking section is near the viewport
     var bookingSection = document.getElementById("book");
     var calendlyLoaded = false;
     function loadCalendly() {
@@ -1024,8 +1350,8 @@
 
       var mount = document.getElementById("calendly-mount");
       mount.classList.remove("booking-placeholder");
-      mount.innerHTML = '';
-      mount.removeAttribute('style');
+      mount.innerHTML = "";
+      mount.removeAttribute("style");
 
       var widget = document.createElement("div");
       widget.className = "calendly-inline-widget";
