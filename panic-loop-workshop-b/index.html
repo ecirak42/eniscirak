@@ -56,10 +56,11 @@
       --sage: #9DB5A2;
       --amber: #C9794A;
       --amber-bright: #D98D5F;
+      --ink-sketch: #D6D0C0;
       --star: #00B67A;
       --serif: "Source Serif 4", Georgia, serif;
       --sans: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
-      --measure: 36rem;
+      --measure: 35rem;
     }
 
     * { box-sizing: border-box; }
@@ -80,6 +81,31 @@
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
     }
+
+    /* Lamplight */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      background:
+        radial-gradient(circle at 22% -8%, rgba(217, 141, 95, 0.09), rgba(217, 141, 95, 0) 34rem),
+        radial-gradient(circle at 85% 110%, rgba(157, 181, 162, 0.05), rgba(157, 181, 162, 0) 30rem);
+      pointer-events: none;
+    }
+
+    /* Grain */
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+      opacity: 0.05;
+      pointer-events: none;
+    }
+
+    main, footer, .top-label, .sticky-cta { position: relative; z-index: 1; }
 
     a { color: inherit; text-decoration: none; }
     img { display: block; max-width: 100%; }
@@ -111,26 +137,49 @@
       text-transform: uppercase;
     }
 
-    /* ------- Letter ------- */
+    /* ------- Letter opening ------- */
     .letter-open {
-      padding: clamp(3.2rem, 8vw, 5.5rem) 0 0;
+      padding: clamp(3.2rem, 8vw, 5.2rem) 0 0;
+    }
+
+    .night-line {
+      margin: 0 0 0.7rem;
+      color: var(--text-2);
+      font-size: clamp(1.12rem, 1.6vw, 1.26rem);
+      line-height: 1.55;
     }
 
     h1 {
-      margin: 0;
+      margin: 1.8rem 0 0;
       color: var(--text);
       font-family: var(--serif);
-      font-size: clamp(2.5rem, 7.5vw, 3.6rem);
+      font-size: clamp(2.5rem, 7.5vw, 3.7rem);
       font-weight: 600;
       letter-spacing: -0.015em;
       line-height: 1.08;
     }
 
-    .open-list {
-      margin: 2rem 0 0;
-      color: var(--text-2);
-      font-size: clamp(1.15rem, 1.6vw, 1.3rem);
-      line-height: 1.65;
+    .open-after {
+      margin-top: 1.4rem;
+    }
+
+    /* Staggered entrance */
+    .fade-seq > * {
+      opacity: 0;
+      transform: translateY(8px);
+      animation: fadeUp 0.7s ease forwards;
+    }
+
+    .fade-seq > *:nth-child(1) { animation-delay: 0.1s; }
+    .fade-seq > *:nth-child(2) { animation-delay: 0.4s; }
+    .fade-seq > *:nth-child(3) { animation-delay: 0.7s; }
+    .fade-seq > *:nth-child(4) { animation-delay: 1s; }
+    .fade-seq > *:nth-child(5) { animation-delay: 1.45s; }
+    .fade-seq > *:nth-child(6) { animation-delay: 1.85s; }
+    .fade-seq > *:nth-child(7) { animation-delay: 2.15s; }
+
+    @keyframes fadeUp {
+      to { opacity: 1; transform: none; }
     }
 
     .letter-body {
@@ -147,11 +196,86 @@
       line-height: 1.25;
     }
 
+    .drop::first-letter {
+      float: left;
+      padding: 0.05em 0.14em 0 0;
+      color: var(--amber);
+      font-size: 3.3em;
+      font-weight: 600;
+      line-height: 0.82;
+    }
+
     .divider {
-      width: 3rem;
-      height: 1px;
-      margin: 3rem auto;
-      background: var(--line);
+      margin: 3rem 0;
+      color: var(--muted);
+      font-size: 1.1rem;
+      letter-spacing: 0.7em;
+      text-align: center;
+    }
+
+    /* ------- Loop sketch ------- */
+    .sketch {
+      margin: 2.4rem 0 0;
+    }
+
+    .sketch svg {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .sketch-ink {
+      fill: none;
+      stroke: var(--ink-sketch);
+      stroke-width: 1.6;
+      stroke-linecap: round;
+      opacity: 0.8;
+    }
+
+    .sketch-amber {
+      fill: none;
+      stroke: var(--amber);
+      stroke-width: 2.1;
+      stroke-linecap: round;
+    }
+
+    .sketch-label {
+      fill: var(--text);
+      font-family: var(--serif);
+      font-size: 23px;
+      font-style: italic;
+    }
+
+    .sketch-side {
+      fill: var(--amber-bright);
+      font-family: var(--serif);
+      font-size: 17px;
+      font-style: italic;
+    }
+
+    .sketch-caption {
+      margin-top: 0.4rem;
+      color: var(--muted);
+      font-family: var(--sans);
+      font-size: 0.82rem;
+      text-align: center;
+    }
+
+    /* ------- Margin note ------- */
+    .margin-note {
+      margin: 2.6rem 0 0;
+      padding: 0.4rem 0 0.4rem 1.3rem;
+      border-left: 2px solid var(--amber);
+    }
+
+    .margin-note .note-head {
+      margin: 0 0 0.5rem;
+      color: var(--amber-bright);
+      font-family: var(--sans);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
     }
 
     /* ------- CTA ------- */
@@ -261,40 +385,66 @@
       font-size: 0.82rem;
     }
 
-    /* ------- Quote ------- */
-    .quote-card {
-      margin: 2rem 0 0;
-      padding: 1.5rem 1.5rem 1.4rem;
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      background: var(--bg-soft);
+    /* ------- Plan list ------- */
+    .plan-list {
+      display: grid;
+      gap: 1rem;
+      margin: 1.6rem 0 0;
+      padding: 0.2rem 0 0.2rem 1.3rem;
+      border-left: 1px solid var(--line);
+      list-style: none;
+    }
+
+    .plan-list .plan-when {
+      display: block;
+      color: var(--sage);
+      font-family: var(--sans);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .plan-list li {
+      color: var(--text-2);
+      line-height: 1.6;
+    }
+
+    /* ------- Quotes ------- */
+    .letter-quote {
+      margin: 1.8rem 0 0;
+      padding: 0.3rem 0 0.3rem 1.3rem;
+      border-left: 2px solid var(--sage);
     }
 
     .stars {
       display: block;
-      margin-bottom: 0.8rem;
+      margin-bottom: 0.5rem;
       color: var(--star);
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       letter-spacing: 0.18em;
     }
 
-    .quote-card blockquote {
-      margin: 0;
-    }
-
-    .quote-card blockquote p {
+    .letter-quote p {
       color: var(--text);
       font-size: 1.05rem;
       line-height: 1.65;
     }
 
-    .quote-card cite {
+    .letter-quote cite {
       display: block;
-      margin-top: 1rem;
+      margin-top: 0.7rem;
       color: var(--muted);
       font-family: var(--sans);
       font-size: 0.84rem;
       font-style: normal;
+    }
+
+    .quote-source {
+      margin-top: 1.4rem;
+      color: var(--muted);
+      font-family: var(--sans);
+      font-size: 0.8rem;
     }
 
     /* ------- FAQ ------- */
@@ -361,7 +511,8 @@
     .signature .sig-name {
       color: var(--text);
       font-family: var(--serif);
-      font-size: 1.3rem;
+      font-size: 1.35rem;
+      font-style: italic;
       font-weight: 600;
     }
 
@@ -461,6 +612,12 @@
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
 
+      .fade-seq > * {
+        opacity: 1;
+        transform: none;
+        animation: none;
+      }
+
       .reveal,
       .reveal.is-visible {
         opacity: 1;
@@ -482,14 +639,13 @@
 
   <main id="top">
     <section class="letter-open">
-      <div class="wrap">
+      <div class="wrap fade-seq">
+        <p class="night-line">You checked your pulse twice in the last hour.</p>
+        <p class="night-line">You know where every exit in the building is.</p>
+        <p class="night-line">You left early again, and made it sound casual.</p>
+        <p class="night-line">Nobody around you knows how much work this takes.</p>
         <h1>You&rsquo;ve gotten good at hiding it.</h1>
-        <p class="open-list">
-          The pulse checks. The exit seats. The early goodbyes. The plans you cancel an hour
-          before. From the outside you look fine. Inside, you&rsquo;re managing a fear that never
-          fully switches off.
-        </p>
-        <p style="margin-top: 1.25rem;">
+        <p class="open-after">
           I did this for almost five years. This page is a letter about what I found out.
         </p>
 
@@ -501,13 +657,13 @@
       </div>
     </section>
 
-    <div class="divider"></div>
+    <div class="divider" aria-hidden="true">&middot; &middot; &middot;</div>
 
     <section class="letter-body">
       <div class="wrap">
         <div class="reveal">
           <h2>The part nobody explained to me</h2>
-          <p>
+          <p class="drop">
             Every test came back normal. Everyone kept telling me I was fine. Nobody explained why
             my body kept doing it anyway.
           </p>
@@ -521,10 +677,45 @@
             And watching finds things. A skipped beat. A light head. A moment where the room feels
             unreal. That&rsquo;s why attacks seem to come from nowhere. The watching finds them first.
           </p>
-          <p>
-            Once I understood that, everything I&rsquo;d been doing to protect myself looked
+
+          <figure class="sketch" aria-hidden="true">
+            <svg viewBox="0 0 560 380" xmlns="http://www.w3.org/2000/svg">
+              <!-- ink arcs -->
+              <path class="sketch-ink" d="M 322 60 Q 424 76 460 124" />
+              <path class="sketch-ink" d="M 460 124 L 447 116 M 460 124 L 450 130" />
+              <path class="sketch-ink" d="M 482 170 Q 478 258 422 312" />
+              <path class="sketch-ink" d="M 422 312 L 433 302 M 422 312 L 432 315" />
+              <path class="sketch-ink" d="M 350 340 Q 280 364 210 341" />
+              <path class="sketch-ink" d="M 210 341 L 223 334 M 210 341 L 221 347" />
+              <path class="sketch-ink" d="M 128 314 Q 74 254 80 174" />
+              <path class="sketch-ink" d="M 80 174 L 73 187 M 80 174 L 88 184" />
+              <!-- amber return arc -->
+              <path class="sketch-amber" d="M 92 126 Q 130 62 222 54" />
+              <path class="sketch-amber" d="M 222 54 L 208 50 M 222 54 L 211 62" />
+
+              <text class="sketch-label" x="280" y="52" text-anchor="middle" transform="rotate(-1.5 280 52)">a sensation</text>
+              <text class="sketch-label" x="478" y="152" text-anchor="middle" transform="rotate(2 478 152)">fear spikes</text>
+              <text class="sketch-label" x="396" y="336" text-anchor="middle" transform="rotate(-1 396 336)">you escape</text>
+              <text class="sketch-label" x="164" y="336" text-anchor="middle" transform="rotate(1.5 164 336)">relief</text>
+              <text class="sketch-label" x="86" y="152" text-anchor="middle" transform="rotate(-2 86 152)">watching</text>
+              <text class="sketch-side" x="26" y="34" transform="rotate(-8 26 34)">and it finds the next one</text>
+            </svg>
+            <figcaption class="sketch-caption">That&rsquo;s the loop. On Saturday I walk you through every step of it.</figcaption>
+          </figure>
+
+          <p style="margin-top: 1.8rem;">
+            Once I understood this, everything I&rsquo;d been doing to protect myself looked
             different. The checking, the escaping, the avoiding. All of it was feeding the loop.
           </p>
+
+          <aside class="margin-note">
+            <p class="note-head">A quick note, in case this page set something off</p>
+            <p>
+              Reading about symptoms can start the checking. If something in your body just got
+              loud, you don&rsquo;t have to fix it. Let it be there while you keep reading.
+              That&rsquo;s the skill, and it&rsquo;s learnable.
+            </p>
+          </aside>
         </div>
 
         <div class="reveal">
@@ -546,15 +737,27 @@
           <h2>What I&rsquo;m inviting you to</h2>
           <p>
             On <span data-workshop-display-date>Saturday</span> I&rsquo;m teaching a live 90-minute
-            workshop on this loop.
+            workshop on this loop. Here&rsquo;s exactly how it goes, so there are no surprises.
           </p>
-          <p>
-            I&rsquo;ll walk you through how it works, slowly and in plain language, including why
-            DP/DR and strange body sensations feel so convincing. You&rsquo;ll map your own version
-            of the loop on paper. I&rsquo;ll teach you a way to meet a wave without feeding it, and
-            we&rsquo;ll practice it together. Then you can ask me anything.
-          </p>
-          <p>
+          <ul class="plan-list">
+            <li>
+              <span class="plan-when">First half hour</span>
+              The loop, in plain language. Why the symptoms feel so dangerous. Why DP/DR shows up.
+            </li>
+            <li>
+              <span class="plan-when">Then</span>
+              You map your own loop on paper. Nobody sees it but you.
+            </li>
+            <li>
+              <span class="plan-when">Then</span>
+              The practice. A way to meet a wave without feeding it. We do it together.
+            </li>
+            <li>
+              <span class="plan-when">The last stretch</span>
+              Questions. Ask anything, or just listen.
+            </li>
+          </ul>
+          <p style="margin-top: 1.6rem;">
             You don&rsquo;t have to talk. You don&rsquo;t have to turn your camera on. If you panic
             halfway through, you can step away and come back, and nobody will think anything of it.
           </p>
@@ -565,18 +768,25 @@
         </div>
 
         <div class="reveal">
-          <h2>What a client said</h2>
-          <div class="quote-card">
+          <h2>From people I&rsquo;ve worked with</h2>
+          <blockquote class="letter-quote">
             <span class="stars" aria-label="Five-star review">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-            <blockquote>
-              <p>
-                &ldquo;To anyone looking for a review to see if this actually helps. I am here to
-                tell you it does. Enis has literally been a life changer for me. He really
-                understands what you are going through because he has been right where you are.&rdquo;
-              </p>
-              <cite>Stephanie S., from the public Trustpilot reviews of my coaching practice</cite>
-            </blockquote>
-          </div>
+            <p>
+              &ldquo;To anyone looking for a review to see if this actually helps. I am here to
+              tell you it does. Enis has literally been a life changer for me. He really
+              understands what you are going through because he has been right where you are.&rdquo;
+            </p>
+            <cite>Stephanie S.</cite>
+          </blockquote>
+          <blockquote class="letter-quote">
+            <span class="stars" aria-label="Five-star review">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            <p>
+              &ldquo;He did not just give me something to make me feel calm for a hour and then
+              spiral, he gave me tools to use constantly.&rdquo;
+            </p>
+            <cite>Kiara Z.</cite>
+          </blockquote>
+          <p class="quote-source">Both from the public Trustpilot reviews of my coaching practice.</p>
         </div>
 
         <div class="reveal">
