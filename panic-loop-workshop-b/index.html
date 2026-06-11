@@ -12,9 +12,7 @@
 
   <script>
     window.WORKSHOP_EVENT = Object.freeze({
-      time: "11 AM Central / 12 PM Eastern",
-      standardCheckoutUrl: "https://square.link/u/NtyClaJI?src=embed",
-      vipCheckoutUrl: "https://square.link/u/lRtE2CXp?src=embed"
+      time: "11 AM Central / 12 PM Eastern"
     });
   </script>
 
@@ -25,7 +23,7 @@
   <title>Panic Loop Workshop | A Letter About the Way Out</title>
   <meta
     name="description"
-    content="A live 90-minute workshop on the loop that keeps panic going. From someone who lived it. $49, replay included."
+    content="A free live 90-minute workshop on the loop that keeps panic going. From someone who lived it. Replay included."
   />
   <meta property="og:title" content="You've gotten good at hiding it" />
   <meta property="og:description" content="A letter about panic, the loop that keeps it going, and a live 90-minute workshop on the way out." />
@@ -42,6 +40,7 @@
     rel="stylesheet"
   />
   <script src="/assets/workshop-schedule.js?v=20260610" defer></script>
+  <script src="/assets/workshop-signup.js?v=20260611" defer></script>
 
   <style>
     :root {
@@ -363,6 +362,94 @@
 
     .vip-line a:hover { border-color: var(--sage); }
 
+    .signup-card {
+      margin-top: 1.25rem;
+      padding: clamp(1rem, 3vw, 1.35rem);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: rgba(40, 41, 35, 0.92);
+    }
+
+    .signup-card h3 {
+      margin: 0;
+      color: var(--text);
+      font-family: var(--serif);
+      font-size: clamp(1.35rem, 3vw, 1.8rem);
+      line-height: 1.2;
+    }
+
+    .signup-card p {
+      margin-top: 0.55rem;
+      color: var(--text-2);
+      font-family: var(--sans);
+      font-size: 0.92rem;
+      line-height: 1.55;
+    }
+
+    .signup-form {
+      display: grid;
+      gap: 0.85rem;
+      margin-top: 1.1rem;
+    }
+
+    .signup-fields {
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    .signup-field label {
+      display: block;
+      margin-bottom: 0.32rem;
+      color: var(--sage);
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .signup-field input {
+      width: 100%;
+      min-height: 3.1rem;
+      padding: 0.78rem 0.85rem;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #1F201C;
+      color: var(--text);
+      font: 1rem/1.2 var(--sans);
+    }
+
+    .signup-field input:focus {
+      border-color: var(--sage);
+      box-shadow: 0 0 0 3px rgba(157, 181, 162, 0.16);
+      outline: none;
+    }
+
+    .signup-form .button { width: 100%; }
+
+    .signup-consent,
+    .signup-status {
+      margin-top: 0;
+      color: var(--muted);
+      font-family: var(--sans);
+      font-size: 0.76rem;
+      line-height: 1.45;
+    }
+
+    .signup-status {
+      padding: 0.75rem 0.85rem;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--bg-soft);
+    }
+
+    .signup-status.is-success {
+      border-color: rgba(157, 181, 162, 0.42);
+      background: rgba(157, 181, 162, 0.1);
+      color: var(--sage);
+      font-weight: 700;
+    }
+
     /* ------- Video ------- */
     .video-wrap {
       margin: 2rem 0 0.75rem;
@@ -634,7 +721,7 @@
 </head>
 <body>
   <div class="top-label">
-    <span>A live 90-minute workshop &middot; <span data-workshop-short-date>this Saturday</span> &middot; $49</span>
+    <span>Free live 90-minute workshop &middot; <span data-workshop-short-date>this Saturday</span></span>
   </div>
 
   <main id="top">
@@ -651,8 +738,8 @@
 
         <div class="cta-block">
           <p class="cta-date"><span data-workshop-date>Saturday</span> <span>&middot;</span> <span data-workshop-time>11 AM Central / 12 PM Eastern</span></p>
-          <a class="button" href="/checkout/panic-loop-workshop/" data-standard-checkout>Save my seat &middot; $49</a>
-          <p class="cta-micro">Live online &middot; Replay included &middot; Cameras off is fine &middot; Refund within 7 days if it wasn&rsquo;t useful</p>
+          <a class="button" href="#tickets" data-signup-link>Save my free seat</a>
+          <p class="cta-micro">Live online &middot; Replay included &middot; Cameras off is fine &middot; No payment required</p>
         </div>
       </div>
     </section>
@@ -762,8 +849,9 @@
             halfway through, you can step away and come back, and nobody will think anything of it.
           </p>
           <p>
-            It costs $49. A private session with me is $125, so this is the most affordable way to
-            get this explanation from someone who has actually lived it.
+            It is free while I am using the workshop as the front door into my coaching work. If the
+            way I explain this lands for you, you can book a free call afterward and we can talk
+            about your specific pattern.
           </p>
         </div>
 
@@ -792,9 +880,9 @@
         <div class="reveal">
           <h2>The deal</h2>
           <p>
-            If you attend live or watch the replay and it wasn&rsquo;t useful, email me within 7
-            days and I&rsquo;ll refund you. You&rsquo;ve been disappointed enough times. I&rsquo;m
-            not interested in being another one.
+            Come live if you can. Watch the replay if you can&rsquo;t. You do not have to buy
+            anything, turn your camera on, or share personal details. Just come understand the
+            loop and see if this way of working makes sense to you.
           </p>
         </div>
 
@@ -818,8 +906,8 @@
               <p>The replay is included. Watch it whenever you want.</p>
             </details>
             <details>
-              <summary>What happens after I pay?</summary>
-              <p>You get a confirmation email with your workshop link. The replay arrives by email after the live call. Checkout is handled by Square.</p>
+              <summary>What happens after I register?</summary>
+              <p>You get a confirmation email with the workshop details. The replay arrives by email after the live call.</p>
             </details>
           </div>
         </div>
@@ -842,9 +930,27 @@
 
           <div class="cta-block" id="tickets">
             <p class="cta-date"><span data-workshop-date>Saturday</span> <span>&middot;</span> <span data-workshop-time>11 AM Central / 12 PM Eastern</span></p>
-            <a class="button" href="/checkout/panic-loop-workshop/" data-standard-checkout>Save my seat &middot; $49</a>
-            <p class="cta-micro">Live online &middot; Replay included &middot; Cameras off is fine &middot; Refund within 7 days if it wasn&rsquo;t useful</p>
-            <p class="vip-line">Want a private 60-minute session with me too? <a href="/checkout/panic-loop-workshop-vip/" data-vip-checkout>VIP ticket &middot; $150</a></p>
+            <div class="signup-card" id="workshop-signup">
+              <h3>Save your free seat</h3>
+              <p>Put in your name and email. I will send the workshop link, reminders, and the replay.</p>
+              <form class="signup-form" action="https://assets.mailerlite.com/jsonp/2426159/forms/189992583080969954/subscribe" method="post" data-workshop-signup-form>
+                <div class="signup-fields">
+                  <div class="signup-field">
+                    <label for="letter-workshop-name">First name</label>
+                    <input id="letter-workshop-name" name="fields[name]" type="text" autocomplete="given-name" required>
+                  </div>
+                  <div class="signup-field">
+                    <label for="letter-workshop-email">Email</label>
+                    <input id="letter-workshop-email" name="fields[email]" type="email" autocomplete="email" required>
+                  </div>
+                </div>
+                <button class="button" type="submit">Save my free seat</button>
+                <input type="hidden" name="ml-submit" value="1">
+                <input type="hidden" name="anticsrf" value="true">
+                <p class="signup-consent">You are signing up for workshop emails from Enis Cirak. You can unsubscribe any time.</p>
+                <p class="signup-status" data-signup-status hidden></p>
+              </form>
+            </div>
           </div>
         </div>
       </div>
@@ -865,9 +971,9 @@
   <div class="sticky-cta" id="stickyCta" aria-hidden="true">
     <p class="sticky-text">
       <span data-workshop-short-date>This Saturday</span>
-      Live workshop &middot; $49
+      Free live workshop
     </p>
-    <a class="button" href="/checkout/panic-loop-workshop/" data-standard-checkout>Save my seat</a>
+    <a class="button" href="#tickets" data-signup-link>Save my seat</a>
   </div>
 
   <script>
@@ -878,25 +984,7 @@
         el.textContent = config.time || el.textContent;
       });
 
-      document.querySelectorAll("[data-standard-checkout]").forEach(function (link) {
-        link.href = config.standardCheckoutUrl || link.href;
-      });
-
-      document.querySelectorAll("[data-vip-checkout]").forEach(function (link) {
-        link.href = config.vipCheckoutUrl || link.href;
-      });
     })();
-
-    document.querySelectorAll("[data-standard-checkout], [data-vip-checkout]").forEach(function (link) {
-      link.addEventListener("click", function () {
-        if (typeof gtag === "function") {
-          gtag("event", "workshop_checkout_click", {
-            event_category: "engagement",
-            event_label: "variant-b: " + link.textContent.trim()
-          });
-        }
-      });
-    });
 
     var revealEls = document.querySelectorAll(".reveal");
     if ("IntersectionObserver" in window) {

@@ -12,9 +12,7 @@
 
   <script>
     window.WORKSHOP_EVENT = Object.freeze({
-      time: "11 AM Central / 12 PM Eastern",
-      standardCheckoutUrl: "https://square.link/u/NtyClaJI?src=embed",
-      vipCheckoutUrl: "https://square.link/u/lRtE2CXp?src=embed"
+      time: "11 AM Central / 12 PM Eastern"
     });
   </script>
 
@@ -24,7 +22,7 @@
   <title>Panic Loop Workshop | Live 90-Minute Workshop for Panic Attacks, DP/DR &amp; Avoidance</title>
   <meta
     name="description"
-    content="A calm, live 90-minute workshop on panic attacks, DP/DR, checking, avoidance, and what to practice when symptoms show up. Guided practice and replay included. $49."
+    content="A free live 90-minute workshop on panic attacks, DP/DR, checking, avoidance, and what to practice when symptoms show up. Guided practice and replay included."
   />
   <meta property="og:title" content="Panic Loop Workshop | Stop planning your life around the next panic attack" />
   <meta property="og:description" content="A calm, live 90-minute workshop on the loop that keeps panic going. Guided practice and replay included." />
@@ -57,16 +55,8 @@
     "offers": [
       {
         "@type": "Offer",
-        "name": "Standard ticket",
-        "price": "49",
-        "priceCurrency": "USD",
-        "url": "https://eniscirak.com/panic-loop-workshop/",
-        "availability": "https://schema.org/InStock"
-      },
-      {
-        "@type": "Offer",
-        "name": "VIP ticket with private session",
-        "price": "150",
+        "name": "Free workshop registration",
+        "price": "0",
         "priceCurrency": "USD",
         "url": "https://eniscirak.com/panic-loop-workshop/",
         "availability": "https://schema.org/InStock"
@@ -82,6 +72,7 @@
     rel="stylesheet"
   />
   <script src="/assets/workshop-schedule.js?v=20260610" defer></script>
+  <script src="/assets/workshop-signup.js?v=20260611" defer></script>
   <link rel="preload" as="image" href="../assets/enis-tree.jpg" />
 
   <style>
@@ -562,6 +553,101 @@
       font-weight: 700;
     }
 
+    .signup-card {
+      margin-top: 2rem;
+      padding: clamp(1.35rem, 3vw, 2rem);
+      border: 1px solid rgba(95, 116, 99, 0.34);
+      border-radius: 12px;
+      background: var(--surface);
+      box-shadow: 0 22px 60px rgba(34, 37, 31, 0.08);
+    }
+
+    .signup-card.compact {
+      max-width: 37rem;
+      box-shadow: none;
+    }
+
+    .signup-card h3 {
+      font-family: var(--serif);
+      font-size: clamp(1.45rem, 2.3vw, 2rem);
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    .signup-card p {
+      margin-top: 0.6rem;
+      color: var(--ink-2);
+      font-size: 0.96rem;
+      line-height: 1.55;
+    }
+
+    .signup-form {
+      display: grid;
+      gap: 0.85rem;
+      margin-top: 1.25rem;
+    }
+
+    .signup-fields {
+      display: grid;
+      grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr);
+      gap: 0.75rem;
+    }
+
+    .signup-field label {
+      display: block;
+      margin-bottom: 0.35rem;
+      color: var(--sage-ink);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .signup-field input {
+      width: 100%;
+      min-height: 3.15rem;
+      padding: 0.8rem 0.9rem;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #FFFDF6;
+      color: var(--ink);
+      font: inherit;
+      line-height: 1.2;
+    }
+
+    .signup-field input:focus {
+      border-color: var(--sage);
+      box-shadow: 0 0 0 3px rgba(95, 116, 99, 0.16);
+      outline: none;
+    }
+
+    .signup-form .button {
+      width: 100%;
+      min-height: 3.2rem;
+    }
+
+    .signup-consent,
+    .signup-status {
+      margin-top: 0;
+      color: var(--muted);
+      font-size: 0.78rem;
+      line-height: 1.45;
+    }
+
+    .signup-status {
+      padding: 0.8rem 0.9rem;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 253, 246, 0.72);
+    }
+
+    .signup-status.is-success {
+      border-color: rgba(95, 116, 99, 0.35);
+      background: var(--sage-wash);
+      color: var(--sage-ink);
+      font-weight: 650;
+    }
+
     .technical-grid {
       grid-template-columns: repeat(4, minmax(0, 1fr));
       margin-top: 2rem;
@@ -1028,6 +1114,7 @@
       .leave-panel,
       .story-card,
       .video-card,
+      .signup-fields,
       .shift-layout,
       .loop-layout {
         grid-template-columns: 1fr;
@@ -1138,11 +1225,11 @@
             <span><time data-workshop-date data-workshop-datetime>Every Saturday</time> &middot; <span data-workshop-time>11 AM Central / 12 PM Eastern</span></span>
           </p>
 
-          <div class="button-row" aria-label="Workshop ticket options">
-            <a class="button" href="/checkout/panic-loop-workshop/" data-standard-checkout>Reserve my spot &middot; $49</a>
-            <a class="button button-secondary" href="/checkout/panic-loop-workshop-vip/" data-vip-checkout>VIP + private session &middot; $150</a>
+          <div class="button-row" aria-label="Workshop registration">
+            <a class="button" href="#workshop-signup" data-signup-link>Save my free spot</a>
+            <a class="button button-secondary" href="#workshop-details">See what we cover</a>
           </div>
-          <p class="checkout-note"><strong>Secure checkout powered by Square.</strong> Workshop details are sent by email after purchase.</p>
+          <p class="checkout-note"><strong>Free live workshop.</strong> Register with your email and I will send the workshop link and reminders.</p>
 
           <p class="small-note">
             Live online &middot; Replay included &middot; Guided practice &middot; Cameras can stay off
@@ -1333,17 +1420,17 @@
           Ninety minutes, live online at <span data-workshop-time>11 AM Central / 12 PM Eastern</span>.
           Replay included if you cannot make it.
         </p>
-        <div class="button-row" aria-label="Workshop ticket options">
-          <a class="button" href="/checkout/panic-loop-workshop/" data-standard-checkout>Reserve my spot &middot; $49</a>
-          <a class="button button-secondary" href="#tickets">Compare tickets</a>
+        <div class="button-row" aria-label="Workshop registration">
+          <a class="button" href="#workshop-signup" data-signup-link>Save my free spot</a>
+          <a class="button button-secondary" href="#workshop-details">See what we cover</a>
         </div>
         <p class="small-note">
-          Secure checkout through Square &middot; 7-day refund policy if it was not useful
+          Free registration &middot; Email reminders &middot; Replay included
         </p>
       </div>
     </section>
 
-    <section class="agenda-section reveal">
+    <section class="agenda-section reveal" id="workshop-details">
       <div class="wrap-wide section-head">
         <div>
           <p class="eyebrow">04 &middot; The workshop</p>
@@ -1545,9 +1632,9 @@
             Habits can be unlearned, and unlearning them is how you get your life back.
           </p>
           <p class="quiet-panel">
-            You should not have to gamble on this. Attend live or watch the replay, and if it was
-            not useful, email me within 7 days and I will refund the ticket. I would rather refund
-            you than add one more disappointment to your list.
+            You do not have to decide anything big from this page. Come to the free workshop,
+            listen, ask questions if you want, and see if the way I explain this makes something
+            click.
           </p>
         </div>
       </div>
@@ -1583,12 +1670,12 @@
             <p>You get a confirmation email with your workshop link. The replay arrives by email after the live call.</p>
           </details>
           <details>
-            <summary>What if I attend and it does not feel useful?</summary>
-            <p>Email me within 7 days after attending live or watching the replay. If it was not useful for you, I will refund you.</p>
+            <summary>Is it really free?</summary>
+            <p>Yes. I am using the workshop as a low-pressure way for people to understand my work before deciding whether a free consult call or private coaching makes sense.</p>
           </details>
           <details>
             <summary>What if I can&rsquo;t attend live?</summary>
-            <p>The replay is included with every ticket. Watch it whenever you want.</p>
+            <p>The replay is included. Register anyway and I will send it after the live call.</p>
           </details>
           <details>
             <summary>Do I have to talk or be on camera?</summary>
@@ -1606,64 +1693,52 @@
       </div>
     </section>
 
-    <section class="pricing-section reveal" id="tickets">
+    <section class="pricing-section reveal" id="workshop-signup">
       <div class="wrap-wide">
-        <p class="eyebrow">10 &middot; Tickets</p>
-        <h2>Join the next workshop</h2>
+        <p class="eyebrow">10 &middot; Free registration</p>
+        <h2>Save your spot for the next workshop</h2>
         <p class="lede">
           Come learn what to do when symptoms start, so the next wave can pass without turning
           into an emergency.
         </p>
-        <p class="small-note">
-          For comparison, a single one-on-one session with me is $125. The workshop is $49.
-        </p>
-        <div class="pricing-grid">
-          <article class="pricing-card">
-            <h3>Standard</h3>
-            <p class="card-note">Best if you want the live workshop, the core explanation, guided practice, Q&amp;A, and replay.</p>
-            <p class="price"><strong>$49</strong><span>one-time</span></p>
-            <ul class="plain-list">
-              <li>The live 90-minute workshop.</li>
-              <li>A clear explanation of the panic feedback loop.</li>
-              <li>A guided practice for meeting symptoms differently.</li>
-              <li>Live Q&amp;A.</li>
-              <li>Replay access.</li>
-            </ul>
-            <div class="button-row">
-              <a class="button" href="/checkout/panic-loop-workshop/" data-standard-checkout>Reserve my spot &middot; $49</a>
+        <div class="signup-card">
+          <h3>The next live workshop is <span data-workshop-display-date>this Saturday</span></h3>
+          <p>
+            Enter your name and email. You will get the confirmation email, reminders, and the replay
+            link after the live workshop.
+          </p>
+          <form class="signup-form" action="https://assets.mailerlite.com/jsonp/2426159/forms/189992583080969954/subscribe" method="post" data-workshop-signup-form>
+            <div class="signup-fields">
+              <div class="signup-field">
+                <label for="workshop-name">First name</label>
+                <input id="workshop-name" name="fields[name]" type="text" autocomplete="given-name" required>
+              </div>
+              <div class="signup-field">
+                <label for="workshop-email">Email</label>
+                <input id="workshop-email" name="fields[email]" type="email" autocomplete="email" required>
+              </div>
             </div>
-            <p class="checkout-note"><strong>Secure checkout powered by Square.</strong></p>
-          </article>
-
-          <article class="pricing-card vip">
-            <span class="pricing-label">Best for personalized support</span>
-            <h3>VIP + Private Session</h3>
-            <p class="card-note">Best if you have several triggers or safety behaviors and want help choosing what to work with first.</p>
-            <p class="price"><strong>$150</strong><span>one-time</span></p>
-            <ul class="plain-list">
-              <li>Everything in Standard.</li>
-              <li>A private 60-minute session with Enis.</li>
-              <li>Help looking at your symptoms, fear thoughts, checking, and avoidance.</li>
-              <li>Support choosing the first places to practice.</li>
-            </ul>
-            <div class="button-row">
-              <a class="button" href="/checkout/panic-loop-workshop-vip/" data-vip-checkout>Get VIP + private session &middot; $150</a>
-            </div>
-            <p class="checkout-note"><strong>Secure checkout powered by Square.</strong></p>
-          </article>
+            <button class="button" type="submit">Save my free spot</button>
+            <input type="hidden" name="ml-submit" value="1">
+            <input type="hidden" name="anticsrf" value="true">
+            <p class="signup-consent">
+              You are signing up for workshop emails from Enis Cirak. You can unsubscribe any time.
+            </p>
+            <p class="signup-status" data-signup-status hidden></p>
+          </form>
         </div>
-        <div class="assurance-grid" aria-label="Checkout and refund details">
+        <div class="assurance-grid" aria-label="Registration details">
           <div class="assurance-card">
-            <h3>Secure checkout</h3>
-            <p>Payments are processed through Square. Workshop details are sent to the email you use at checkout.</p>
+            <h3>No payment required</h3>
+            <p>This workshop is free while I am using it as the front door into my coaching work.</p>
           </div>
           <div class="assurance-card">
-            <h3>7-day usefulness policy</h3>
-            <p>If you attend live or watch the replay and feel it was not useful, email within 7 days and I will refund you.</p>
+            <h3>Replay included</h3>
+            <p>If you cannot attend live, register anyway and I will send the replay after the call.</p>
           </div>
         </div>
         <p class="pricing-note">
-          After checkout, your workshop link arrives by email. The replay comes after the live call.
+          After you register, check your inbox for the confirmation email. If it is not there, check spam or promotions.
         </p>
       </div>
     </section>
@@ -1696,25 +1771,7 @@
         el.textContent = config.time || el.textContent;
       });
 
-      document.querySelectorAll("[data-standard-checkout]").forEach(function (link) {
-        link.href = config.standardCheckoutUrl || link.href;
-      });
-
-      document.querySelectorAll("[data-vip-checkout]").forEach(function (link) {
-        link.href = config.vipCheckoutUrl || link.href;
-      });
     })();
-
-    document.querySelectorAll("[data-standard-checkout], [data-vip-checkout]").forEach(function (link) {
-      link.addEventListener("click", function () {
-        if (typeof gtag === "function") {
-          gtag("event", "workshop_checkout_click", {
-            event_category: "engagement",
-            event_label: link.textContent.trim()
-          });
-        }
-      });
-    });
 
     var revealEls = document.querySelectorAll(".reveal");
     if ("IntersectionObserver" in window) {
