@@ -18,6 +18,34 @@
     return input;
   }
 
+  function setHidden(form, name, value) {
+    var input = form.querySelector("input[name='" + name + "']");
+    if (!input) {
+      input = createHidden(name, "");
+      form.appendChild(input);
+    }
+
+    input.value = value || "";
+  }
+
+  function getParam(params, key) {
+    return params.get(key) || "";
+  }
+
+  function addAttribution(form) {
+    var params = new URLSearchParams(window.location.search);
+    var variant = window.location.pathname.indexOf("panic-loop-workshop-b") !== -1 ? "letter" : "primary";
+
+    setHidden(form, "fields[utm_source]", getParam(params, "utm_source"));
+    setHidden(form, "fields[utm_medium]", getParam(params, "utm_medium"));
+    setHidden(form, "fields[utm_campaign]", getParam(params, "utm_campaign"));
+    setHidden(form, "fields[utm_content]", getParam(params, "utm_content"));
+    setHidden(form, "fields[utm_term]", getParam(params, "utm_term"));
+    setHidden(form, "fields[landing_page]", window.location.href);
+    setHidden(form, "fields[page_variant]", variant);
+    setHidden(form, "fields[referrer]", document.referrer);
+  }
+
   function setStatus(form, message, isSuccess) {
     var status = form.querySelector("[data-signup-status]");
     if (!status) return;
@@ -39,7 +67,7 @@
 
     setStatus(
       form,
-      "You are on the list. Check your email to confirm your spot. If you do not see it, check spam or promotions.",
+      "You are registered. Check your email for the workshop details. If you do not see it, check spam or promotions.",
       true
     );
   }
@@ -57,6 +85,7 @@
     form.action = FORM_ACTION;
     form.method = "post";
     form.target = frameName;
+    addAttribution(form);
 
     if (!form.querySelector("input[name='ml-submit']")) {
       form.appendChild(createHidden("ml-submit", "1"));
