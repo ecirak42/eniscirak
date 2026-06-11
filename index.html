@@ -459,21 +459,21 @@
       background: var(--sage);
     }
 
-    .river-section {
+    .core-section {
       background: linear-gradient(180deg, var(--sage-wash), #EFF3EC);
     }
 
-    .river-layout {
+    .core-layout {
       display: grid;
       grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
       gap: clamp(2rem, 5vw, 4.5rem);
       align-items: center;
     }
 
-    .river-visual {
-      position: relative;
-      min-height: 30rem;
-      overflow: hidden;
+    .core-visual {
+      display: grid;
+      gap: 1rem;
+      padding: clamp(1rem, 2.3vw, 1.35rem);
       border: 1px solid rgba(95, 116, 99, 0.3);
       border-radius: 16px;
       background:
@@ -482,63 +482,111 @@
       box-shadow: 0 26px 70px rgba(34, 37, 31, 0.08);
     }
 
-    .river-path {
-      position: absolute;
-      inset: 10% -8%;
-      transform: rotate(-5deg);
-      border-radius: 44% 56% 48% 52%;
-      background:
-        repeating-linear-gradient(90deg, rgba(255,255,255,0.24) 0 1.8rem, rgba(255,255,255,0) 1.8rem 3.8rem),
-        linear-gradient(90deg, rgba(127, 167, 160, 0.18), rgba(127, 167, 160, 0.82), rgba(127, 167, 160, 0.23));
-      filter: saturate(0.9);
+    .signal-card {
+      padding: 1rem 1.1rem;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--surface);
     }
 
-    .river-path::before,
-    .river-path::after {
-      content: "";
-      position: absolute;
-      left: -4%;
-      right: -4%;
-      height: 26%;
-      border-radius: 50%;
-      background: rgba(255, 253, 246, 0.54);
-    }
-
-    .river-path::before { top: 12%; }
-    .river-path::after { bottom: 15%; }
-
-    .stone {
-      position: absolute;
-      z-index: 2;
-      min-width: 6rem;
-      padding: 0.75rem 0.85rem;
-      border: 1px solid rgba(95, 116, 99, 0.32);
-      border-radius: 999px;
-      background: rgba(255, 253, 246, 0.9);
+    .signal-card span,
+    .track-label,
+    .outcome-label {
+      display: block;
       color: var(--sage-ink);
-      font-size: 0.82rem;
-      font-weight: 700;
-      text-align: center;
-      box-shadow: 0 10px 26px rgba(34, 37, 31, 0.08);
+      font-size: 0.72rem;
+      font-weight: 750;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
     }
 
-    .stone.one { top: 17%; left: 13%; transform: rotate(-6deg); }
-    .stone.two { top: 35%; right: 14%; transform: rotate(7deg); }
-    .stone.three { bottom: 28%; left: 18%; transform: rotate(5deg); }
-    .stone.four { bottom: 13%; right: 16%; transform: rotate(-4deg); }
+    .signal-card strong {
+      display: block;
+      margin-top: 0.35rem;
+      color: var(--ink);
+      font-family: var(--serif);
+      font-size: clamp(1.35rem, 2vw, 1.8rem);
+      line-height: 1.15;
+    }
 
-    .flow-note {
-      position: absolute;
-      right: 1.15rem;
-      bottom: 1.15rem;
-      z-index: 3;
-      max-width: 18rem;
-      padding: 1rem 1.05rem;
+    .path-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .path-track {
+      position: relative;
+      padding: 1.1rem;
       border: 1px solid var(--line);
       border-radius: 10px;
+      background: rgba(255, 253, 246, 0.72);
+    }
+
+    .path-track h3 {
+      margin-top: 0.35rem;
+      font-family: var(--serif);
+      font-size: clamp(1.35rem, 2vw, 1.7rem);
+      font-weight: 600;
+    }
+
+    .path-track ol {
+      display: grid;
+      gap: 0.72rem;
+      margin: 1.05rem 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .path-track li {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr);
+      gap: 0.65rem;
+      align-items: start;
+    }
+
+    .step-dot {
+      display: inline-flex;
+      width: 1.55rem;
+      height: 1.55rem;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(95, 116, 99, 0.34);
+      border-radius: 999px;
       background: var(--surface);
+      color: var(--sage-ink);
+      font-size: 0.72rem;
+      font-weight: 750;
+      line-height: 1;
+    }
+
+    .path-track p {
       color: var(--ink-2);
       font-size: 0.9rem;
+      line-height: 1.48;
+    }
+
+    .old-track {
+      border-color: rgba(158, 82, 48, 0.26);
+      background: rgba(255, 250, 243, 0.8);
+    }
+
+    .new-track {
+      border-color: rgba(95, 116, 99, 0.34);
+      background: rgba(232, 238, 231, 0.6);
+    }
+
+    .outcome-card {
+      padding: 1rem 1.1rem;
+      border: 1px solid rgba(95, 116, 99, 0.34);
+      border-radius: 12px;
+      background: var(--surface);
+    }
+
+    .outcome-card p {
+      margin-top: 0.35rem;
+      color: var(--ink);
+      font-size: 0.96rem;
       line-height: 1.5;
     }
 
@@ -846,7 +894,7 @@
     @media (max-width: 980px) {
       .hero-grid,
       .section-head,
-      .river-layout,
+      .core-layout,
       .agenda-row,
       .story-card {
         grid-template-columns: 1fr;
@@ -883,13 +931,7 @@
 
       .photo-frame::after { display: none; }
 
-      .river-visual { min-height: 26rem; }
-
-      .stone {
-        min-width: auto;
-        padding: 0.62rem 0.7rem;
-        font-size: 0.76rem;
-      }
+      .path-grid { grid-template-columns: 1fr; }
 
       .principles-grid,
       .method-grid,
@@ -1005,36 +1047,56 @@
       </div>
     </section>
 
-    <section class="river-section reveal" id="work">
-      <div class="wrap-wide river-layout">
+    <section class="core-section reveal" id="work">
+      <div class="wrap-wide core-layout">
         <div>
           <p class="eyebrow">02 &middot; The core idea</p>
-          <h2>A nervous system becomes steady when the blockages start to release</h2>
+          <h2>The old way is control. The new way is integration.</h2>
           <p class="lede">
-            I often think of this work like a river. The water is your life force: emotion, energy,
-            attention, aliveness. The rocks are the places where something got resisted, suppressed,
-            or held too tightly.
+            Most people do not get stuck because they had fear, grief, anger, panic, or shame.
+            They get stuck because the body learned to tighten around those feelings.
           </p>
           <p>
-            When the rocks are there, the water gets turbulent. You feel pressure, fear, intrusive
-            thoughts, panic, shutdown, or a constant need to control. The goal is not to shame the
-            turbulence. The goal is to work with the rocks.
+            You check, brace, avoid, analyze, distract, suppress, or try to force yourself to calm
+            down. It makes sense. It can even help for a moment. But if the emotion underneath never
+            gets felt, the pressure keeps coming back in new forms.
           </p>
           <p>
-            The more you feel and release what has been held, the more your system can integrate.
-            You feel less fragmented. More of you is available. Life starts to move again.
+            The work is learning how to turn toward what is happening inside, without drowning in it.
+            When the charge can move, the system has less to defend against.
           </p>
         </div>
-        <div class="river-visual" aria-label="River visual showing emotional blockages dissolving">
-          <div class="river-path" aria-hidden="true"></div>
-          <span class="stone one">fear</span>
-          <span class="stone two">grief</span>
-          <span class="stone three">anger</span>
-          <span class="stone four">old protection</span>
-          <p class="flow-note">
-            The work is not forcing the river to be calm. It is letting the stuck places finally
-            be felt, digested, and released.
-          </p>
+        <div class="core-visual" aria-label="Comparison of resisting feelings versus integrating feelings">
+          <div class="signal-card">
+            <span>Starting point</span>
+            <strong>A sensation, emotion, memory, or trigger gets activated.</strong>
+          </div>
+          <div class="path-grid">
+            <article class="path-track old-track">
+              <span class="track-label">Old pattern</span>
+              <h3>Control the feeling</h3>
+              <ol>
+                <li><span class="step-dot">1</span><p>&ldquo;This should not be happening.&rdquo;</p></li>
+                <li><span class="step-dot">2</span><p>Check, brace, avoid, suppress, or seek certainty.</p></li>
+                <li><span class="step-dot">3</span><p>You feel relief for a moment, but the charge stays stored.</p></li>
+                <li><span class="step-dot">4</span><p>The next trigger hits the same old pressure.</p></li>
+              </ol>
+            </article>
+            <article class="path-track new-track">
+              <span class="track-label">New practice</span>
+              <h3>Meet the feeling</h3>
+              <ol>
+                <li><span class="step-dot">1</span><p>&ldquo;Something in me needs attention.&rdquo;</p></li>
+                <li><span class="step-dot">2</span><p>Slow down, notice the body, and stop fighting the wave.</p></li>
+                <li><span class="step-dot">3</span><p>Let the fear, grief, anger, or pressure be felt safely.</p></li>
+                <li><span class="step-dot">4</span><p>The charge can move, soften, and become part of you again.</p></li>
+              </ol>
+            </article>
+          </div>
+          <div class="outcome-card">
+            <span class="outcome-label">The shift</span>
+            <p>You are not trying to win a battle with your symptoms. You are helping your system stop treating your own inner experience like a threat.</p>
+          </div>
         </div>
       </div>
     </section>
