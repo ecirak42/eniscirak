@@ -2,7 +2,7 @@
 
 Suggested sender: Enis Cirak <hello@eniscirak.com>
 
-Suggested reply-to: eniscirak@gmail.com
+Suggested reply-to: hello@eniscirak.com
 
 Automation trigger: subscriber joins the Panic Loop Workshop form/group in MailerLite.
 
@@ -49,7 +49,7 @@ My goal is simple: I want you to leave with a clearer understanding of what is h
 
 You do not have to talk. You do not have to be on camera. You can just listen.
 
-If you have any trouble finding the link, reply to this email or email me at eniscirak@gmail.com.
+If you have any trouble finding the link, reply to this email or email me at hello@eniscirak.com.
 
 See you there,
 
